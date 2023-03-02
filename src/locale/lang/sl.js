@@ -107,14 +107,14 @@ export default {
       hasCheckedFormat: '{checked}/{total} izbranih'
     },
     image: {
-      error: 'NEUSPELO'
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Nazaj'
+      title: 'Back' // to be translated
     },
     popconfirm: {
-      confirmButtonText: 'Da',
-      cancelButtonText: 'Ne'
+      confirmButtonText: 'Yes', // to be translated
+      cancelButtonText: 'No' // to be translated
     },
     empty: {
       description: 'Ni podatkov'

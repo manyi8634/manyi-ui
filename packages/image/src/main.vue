@@ -62,8 +62,7 @@
       zIndex: {
         type: Number,
         default: 2000
-      },
-      initialIndex: Number
+      }
     },
 
     data() {
@@ -96,15 +95,9 @@
       },
       imageIndex() {
         let previewIndex = 0;
-        const initialIndex = this.initialIndex;
-        if (initialIndex >= 0) {
-          previewIndex = initialIndex;
-          return previewIndex;
-        }
         const srcIndex = this.previewSrcList.indexOf(this.src);
         if (srcIndex >= 0) {
           previewIndex = srcIndex;
-          return previewIndex;
         }
         return previewIndex;
       }

@@ -8,7 +8,7 @@ export default {
       now: 'Ahora',
       today: 'Hoy',
       cancel: 'Cancelar',
-      clear: 'Limpiar',
+      clear: 'Despejar',
       confirm: 'Confirmar',
       selectDate: 'Seleccionar fecha',
       selectTime: 'Seleccionar hora',
@@ -91,7 +91,7 @@ export default {
       emptyText: 'Sin Datos',
       confirmFilter: 'Confirmar',
       resetFilter: 'Reiniciar',
-      clearFilter: 'Limpiar',
+      clearFilter: 'Despejar',
       sumText: 'Suma'
     },
     tree: {

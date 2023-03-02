@@ -476,7 +476,7 @@ Custom validate callback function must be called. See more advanced usage at [as
       { type: 'number', message: 'age must be a number'}
     ]"
   >
-    <el-input v-model.number="numberValidateForm.age" autocomplete="off"></el-input>
+    <el-input type="age" v-model.number="numberValidateForm.age" autocomplete="off"></el-input>
   </el-form-item>
   <el-form-item>
     <el-button type="primary" @click="submitForm('numberValidateForm')">Submit</el-button>
@@ -520,7 +520,7 @@ When an `el-form-item` is nested in another `el-form-item`, its label width will
 
 All components in a Form inherit their `size` attribute from that Form. Similarly, FormItem also has a `size` attribute.
 
-:::demo Still you can fine tune each component's `size` if you don't want that component to inherit its size from From or FormItem.
+:::demo Still you can fine tune each component's `size` if you don't want that component to inherit its size from From or FormIten.
 ```html
 <el-form ref="form" :model="sizeForm" label-width="120px" size="mini">
   <el-form-item label="Activity name">

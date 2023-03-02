@@ -1,20 +1,11 @@
 ## 快速上手
 
-本节将介绍如何在项目中使用 Element。
+本节将介绍如何在项目中使用 ManyiUI。
 
-### 使用 vue-cli@3
 
-我们为新版的 vue-cli 准备了相应的 [Element 插件](https://github.com/ElementUI/vue-cli-plugin-element)，你可以用它们快速地搭建一个基于 Element 的项目。
+### 引入 ManyiUI
 
-### 使用 Starter Kit
-
-我们提供了通用的[项目模板](https://github.com/ElementUI/element-starter)，你可以直接使用。对于 Laravel 用户，我们也准备了相应的[模板](https://github.com/ElementUI/element-in-laravel-starter)，同样可以直接下载使用。
-
-如果不希望使用我们提供的模板，请继续阅读。
-
-### 引入 Element
-
-你可以引入整个 Element，或是根据需要仅引入部分组件。我们先介绍如何引入完整的 Element。
+你可以引入整个 ManyiUI，或是根据需要仅引入部分组件。我们先介绍如何引入完整的 ManyiUI。
 
 #### 完整引入
 
@@ -22,11 +13,11 @@
 
 ```javascript
 import Vue from 'vue';
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+import ManyiUI from 'manyi-ui';
+import 'manyi-ui/lib/theme-chalk/index.css';
 import App from './App.vue';
 
-Vue.use(ElementUI);
+Vue.use(ManyiUI);
 
 new Vue({
   el: '#app',
@@ -55,7 +46,7 @@ npm install babel-plugin-component -D
     [
       "component",
       {
-        "libraryName": "element-ui",
+        "libraryName": "manyi-ui",
         "styleLibraryName": "theme-chalk"
       }
     ]
@@ -67,7 +58,7 @@ npm install babel-plugin-component -D
 
 ```javascript
 import Vue from 'vue';
-import { Button, Select } from 'element-ui';
+import { Button, Select } from 'manyi-ui';
 import App from './App.vue';
 
 Vue.component(Button.name, Button);
@@ -165,7 +156,7 @@ import {
   MessageBox,
   Message,
   Notification
-} from 'element-ui';
+} from 'manyi-ui';
 
 Vue.use(Pagination);
 Vue.use(Dialog);
@@ -254,21 +245,21 @@ Vue.prototype.$message = Message;
 
 ### 全局配置
 
-在引入 Element 时，可以传入一个全局配置对象。该对象目前支持 `size` 与 `zIndex` 字段。`size` 用于改变组件的默认尺寸，`zIndex` 设置弹框的初始 z-index（默认值：2000）。按照引入 Element 的方式，具体操作如下：
+在引入 ManyiUI 时，可以传入一个全局配置对象。该对象目前支持 `size` 与 `zIndex` 字段。`size` 用于改变组件的默认尺寸，`zIndex` 设置弹框的初始 z-index（默认值：2000）。按照引入 ManyiUI 的方式，具体操作如下：
 
-完整引入 Element：
+完整引入 ManyiUI：
 
 ```js
 import Vue from 'vue';
-import Element from 'element-ui';
-Vue.use(Element, { size: 'small', zIndex: 3000 });
+import ManyiUI from 'manyi-ui';
+Vue.use(ManyiUI, { size: 'small', zIndex: 3000 });
 ```
 
-按需引入 Element：
+按需引入 ManyiUI：
 
 ```js
 import Vue from 'vue';
-import { Button } from 'element-ui';
+import { Button } from 'manyi-ui';
 
 Vue.prototype.$ELEMENT = { size: 'small', zIndex: 3000 };
 Vue.use(Button);
@@ -278,7 +269,7 @@ Vue.use(Button);
 
 ### 开始使用
 
-至此，一个基于 Vue 和 Element 的开发环境已经搭建完毕，现在就可以编写代码了。各个组件的使用方法请参阅它们各自的文档。
+至此，一个基于 Vue 和 ManyiUI 的开发环境已经搭建完毕，现在就可以编写代码了。各个组件的使用方法请参阅它们各自的文档。
 
 ### 使用 Nuxt.js
 

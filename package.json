@@ -49,9 +49,11 @@
   },
   "homepage": "https://gitee.com/manyi863412757/manyi-ui.git",
   "keywords": [
-    "manyi",
     "manyi-ui",
+    "manyi",
     "zhangmanyi",
+    "vue",
+    "vue2",
     "components"
   ],
   "license": "MIT",

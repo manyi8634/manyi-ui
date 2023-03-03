@@ -130,23 +130,23 @@
   }
 </style>
 <template>
-  <el-scrollbar class="page-component__scroll" ref="componentScrollBar">
+  <my-scrollbar class="page-component__scroll" ref="componentScrollBar">
   <div class="page-container page-component">
-    <el-scrollbar class="page-component__nav">
+    <my-scrollbar class="page-component__nav">
       <side-nav :data="navsData[lang]" :base="`/${ lang }/component`"></side-nav>
-    </el-scrollbar>
+    </my-scrollbar>
     <div class="page-component__content">
       <router-view class="content"></router-view>
       <footer-nav></footer-nav>
     </div>
-    <el-backtop 
+    <my-backtop 
       v-if="showBackToTop"
       target=".page-component__scroll .el-scrollbar__wrap"
       :right="100"
       :bottom="150"
-    ></el-backtop>
+    ></my-backtop>
   </div>
-  </el-scrollbar>
+  </my-scrollbar>
 </template>
 <script>
   import bus from '../../bus';

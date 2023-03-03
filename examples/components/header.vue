@@ -96,6 +96,15 @@
         background: #ebebeb;
       }
     }
+    .logo-wrap{
+      display: flex;
+      img{
+        height: 80px;
+      }
+      h1{
+        color:#409EFF;
+      }
+    }
 
     .nav-logo,
     .nav-logo-small {
@@ -284,8 +293,9 @@
   <div class="headerWrapper">
     <div id="v3-banner" v-if="isHome">
       <template v-if="lang === 'zh-CN'">
-        您正在浏览基于 Vue 2.x 的 Element UI 文档;
-        <a href="https://element-plus.org/#/zh-CN">点击这里</a> 查看 Vue 3.x 的升级版本
+        您正在浏览基于 Vue 2.x 的 Manyi UI 文档;
+        Vue 3.x 的升级版本尚在开发中，敬请期待...
+        <!-- <a href="https://element-plus.org/#/zh-CN">点击这里</a> 查看 Vue 3.x 的升级版本 -->
       </template>
       <template v-else>
         You’re browsing the documentation of Element UI for Vue 2.x version.
@@ -297,15 +307,25 @@
         <h1><router-link :to="`/${ lang }`">
           <!-- logo -->
           <slot>
-            <img
+            <!-- <img
               src="../assets/images/element-logo.svg"
               alt="element-logo"
               class="nav-logo">
             <img
               src="../assets/images/element-logo-small.svg"
               alt="element-logo"
-              class="nav-logo-small">
-          </slot>
+              class="nav-logo-small"> -->
+              <div class="logo-wrap">
+                <img
+                  src="../assets/images/manyi-logo.svg"
+                  alt="manyi-logo"
+                >
+                <h1>ManyiUI</h1>
+              </div>
+          </slot> 
+
+          
+          
 
         </router-link></h1>
 

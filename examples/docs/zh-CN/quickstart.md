@@ -13,7 +13,7 @@
 
 ```javascript
 import Vue from 'vue';
-import ManyiUI from 'manyi-ui';
+import ManyiUI from 'manyi-ui/src';
 import 'manyi-ui/lib/theme-chalk/index.css';
 import App from './App.vue';
 

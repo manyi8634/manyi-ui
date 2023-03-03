@@ -7,17 +7,17 @@ Si tiene que mostrar muchos datos en una página, utilice la paginación.
 ```html
 <div class="block">
   <span class="demonstration">When you have few pages</span>
-  <el-pagination
+  <my-pagination
     layout="prev, pager, next"
     :total="50">
-  </el-pagination>
+  </my-pagination>
 </div>
 <div class="block">
   <span class="demonstration">When you have more than 7 pages</span>
-  <el-pagination
+  <my-pagination
     layout="prev, pager, next"
     :total="1000">
-  </el-pagination>
+  </my-pagination>
 </div>
 ```
 :::
@@ -26,12 +26,12 @@ Si tiene que mostrar muchos datos en una página, utilice la paginación.
 
 :::demo De forma predeterminada, Pagination colapsa los botones del paginador adicionales cuando tiene más de 7 páginas. Esto se puede configurar con el atributo `pager-count`.
 ```html
-<el-pagination
+<my-pagination
   :page-size="20"
   :pager-count="11"
   layout="prev, pager, next"
   :total="1000">
-</el-pagination>
+</my-pagination>
 ```
 :::
 
@@ -41,11 +41,11 @@ Usa una paginación pequeña en caso de espacio limitado.
 
 :::demo Solo ponga el atributo `small` como `true` y la Paginación se volverá pequeña.
 ```html
-<el-pagination
+<my-pagination
   small
   layout="prev, pager, next"
   :total="50">
-</el-pagination>
+</my-pagination>
 ```
 :::
 
@@ -59,18 +59,18 @@ Agrega más módulos basados en su escenario.
 <template>
   <div class="block">
     <span class="demonstration">Total item count</span>
-    <el-pagination
+    <my-pagination
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
       :current-page.sync="currentPage1"
       :page-size="100"
       layout="total, prev, pager, next"
       :total="1000">
-    </el-pagination>
+    </my-pagination>
   </div>
   <div class="block">
     <span class="demonstration">Change page size</span>
-    <el-pagination
+    <my-pagination
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
       :current-page.sync="currentPage2"
@@ -78,22 +78,22 @@ Agrega más módulos basados en su escenario.
       :page-size="100"
       layout="sizes, prev, pager, next"
       :total="1000">
-    </el-pagination>
+    </my-pagination>
   </div>
   <div class="block">
     <span class="demonstration">Jump to</span>
-    <el-pagination
+    <my-pagination
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
       :current-page.sync="currentPage3"
       :page-size="100"
       layout="prev, pager, next, jumper"
       :total="1000">
-    </el-pagination>
+    </my-pagination>
   </div>
   <div class="block">
     <span class="demonstration">All combined</span>
-    <el-pagination
+    <my-pagination
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
       :current-page.sync="currentPage4"
@@ -101,7 +101,7 @@ Agrega más módulos basados en su escenario.
       :page-size="100"
       layout="total, sizes, prev, pager, next, jumper"
       :total="400">
-    </el-pagination>
+    </my-pagination>
   </div>
 </template>
 <script>
@@ -134,13 +134,13 @@ Cuando sólo hay una página, oculte la paginación configurando el atributo `hi
 :::demo
 ```html
 <div>
- <el-switch v-model="value">
- </el-switch>
- <el-pagination
+ <my-switch v-model="value">
+ </my-switch>
+ <my-pagination
   :hide-on-single-page="value"
   :total="5"
   layout="prev, pager, next">
-</el-pagination>
+</my-pagination>
 </div>
 
 <script>

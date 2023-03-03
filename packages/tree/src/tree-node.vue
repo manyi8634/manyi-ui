@@ -34,7 +34,7 @@
         ]"
       >
       </span>
-      <el-checkbox
+      <my-checkbox
         v-if="showCheckbox"
         v-model="node.checked"
         :indeterminate="node.indeterminate"
@@ -42,14 +42,14 @@
         @click.native.stop
         @change="handleCheckChange"
       >
-      </el-checkbox>
+      </my-checkbox>
       <span
         v-if="node.loading"
         class="el-tree-node__loading-icon el-icon-loading">
       </span>
       <node-content :node="node"></node-content>
     </div>
-    <el-collapse-transition>
+    <my-collapse-transition>
       <div
         class="el-tree-node__children"
         v-if="!renderAfterExpand || childNodeRendered"
@@ -67,7 +67,7 @@
           @node-expand="handleChildNodeExpand">
         </el-tree-node>
       </div>
-    </el-collapse-transition>
+    </my-collapse-transition>
   </div>
 </template>
 

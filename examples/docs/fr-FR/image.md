@@ -9,10 +9,10 @@ En plus des propriétés natives de img, ce composant supporte le lazy loading, 
 <div class="demo-image">
   <div class="block" v-for="fit in fits" :key="fit">
     <span class="demonstration">{{ fit }}</span>
-    <el-image
+    <my-image
       style="width: 100px; height: 100px"
       :src="url"
-      :fit="fit"></el-image>
+      :fit="fit"></my-image>
   </div>
 </div>
 
@@ -36,15 +36,15 @@ En plus des propriétés natives de img, ce composant supporte le lazy loading, 
 <div class="demo-image__placeholder">
   <div class="block">
     <span class="demonstration">Défaut</span>
-    <el-image :src="src"></el-image>
+    <my-image :src="src"></my-image>
   </div>
   <div class="block">
     <span class="demonstration">Personnalisé</span>
-    <el-image :src="src">
+    <my-image :src="src">
       <div slot="placeholder" class="image-slot">
         Chargement<span class="dot">...</span>
       </div>
-    </el-image>
+    </my-image>
   </div>
 </div>
 
@@ -67,15 +67,15 @@ En plus des propriétés natives de img, ce composant supporte le lazy loading, 
 <div class="demo-image__error">
   <div class="block">
     <span class="demonstration">Défaut</span>
-    <el-image></el-image>
+    <my-image></my-image>
   </div>
   <div class="block">
     <span class="demonstration">Personnalisé</span>
-    <el-image>
+    <my-image>
       <div slot="error" class="image-slot">
         <i class="el-icon-picture-outline"></i>
       </div>
-    </el-image>
+    </my-image>
   </div>
 </div>
 ```
@@ -86,7 +86,7 @@ En plus des propriétés natives de img, ce composant supporte le lazy loading, 
 :::demo Utilisez le lazy loading avec `lazy = true`. Les images ne se chargeront que lorsque le scrolling les atteindra. Vous pouvez indiquer le conteneur grâce à `scroll-container`. Si undefined, ce sera le conteneur parent le plus proche avec la propriété overflow à auto ou scroll.
 ```html
 <div class="demo-image__lazy">
-  <el-image v-for="url in urls" :key="url" :src="url" lazy></el-image>
+  <my-image v-for="url in urls" :key="url" :src="url" lazy></my-image>
 </div>
 
 <script>
@@ -114,11 +114,11 @@ En plus des propriétés natives de img, ce composant supporte le lazy loading, 
 :::demo allow big image preview by setting `previewSrcList` prop.
 ```html
 <div class="demo-image__preview">
-  <el-image 
+  <my-image 
     style="width: 100px; height: 100px"
     :src="url" 
     :preview-src-list="srcList">
-  </el-image>
+  </my-image>
 </div>
 
 <script>

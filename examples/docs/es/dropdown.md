@@ -7,18 +7,18 @@ Pase el ratón por el menú desplegable para desplegarlo y obtener más acciones
 :::demo El elemento desencadenante se representa con el slot predeterminado, y la parte desplegable se representa con el slot llamado dropdown. Por defecto, la lista desplegable se muestra cuando se pasa el ratón por encima del elemento desencadenante sin necesidad de hacer clic en él.
 
 ```html
-<el-dropdown>
+<my-dropdown>
   <span class="el-dropdown-link">
     Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
   </span>
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>Action 1</el-dropdown-item>
-    <el-dropdown-item>Action 2</el-dropdown-item>
-    <el-dropdown-item>Action 3</el-dropdown-item>
-    <el-dropdown-item disabled>Action 4</el-dropdown-item>
-    <el-dropdown-item divided>Action 5</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <my-dropdown-menu slot="dropdown">
+    <my-dropdown-item>Action 1</my-dropdown-item>
+    <my-dropdown-item>Action 2</my-dropdown-item>
+    <my-dropdown-item>Action 3</my-dropdown-item>
+    <my-dropdown-item disabled>Action 4</my-dropdown-item>
+    <my-dropdown-item divided>Action 5</my-dropdown-item>
+  </my-dropdown-menu>
+</my-dropdown>
 
 <style>
   .el-dropdown-link {
@@ -41,28 +41,28 @@ Utilizando un botón para activar la lista desplegable.
 :::demo Utilice `split-button` para dividir el elemento detonante en un grupo de botones, siendo el botón izquierdo un botón normal y el botón derecho el objetivo real de la detonación. Si desea insertar una línea de separación entre la posición tres y la posición cuatro, sólo añada un divisor de clase a la posición cuatro.
 
 ```html
-<el-dropdown>
-  <el-button type="primary">
+<my-dropdown>
+  <my-button type="primary">
     Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
-  </el-button>
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>Action 1</el-dropdown-item>
-    <el-dropdown-item>Action 2</el-dropdown-item>
-    <el-dropdown-item>Action 3</el-dropdown-item>
-    <el-dropdown-item>Action 4</el-dropdown-item>
-    <el-dropdown-item>Action 5</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
-<el-dropdown split-button type="primary" @click="handleClick">
+  </my-button>
+  <my-dropdown-menu slot="dropdown">
+    <my-dropdown-item>Action 1</my-dropdown-item>
+    <my-dropdown-item>Action 2</my-dropdown-item>
+    <my-dropdown-item>Action 3</my-dropdown-item>
+    <my-dropdown-item>Action 4</my-dropdown-item>
+    <my-dropdown-item>Action 5</my-dropdown-item>
+  </my-dropdown-menu>
+</my-dropdown>
+<my-dropdown split-button type="primary" @click="handleClick">
   Dropdown List
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>Action 1</el-dropdown-item>
-    <el-dropdown-item>Action 2</el-dropdown-item>
-    <el-dropdown-item>Action 3</el-dropdown-item>
-    <el-dropdown-item>Action 4</el-dropdown-item>
-    <el-dropdown-item>Action 5</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <my-dropdown-menu slot="dropdown">
+    <my-dropdown-item>Action 1</my-dropdown-item>
+    <my-dropdown-item>Action 2</my-dropdown-item>
+    <my-dropdown-item>Action 3</my-dropdown-item>
+    <my-dropdown-item>Action 4</my-dropdown-item>
+    <my-dropdown-item>Action 5</my-dropdown-item>
+  </my-dropdown-menu>
+</my-dropdown>
 
 <style>
   .el-dropdown {
@@ -95,38 +95,38 @@ Haga clic en el elemento detonante o sobre él.
 :::demo Utilice el atributo `trigger`. Por defecto, es `hover`.
 
 ```html
-<el-row class="block-col-2">
-  <el-col :span="12">
+<my-row class="block-col-2">
+  <my-col :span="12">
     <span class="demonstration">hover to trigger</span>
-    <el-dropdown>
+    <my-dropdown>
       <span class="el-dropdown-link">
         Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
       </span>
-      <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item icon="el-icon-plus">Action 1</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-plus">Action 2</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-plus-outline">Action 3</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-check">Action 4</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-check">Action 5</el-dropdown-item>
-      </el-dropdown-menu>
-    </el-dropdown>
-  </el-col>
-  <el-col :span="12">
+      <my-dropdown-menu slot="dropdown">
+        <my-dropdown-item icon="el-icon-plus">Action 1</my-dropdown-item>
+        <my-dropdown-item icon="el-icon-circle-plus">Action 2</my-dropdown-item>
+        <my-dropdown-item icon="el-icon-circle-plus-outline">Action 3</my-dropdown-item>
+        <my-dropdown-item icon="el-icon-check">Action 4</my-dropdown-item>
+        <my-dropdown-item icon="el-icon-circle-check">Action 5</my-dropdown-item>
+      </my-dropdown-menu>
+    </my-dropdown>
+  </my-col>
+  <my-col :span="12">
     <span class="demonstration">click to trigger</span>
-    <el-dropdown trigger="click">
+    <my-dropdown trigger="click">
       <span class="el-dropdown-link">
         Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
       </span>
-      <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item icon="el-icon-plus">Action 1</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-plus">Action 2</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-plus-outline">Action 3</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-check">Action 4</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-check">Action 5</el-dropdown-item>
-      </el-dropdown-menu>
-    </el-dropdown>
-  </el-col>
-</el-row>
+      <my-dropdown-menu slot="dropdown">
+        <my-dropdown-item icon="el-icon-plus">Action 1</my-dropdown-item>
+        <my-dropdown-item icon="el-icon-circle-plus">Action 2</my-dropdown-item>
+        <my-dropdown-item icon="el-icon-circle-plus-outline">Action 3</my-dropdown-item>
+        <my-dropdown-item icon="el-icon-check">Action 4</my-dropdown-item>
+        <my-dropdown-item icon="el-icon-circle-check">Action 5</my-dropdown-item>
+      </my-dropdown-menu>
+    </my-dropdown>
+  </my-col>
+</my-row>
 
 <style>
   .el-dropdown-link {
@@ -153,18 +153,18 @@ Use `hide-on-click` para definir si el menú se cierra al hacer clic.
 :::demo El menú predeterminado se cerrará cuando haga clic en los elementos del menú, y se puede desactivar configurando `hide-on-click` como false.
 
 ```html
-<el-dropdown :hide-on-click="false">
+<my-dropdown :hide-on-click="false">
   <span class="el-dropdown-link">
     Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
   </span>
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>Action 1</el-dropdown-item>
-    <el-dropdown-item>Action 2</el-dropdown-item>
-    <el-dropdown-item>Action 3</el-dropdown-item>
-    <el-dropdown-item disabled>Action 4</el-dropdown-item>
-    <el-dropdown-item divided>Action 5</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <my-dropdown-menu slot="dropdown">
+    <my-dropdown-item>Action 1</my-dropdown-item>
+    <my-dropdown-item>Action 2</my-dropdown-item>
+    <my-dropdown-item>Action 3</my-dropdown-item>
+    <my-dropdown-item disabled>Action 4</my-dropdown-item>
+    <my-dropdown-item divided>Action 5</my-dropdown-item>
+  </my-dropdown-menu>
+</my-dropdown>
 
 <style>
   .el-dropdown-link {
@@ -184,18 +184,18 @@ Al hacer clic en cada elemento desplegable se detona un evento cuyo parámetro e
 
 :::demo
 ```html
-<el-dropdown @command="handleCommand">
+<my-dropdown @command="handleCommand">
   <span class="el-dropdown-link">
     Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
   </span>
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item command="a">Action 1</el-dropdown-item>
-    <el-dropdown-item command="b">Action 2</el-dropdown-item>
-    <el-dropdown-item command="c">Action 3</el-dropdown-item>
-    <el-dropdown-item command="d" disabled>Action 4</el-dropdown-item>
-    <el-dropdown-item command="e" divided>Action 5</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <my-dropdown-menu slot="dropdown">
+    <my-dropdown-item command="a">Action 1</my-dropdown-item>
+    <my-dropdown-item command="b">Action 2</my-dropdown-item>
+    <my-dropdown-item command="c">Action 3</my-dropdown-item>
+    <my-dropdown-item command="d" disabled>Action 4</my-dropdown-item>
+    <my-dropdown-item command="e" divided>Action 5</my-dropdown-item>
+  </my-dropdown-menu>
+</my-dropdown>
 
 <style>
   .el-dropdown-link {
@@ -226,45 +226,45 @@ Además del tamaño predeterminado, el componente Dropdown proporciona tres tama
 :::demo Utilice el atributo `size` para establecer tamaños adicionales con `medium`, `small` o `mini`.
 
 ```html
-<el-dropdown split-button type="primary">
+<my-dropdown split-button type="primary">
   Default
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>Action 1</el-dropdown-item>
-    <el-dropdown-item>Action 2</el-dropdown-item>
-    <el-dropdown-item>Action 3</el-dropdown-item>
-    <el-dropdown-item>Action 4</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <my-dropdown-menu slot="dropdown">
+    <my-dropdown-item>Action 1</my-dropdown-item>
+    <my-dropdown-item>Action 2</my-dropdown-item>
+    <my-dropdown-item>Action 3</my-dropdown-item>
+    <my-dropdown-item>Action 4</my-dropdown-item>
+  </my-dropdown-menu>
+</my-dropdown>
 
-<el-dropdown size="medium" split-button type="primary">
+<my-dropdown size="medium" split-button type="primary">
   Medium
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>Action 1</el-dropdown-item>
-    <el-dropdown-item>Action 2</el-dropdown-item>
-    <el-dropdown-item>Action 3</el-dropdown-item>
-    <el-dropdown-item>Action 4</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <my-dropdown-menu slot="dropdown">
+    <my-dropdown-item>Action 1</my-dropdown-item>
+    <my-dropdown-item>Action 2</my-dropdown-item>
+    <my-dropdown-item>Action 3</my-dropdown-item>
+    <my-dropdown-item>Action 4</my-dropdown-item>
+  </my-dropdown-menu>
+</my-dropdown>
 
-<el-dropdown size="small" split-button type="primary">
+<my-dropdown size="small" split-button type="primary">
   Small
-  <el-dropdown-menu slot="dropdown">
-   <el-dropdown-item>Action 1</el-dropdown-item>
-   <el-dropdown-item>Action 2</el-dropdown-item>
-   <el-dropdown-item>Action 3</el-dropdown-item>
-   <el-dropdown-item>Action 4</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <my-dropdown-menu slot="dropdown">
+   <my-dropdown-item>Action 1</my-dropdown-item>
+   <my-dropdown-item>Action 2</my-dropdown-item>
+   <my-dropdown-item>Action 3</my-dropdown-item>
+   <my-dropdown-item>Action 4</my-dropdown-item>
+  </my-dropdown-menu>
+</my-dropdown>
 
-<el-dropdown size="mini" split-button type="primary">
+<my-dropdown size="mini" split-button type="primary">
   Mini
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>Action 1</el-dropdown-item>
-    <el-dropdown-item>Action 2</el-dropdown-item>
-    <el-dropdown-item>Action 3</el-dropdown-item>
-    <el-dropdown-item>Action 4</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <my-dropdown-menu slot="dropdown">
+    <my-dropdown-item>Action 1</my-dropdown-item>
+    <my-dropdown-item>Action 2</my-dropdown-item>
+    <my-dropdown-item>Action 3</my-dropdown-item>
+    <my-dropdown-item>Action 4</my-dropdown-item>
+  </my-dropdown-menu>
+</my-dropdown>
 ```
 :::
 
@@ -288,7 +288,7 @@ Además del tamaño predeterminado, el componente Dropdown proporciona tres tama
 | Nombre | Descripción |
 |------|--------|
 | — | contenido del Dropdown. Aviso: Debe ser un elemento html dom válido (ej. `<span>, <button>` etc.) o `el-component`, para adjuntar el listener trigger |
-| dropdown | contenido del menu Dropdown, normalmente es un elemento `<el-dropdown-menu>` |
+| dropdown | contenido del menu Dropdown, normalmente es un elemento `<my-dropdown-menu>` |
 
 ### Dropdown Eventos
 | Nombre         | Descripción                                                  | Parámetros                                       |

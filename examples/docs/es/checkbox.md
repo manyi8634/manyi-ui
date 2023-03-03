@@ -11,7 +11,7 @@ Checkbox puede ser usado para alternar entre dos estados.
 ```html
 <template>
   <!-- `checked` debe ser true o false -->
-  <el-checkbox v-model="checked">Opción</el-checkbox>
+  <my-checkbox v-model="checked">Opción</my-checkbox>
 </template>
 <script>
   export default {
@@ -33,8 +33,8 @@ Estado deshabilitado para el checkbox.
 
 ```html
 <template>
-  <el-checkbox v-model="checked1" disabled>Opción</el-checkbox>
-  <el-checkbox v-model="checked2" disabled>Opción</el-checkbox>
+  <my-checkbox v-model="checked1" disabled>Opción</my-checkbox>
+  <my-checkbox v-model="checked2" disabled>Opción</my-checkbox>
 </template>
 <script>
   export default {
@@ -57,13 +57,13 @@ Es usado por múltiples checkboxes los cuales están enlazados a un grupo, indic
 
 ```html
 <template>
-  <el-checkbox-group v-model="checkList">
-    <el-checkbox label="Opción A"></el-checkbox>
-    <el-checkbox label="Opción B"></el-checkbox>
-    <el-checkbox label="Opción C"></el-checkbox>
-    <el-checkbox label="disabled" disabled></el-checkbox>
-    <el-checkbox label="Seleccionado y deshabilitado" disabled></el-checkbox>
-  </el-checkbox-group>
+  <my-checkbox-group v-model="checkList">
+    <my-checkbox label="Opción A"></my-checkbox>
+    <my-checkbox label="Opción B"></my-checkbox>
+    <my-checkbox label="Opción C"></my-checkbox>
+    <my-checkbox label="disabled" disabled></my-checkbox>
+    <my-checkbox label="Seleccionado y deshabilitado" disabled></my-checkbox>
+  </my-checkbox-group>
 </template>
 
 <script>
@@ -86,11 +86,11 @@ La propiedad `indeterminate` puede ser usada para generar el efecto de marcar to
 
 ```html
 <template>
-  <el-checkbox :indeterminate="isIndeterminate" v-model="checkAll" @change="handleCheckAllChange">Marcar todos</el-checkbox>
+  <my-checkbox :indeterminate="isIndeterminate" v-model="checkAll" @change="handleCheckAllChange">Marcar todos</my-checkbox>
   <div style="margin: 15px 0;"></div>
-  <el-checkbox-group v-model="checkedCities" @change="handleCheckedCitiesChange">
-    <el-checkbox v-for="city in cities" :label="city" :key="city">{{city}}</el-checkbox>
-  </el-checkbox-group>
+  <my-checkbox-group v-model="checkedCities" @change="handleCheckedCitiesChange">
+    <my-checkbox v-for="city in cities" :label="city" :key="city">{{city}}</my-checkbox>
+  </my-checkbox-group>
 </template>
 <script>
   const cityOptions = ['Shanghai', 'Beijing', 'Guangzhou', 'Shenzhen'];
@@ -127,12 +127,12 @@ Las propiedades `min` y `max` pueden limitar la cantidad de elementos selecciona
 
 ```html
 <template>
-  <el-checkbox-group 
+  <my-checkbox-group 
     v-model="checkedCities"
     :min="1"
     :max="2">
-    <el-checkbox v-for="city in cities" :label="city" :key="city">{{city}}</el-checkbox>
-  </el-checkbox-group>
+    <my-checkbox v-for="city in cities" :label="city" :key="city">{{city}}</my-checkbox>
+  </my-checkbox-group>
 </template>
 <script>
   const cityOptions = ['Shanghai', 'Beijing', 'Guangzhou', 'Shenzhen'];
@@ -156,24 +156,24 @@ Checkbox con estilo tipo Botón.
 ```html
 <template>
   <div>
-    <el-checkbox-group v-model="checkboxGroup1">
-      <el-checkbox-button v-for="city in cities" :label="city" :key="city">{{city}}</el-checkbox-button>
-    </el-checkbox-group>
+    <my-checkbox-group v-model="checkboxGroup1">
+      <my-checkbox-button v-for="city in cities" :label="city" :key="city">{{city}}</my-checkbox-button>
+    </my-checkbox-group>
   </div>
   <div style="margin-top: 20px">
-    <el-checkbox-group v-model="checkboxGroup2" size="medium">
-      <el-checkbox-button v-for="city in cities" :label="city" :key="city">{{city}}</el-checkbox-button>
-    </el-checkbox-group>
+    <my-checkbox-group v-model="checkboxGroup2" size="medium">
+      <my-checkbox-button v-for="city in cities" :label="city" :key="city">{{city}}</my-checkbox-button>
+    </my-checkbox-group>
   </div>
   <div style="margin-top: 20px">
-    <el-checkbox-group v-model="checkboxGroup3" size="small">
-      <el-checkbox-button v-for="city in cities" :label="city" :disabled="city === 'Beijing'" :key="city">{{city}}</el-checkbox-button>
-    </el-checkbox-group>
+    <my-checkbox-group v-model="checkboxGroup3" size="small">
+      <my-checkbox-button v-for="city in cities" :label="city" :disabled="city === 'Beijing'" :key="city">{{city}}</my-checkbox-button>
+    </my-checkbox-group>
   </div>
   <div style="margin-top: 20px">
-    <el-checkbox-group v-model="checkboxGroup4" size="mini" disabled>
-      <el-checkbox-button v-for="city in cities" :label="city" :key="city">{{city}}</el-checkbox-button>
-    </el-checkbox-group>
+    <my-checkbox-group v-model="checkboxGroup4" size="mini" disabled>
+      <my-checkbox-button v-for="city in cities" :label="city" :key="city">{{city}}</my-checkbox-button>
+    </my-checkbox-group>
   </div>
 </template>
 <script>
@@ -200,24 +200,24 @@ Checkbox con estilo tipo Botón.
 ```html
 <template>
   <div>
-    <el-checkbox v-model="checked1" label="Opción1" border></el-checkbox>
-    <el-checkbox v-model="checked2" label="Opción2" border></el-checkbox>
+    <my-checkbox v-model="checked1" label="Opción1" border></my-checkbox>
+    <my-checkbox v-model="checked2" label="Opción2" border></my-checkbox>
   </div>
   <div style="margin-top: 20px">
-    <el-checkbox v-model="checked3" label="Opción1" border size="medium"></el-checkbox>
-    <el-checkbox v-model="checked4" label="Opción2" border size="medium"></el-checkbox>
+    <my-checkbox v-model="checked3" label="Opción1" border size="medium"></my-checkbox>
+    <my-checkbox v-model="checked4" label="Opción2" border size="medium"></my-checkbox>
   </div>
   <div style="margin-top: 20px">
-    <el-checkbox-group v-model="checkboxGroup1" size="small">
-      <el-checkbox label="Opción1" border></el-checkbox>
-      <el-checkbox label="Opción2" border disabled></el-checkbox>
-    </el-checkbox-group>
+    <my-checkbox-group v-model="checkboxGroup1" size="small">
+      <my-checkbox label="Opción1" border></my-checkbox>
+      <my-checkbox label="Opción2" border disabled></my-checkbox>
+    </my-checkbox-group>
   </div>
   <div style="margin-top: 20px">
-    <el-checkbox-group v-model="checkboxGroup2" size="mini" disabled>
-      <el-checkbox label="Opción1" border></el-checkbox>
-      <el-checkbox label="Opción2" border></el-checkbox>
-    </el-checkbox-group>
+    <my-checkbox-group v-model="checkboxGroup2" size="mini" disabled>
+      <my-checkbox label="Opción1" border></my-checkbox>
+      <my-checkbox label="Opción2" border></my-checkbox>
+    </my-checkbox-group>
   </div>
 </template>
 

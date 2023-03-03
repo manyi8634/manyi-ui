@@ -8,43 +8,43 @@ Similar to Tooltip, Popover is also built with `Vue-popper`. So for some duplica
 
 ```html
 <template>
-  <el-popover
+  <my-popover
     placement="top-start"
     title="Title"
     width="200"
     trigger="hover"
     content="this is content, this is content, this is content">
-    <el-button slot="reference">Hover to activate</el-button>
-  </el-popover>
+    <my-button slot="reference">Hover to activate</my-button>
+  </my-popover>
 
-  <el-popover
+  <my-popover
     placement="bottom"
     title="Title"
     width="200"
     trigger="click"
     content="this is content, this is content, this is content">
-    <el-button slot="reference">Click to activate</el-button>
-  </el-popover>
+    <my-button slot="reference">Click to activate</my-button>
+  </my-popover>
 
-  <el-popover
+  <my-popover
     ref="popover"
     placement="right"
     title="Title"
     width="200"
     trigger="focus"
     content="this is content, this is content, this is content">
-  </el-popover>
-  <el-button v-popover:popover>Focus to activate</el-button>
+  </my-popover>
+  <my-button v-popover:popover>Focus to activate</my-button>
 
-  <el-popover
+  <my-popover
     placement="bottom"
     title="Title"
     width="200"
     trigger="manual"
     content="this is content, this is content, this is content"
     v-model="visible">
-    <el-button slot="reference" @click="visible = !visible">Manual to activate</el-button>
-  </el-popover>
+    <my-button slot="reference" @click="visible = !visible">Manual to activate</my-button>
+  </my-popover>
 </template>
 
 <script>
@@ -66,17 +66,17 @@ Other components can be nested in popover. Following is an example of nested tab
 :::demo replace the `content` attribute with a default `slot`.
 
 ```html
-<el-popover
+<my-popover
   placement="right"
   width="400"
   trigger="click">
-  <el-table :data="gridData">
-    <el-table-column width="150" property="date" label="date"></el-table-column>
-    <el-table-column width="100" property="name" label="name"></el-table-column>
-    <el-table-column width="300" property="address" label="address"></el-table-column>
-  </el-table>
-  <el-button slot="reference">Click to activate</el-button>
-</el-popover>
+  <my-table :data="gridData">
+    <my-table-column width="150" property="date" label="date"></my-table-column>
+    <my-table-column width="100" property="name" label="name"></my-table-column>
+    <my-table-column width="300" property="address" label="address"></my-table-column>
+  </my-table>
+  <my-button slot="reference">Click to activate</my-button>
+</my-popover>
 
 <script>
   export default {
@@ -112,17 +112,17 @@ Of course, you can nest other operations. It's more light-weight than using a di
 
 :::demo
 ```html
-<el-popover
+<my-popover
   placement="top"
   width="160"
   v-model="visible">
   <p>Are you sure to delete this?</p>
   <div style="text-align: right; margin: 0">
-    <el-button size="mini" type="text" @click="visible = false">cancel</el-button>
-    <el-button type="primary" size="mini" @click="visible = false">confirm</el-button>
+    <my-button size="mini" type="text" @click="visible = false">cancel</my-button>
+    <my-button type="primary" size="mini" @click="visible = false">confirm</my-button>
   </div>
-  <el-button slot="reference">Delete</el-button>
-</el-popover>
+  <my-button slot="reference">Delete</my-button>
+</my-popover>
 
 <script>
   export default {

@@ -171,7 +171,7 @@ export default {
       render(h) {
         return (
           <span class="el-pagination__sizes">
-            <el-select
+            <my-select
               value={ this.$parent.internalPageSize }
               popperClass={ this.$parent.popperClass || '' }
               size="mini"
@@ -179,13 +179,13 @@ export default {
               disabled={ this.$parent.disabled }>
               {
                 this.pageSizes.map(item =>
-                  <el-option
+                  <my-option
                     value={ item }
                     label={ item + this.t('el.pagination.pagesize') }>
-                  </el-option>
+                  </my-option>
                 )
               }
-            </el-select>
+            </my-select>
           </span>
         );
       },
@@ -247,7 +247,7 @@ export default {
         return (
           <span class="el-pagination__jump">
             { this.t('el.pagination.goto') }
-            <el-input
+            <my-input
               class="el-pagination__editor is-in-pagination"
               min={ 1 }
               max={ this.$parent.internalPageCount }

@@ -4,10 +4,10 @@
 :::demo Los datos se pasan a Transfer a través del atributo `data`. Los datos tienen que ser un array de objetos, y cada objeto debe tener estos atributos: `key` que será el identificador del ítem, `label` que será el texto a mostrar, y `disabled` que indicará si el elemento esta desactivado. Los items dentro de la lista destino están sincronizados con la variable asociada a `v-model`, y el valor de esa variable es un array de claves de los elementos de la lista destino. Así que si no quiere que la lista destino esté vacía inicialmente puede inicializar el `v-model` con un array.
 ```html
 <template>
-  <el-transfer
+  <my-transfer
     v-model="value"
     :data="data">
-  </el-transfer>
+  </my-transfer>
 </template>
 
 <script>
@@ -41,13 +41,13 @@ Puede buscar y filtrar los items.
 :::demo Ponga el atributo `filterable` a true para permitir el filtrado. Por defecto si el `label` del ítem contiene el término buscado será incluido en el resultado. También puede implementar su propio método de filtrado con el atributo `filter-method`, que recibe un método y le pasa la búsqueda y cada ítem. Los items para los que devuelva true serán incluidos en el resultado de la búsqueda.
 ```html
 <template>
-  <el-transfer
+  <my-transfer
     filterable
     :filter-method="filterMethod"
     filter-placeholder="State Abbreviations"
     v-model="value"
     :data="data">
-  </el-transfer>
+  </my-transfer>
 </template>
 
 <script>
@@ -88,7 +88,7 @@ Puede personalizar los títulos, botones, la función de renderizado de los item
 <template>
   <p style="text-align: center; margin: 0 0 20px">Customize data items using render-content</p>
   <div style="text-align: center">
-    <el-transfer
+    <my-transfer
       style="text-align: left; display: inline-block"
       v-model="value"
       filterable
@@ -103,13 +103,13 @@ Puede personalizar los títulos, botones, la función de renderizado de los item
       }"
       @change="handleChange"
       :data="data">
-      <el-button class="transfer-footer" slot="left-footer" size="small">Operation</el-button>
-      <el-button class="transfer-footer" slot="right-footer" size="small">Operation</el-button>
-    </el-transfer>
+      <my-button class="transfer-footer" slot="left-footer" size="small">Operation</my-button>
+      <my-button class="transfer-footer" slot="right-footer" size="small">Operation</my-button>
+    </my-transfer>
   </div>
   <p style="text-align: center; margin: 50px 0 20px">Customize data items using scoped slot</p>
   <div style="text-align: center">
-    <el-transfer
+    <my-transfer
       style="text-align: left; display: inline-block"
       v-model="value4"
       filterable
@@ -124,9 +124,9 @@ Puede personalizar los títulos, botones, la función de renderizado de los item
       @change="handleChange"
       :data="data">
       <span slot-scope="{ option }">{{ option.key }} - {{ option.label }}</span>
-      <el-button class="transfer-footer" slot="left-footer" size="small">Operation</el-button>
-      <el-button class="transfer-footer" slot="right-footer" size="small">Operation</el-button>
-    </el-transfer>
+      <my-button class="transfer-footer" slot="left-footer" size="small">Operation</my-button>
+      <my-button class="transfer-footer" slot="right-footer" size="small">Operation</my-button>
+    </my-transfer>
   </div>
 </template>
 
@@ -178,14 +178,14 @@ Por defecto Transfer busca los atributos `key`, `label`, y `disabled` en cada el
 :::demo En este ejemplo los elementos no tienen `key`y `label`, en vez de eso tienen `value` y `desc`. Así que tiene que añadir alias para `key` y `label`.
 ```html
 <template>
-  <el-transfer
+  <my-transfer
     v-model="value"
     :props="{
       key: 'value',
       label: 'desc'
     }"
     :data="data">
-  </el-transfer>
+  </my-transfer>
 </template>
 
 <script>

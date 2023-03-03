@@ -14,7 +14,7 @@ Alert interrompt l'action de l'utilisateur jusqu'à ce qu'il confirme.
 
 ```html
 <template>
-  <el-button type="text" @click="open">Cliquez pour ouvrir la MessageBox</el-button>
+  <my-button type="text" @click="open">Cliquez pour ouvrir la MessageBox</my-button>
 </template>
 
 <script>
@@ -45,7 +45,7 @@ Confirm est utilisé pour demander une confirmation à l'utilisateur.
 
 ```html
 <template>
-  <el-button type="text" @click="open">Cliquez pour ouvrir la MessageBox</el-button>
+  <my-button type="text" @click="open">Cliquez pour ouvrir la MessageBox</my-button>
 </template>
 
 <script>
@@ -83,7 +83,7 @@ Prompt est utilisé lorsqu'un utilisateur.
 
 ```html
 <template>
-  <el-button type="text" @click="open">Cliquez pour ouvrir la MessageBox</el-button>
+  <my-button type="text" @click="open">Cliquez pour ouvrir la MessageBox</my-button>
 </template>
 
 <script>
@@ -121,7 +121,7 @@ Il est possible d'afficher du contenu un peu plus varié et personnalisé.
 
 ```html
 <template>
-  <el-button type="text" @click="open">Cliquez pour ouvrir la MessageBox</el-button>
+  <my-button type="text" @click="open">Cliquez pour ouvrir la MessageBox</my-button>
 </template>
 
 <script>
@@ -177,7 +177,7 @@ Le contenu de MessageBox peut être `VNode`, Vous permettant de passer des compo
 
 ```html
 <template>
-  <el-button type="text" @click="open">Cliquez pour ouvrir la MessageBox</el-button>
+  <my-button type="text" @click="open">Cliquez pour ouvrir la MessageBox</my-button>
 </template>
 
 <script>
@@ -206,7 +206,7 @@ Dans certains cas, les boutons fermer et annuler peuvent avoir des sens différe
 
 ```html
 <template>
-  <el-button type="text" @click="open">Cliquez pour ouvrir la MessageBox</el-button>
+  <my-button type="text" @click="open">Cliquez pour ouvrir la MessageBox</my-button>
 </template>
 
 <script>
@@ -247,7 +247,7 @@ le contenu de MessageBox peut être centré.
 
 ```html
 <template>
-  <el-button type="text" @click="open">Cliquez pour ouvrir la MessageBox</el-button>
+  <my-button type="text" @click="open">Cliquez pour ouvrir la MessageBox</my-button>
 </template>
 
 <script>
@@ -290,7 +290,7 @@ Si Element est importé entièrement, il ajoutera les méthodes suivantes à Vue
 Si vous préférer importer `MessageBox` à la demande:
 
 ```javascript
-import { MessageBox } from 'element-ui';
+import { MessageBox } from 'manyi-ui';
 ```
 
 Les méthodes correspondantes sont: `MessageBox`, `MessageBox.alert`, `MessageBox.confirm` et `MessageBox.prompt`. Les paramètres sont les mêmes que précédemment.

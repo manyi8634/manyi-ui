@@ -15,29 +15,29 @@ DateTimePicker se deriva de DatePicker y TimePicker. Por una explicación más d
 <template>
   <div class="block">
     <span class="demonstration">Default</span>
-    <el-date-picker
+    <my-date-picker
       v-model="value1"
       type="datetime"
       placeholder="Select date and time">
-    </el-date-picker>
+    </my-date-picker>
   </div>
   <div class="block">
     <span class="demonstration">With shortcuts</span>
-    <el-date-picker
+    <my-date-picker
       v-model="value2"
       type="datetime"
       placeholder="Select date and time"
       :picker-options="pickerOptions">
-    </el-date-picker>
+    </my-date-picker>
   </div>
   <div class="block">
     <span class="demonstration">With default time</span>
-    <el-date-picker
+    <my-date-picker
       v-model="value3"
       type="datetime"
       placeholder="Select date and time"
       default-time="12:00:00">
-    </el-date-picker>
+    </my-date-picker>
   </div>
 </template>
 
@@ -85,17 +85,17 @@ DateTimePicker se deriva de DatePicker y TimePicker. Por una explicación más d
 <template>
   <div class="block">
     <span class="demonstration">Default</span>
-    <el-date-picker
+    <my-date-picker
       v-model="value1"
       type="datetimerange"
       range-separator="To"
       start-placeholder="Start date"
       end-placeholder="End date">
-    </el-date-picker>
+    </my-date-picker>
   </div>
   <div class="block">
     <span class="demonstration">With shortcuts</span>
-    <el-date-picker
+    <my-date-picker
       v-model="value2"
       type="datetimerange"
       :picker-options="pickerOptions"
@@ -103,7 +103,7 @@ DateTimePicker se deriva de DatePicker y TimePicker. Por una explicación más d
       start-placeholder="Start date"
       end-placeholder="End date"
       align="right">
-    </el-date-picker>
+    </my-date-picker>
   </div>
 </template>
 
@@ -154,24 +154,24 @@ DateTimePicker se deriva de DatePicker y TimePicker. Por una explicación más d
 <template>
   <div class="block">
     <span class="demonstration">Start date time 12:00:00</span>
-    <el-date-picker
+    <my-date-picker
       v-model="value1"
       type="datetimerange"
       start-placeholder="Start Date"
       end-placeholder="End Date"
       :default-time="['12:00:00']">
-    </el-date-picker>
+    </my-date-picker>
   </div>
   <div class="block">
     <span class="demonstration">Start date time 12:00:00, end date time 08:00:00</span>
-    <el-date-picker
+    <my-date-picker
       v-model="value2"
       type="datetimerange"
       align="right"
       start-placeholder="Start Date"
       end-placeholder="End Date"
       :default-time="['12:00:00', '08:00:00']">
-    </el-date-picker>
+    </my-date-picker>
   </div>
 </template>
 

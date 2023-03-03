@@ -10,12 +10,12 @@
 
 ```html
 <template>
-  <el-tabs v-model="activeName" @tab-click="handleClick">
-    <el-tab-pane label="用户管理" name="first">用户管理</el-tab-pane>
-    <el-tab-pane label="配置管理" name="second">配置管理</el-tab-pane>
-    <el-tab-pane label="角色管理" name="third">角色管理</el-tab-pane>
-    <el-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</el-tab-pane>
-  </el-tabs>
+  <my-tabs v-model="activeName" @tab-click="handleClick">
+    <my-tab-pane label="用户管理" name="first">用户管理</my-tab-pane>
+    <my-tab-pane label="配置管理" name="second">配置管理</my-tab-pane>
+    <my-tab-pane label="角色管理" name="third">角色管理</my-tab-pane>
+    <my-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</my-tab-pane>
+  </my-tabs>
 </template>
 <script>
   export default {
@@ -42,12 +42,12 @@
 
 ```html
 <template>
-  <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
-    <el-tab-pane label="用户管理" name="first">用户管理</el-tab-pane>
-    <el-tab-pane label="配置管理" name="second">配置管理</el-tab-pane>
-    <el-tab-pane label="角色管理" name="third">角色管理</el-tab-pane>
-    <el-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</el-tab-pane>
-  </el-tabs>
+  <my-tabs v-model="activeName" type="card" @tab-click="handleClick">
+    <my-tab-pane label="用户管理" name="first">用户管理</my-tab-pane>
+    <my-tab-pane label="配置管理" name="second">配置管理</my-tab-pane>
+    <my-tab-pane label="角色管理" name="third">角色管理</my-tab-pane>
+    <my-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</my-tab-pane>
+  </my-tabs>
 </template>
 <script>
   export default {
@@ -72,12 +72,12 @@
 
 :::demo 将`type`设置为`border-card`。
 ```html
-<el-tabs type="border-card">
-  <el-tab-pane label="用户管理">用户管理</el-tab-pane>
-  <el-tab-pane label="配置管理">配置管理</el-tab-pane>
-  <el-tab-pane label="角色管理">角色管理</el-tab-pane>
-  <el-tab-pane label="定时任务补偿">定时任务补偿</el-tab-pane>
-</el-tabs>
+<my-tabs type="border-card">
+  <my-tab-pane label="用户管理">用户管理</my-tab-pane>
+  <my-tab-pane label="配置管理">配置管理</my-tab-pane>
+  <my-tab-pane label="角色管理">角色管理</my-tab-pane>
+  <my-tab-pane label="定时任务补偿">定时任务补偿</my-tab-pane>
+</my-tabs>
 ```
 :::
 
@@ -89,19 +89,19 @@
 
 ```html
 <template>
-  <el-radio-group v-model="tabPosition" style="margin-bottom: 30px;">
-    <el-radio-button label="top">top</el-radio-button>
-    <el-radio-button label="right">right</el-radio-button>
-    <el-radio-button label="bottom">bottom</el-radio-button>
-    <el-radio-button label="left">left</el-radio-button>
-  </el-radio-group>
+  <my-radio-group v-model="tabPosition" style="margin-bottom: 30px;">
+    <my-radio-button label="top">top</my-radio-button>
+    <my-radio-button label="right">right</my-radio-button>
+    <my-radio-button label="bottom">bottom</my-radio-button>
+    <my-radio-button label="left">left</my-radio-button>
+  </my-radio-group>
 
-  <el-tabs :tab-position="tabPosition" style="height: 200px;">
-    <el-tab-pane label="用户管理">用户管理</el-tab-pane>
-    <el-tab-pane label="配置管理">配置管理</el-tab-pane>
-    <el-tab-pane label="角色管理">角色管理</el-tab-pane>
-    <el-tab-pane label="定时任务补偿">定时任务补偿</el-tab-pane>
-  </el-tabs>
+  <my-tabs :tab-position="tabPosition" style="height: 200px;">
+    <my-tab-pane label="用户管理">用户管理</my-tab-pane>
+    <my-tab-pane label="配置管理">配置管理</my-tab-pane>
+    <my-tab-pane label="角色管理">角色管理</my-tab-pane>
+    <my-tab-pane label="定时任务补偿">定时任务补偿</my-tab-pane>
+  </my-tabs>
 </template>
 <script>
   export default {
@@ -121,15 +121,15 @@
 
 :::demo
 ```html
-<el-tabs type="border-card">
-  <el-tab-pane>
+<my-tabs type="border-card">
+  <my-tab-pane>
     <span slot="label"><i class="el-icon-date"></i> 我的行程</span>
     我的行程
-  </el-tab-pane>
-  <el-tab-pane label="消息中心">消息中心</el-tab-pane>
-  <el-tab-pane label="角色管理">角色管理</el-tab-pane>
-  <el-tab-pane label="定时任务补偿">定时任务补偿</el-tab-pane>
-</el-tabs>
+  </my-tab-pane>
+  <my-tab-pane label="消息中心">消息中心</my-tab-pane>
+  <my-tab-pane label="角色管理">角色管理</my-tab-pane>
+  <my-tab-pane label="定时任务补偿">定时任务补偿</my-tab-pane>
+</my-tabs>
 ```
 :::
 
@@ -139,16 +139,16 @@
 
 :::demo
 ```html
-<el-tabs v-model="editableTabsValue" type="card" editable @edit="handleTabsEdit">
-  <el-tab-pane
+<my-tabs v-model="editableTabsValue" type="card" editable @edit="handleTabsEdit">
+  <my-tab-pane
     :key="item.name"
     v-for="(item, index) in editableTabs"
     :label="item.title"
     :name="item.name"
   >
     {{item.content}}
-  </el-tab-pane>
-</el-tabs>
+  </my-tab-pane>
+</my-tabs>
 <script>
   export default {
     data() {
@@ -206,23 +206,23 @@
 :::demo
 ```html
 <div style="margin-bottom: 20px;">
-  <el-button
+  <my-button
     size="small"
     @click="addTab(editableTabsValue)"
   >
     add tab
-  </el-button>
+  </my-button>
 </div>
-<el-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
-  <el-tab-pane
+<my-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
+  <my-tab-pane
     v-for="(item, index) in editableTabs"
     :key="item.name"
     :label="item.title"
     :name="item.name"
   >
     {{item.content}}
-  </el-tab-pane>
-</el-tabs>
+  </my-tab-pane>
+</my-tabs>
 <script>
   export default {
     data() {

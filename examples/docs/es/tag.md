@@ -7,11 +7,11 @@ Se utiliza para marcar y seleccionar.
 :::demo Utilice el atributo `type` para definir el tipo de etiqueta. Además, el atributo `color` se puede utilizar para establecer el color de fondo de la etiqueta.
 
 ```html
-<el-tag>Tag 1</el-tag>
-<el-tag type="success">Tag 2</el-tag>
-<el-tag type="info">Tag 3</el-tag>
-<el-tag type="warning">Tag 4</el-tag>
-<el-tag type="danger">Tag 5</el-tag>
+<my-tag>Tag 1</my-tag>
+<my-tag type="success">Tag 2</my-tag>
+<my-tag type="info">Tag 3</my-tag>
+<my-tag type="warning">Tag 4</my-tag>
+<my-tag type="danger">Tag 5</my-tag>
 ```
 :::
 
@@ -20,13 +20,13 @@ Se utiliza para marcar y seleccionar.
 :::demo el atributo `closable` puede usarse para definir una etiqueta removible. Acepta un `Boolean`. De forma predeterminada, la eliminación de la etiqueta tiene una animación que se desvanece. Si no quiere usarlo, puede configurar el atributo `disable-transitions` , que acepta `Boolean`, como `true`. Se dispara el evento `close` cuando la etiqueta es removida. 
 
 ```html
-<el-tag
+<my-tag
   v-for="tag in tags"
   :key="tag.name"
   closable
   :type="tag.type">
   {{tag.name}}
-</el-tag>
+</my-tag>
 
 <script>
   export default {
@@ -52,15 +52,15 @@ Puede utilizar el evento `close` para añadir y eliminar etiquetas dinámicament
 
 :::demo
 ```html
-<el-tag
+<my-tag
   :key="tag"
   v-for="tag in dynamicTags"
   closable
   :disable-transitions="false"
   @close="handleClose(tag)">
   {{tag}}
-</el-tag>
-<el-input
+</my-tag>
+<my-input
   class="input-new-tag"
   v-if="inputVisible"
   v-model="inputValue"
@@ -69,8 +69,8 @@ Puede utilizar el evento `close` para añadir y eliminar etiquetas dinámicament
   @keyup.enter.native="handleInputConfirm"
   @blur="handleInputConfirm"
 >
-</el-input>
-<el-button v-else class="button-new-tag" size="small" @click="showInput">+ New Tag</el-button>
+</my-input>
+<my-button v-else class="button-new-tag" size="small" @click="showInput">+ New Tag</my-button>
 
 <style>
   .el-tag + .el-tag {
@@ -132,10 +132,10 @@ Además del tamaño predeterminado, el componente Tag proporciona tres tamaños 
 :::demo Utilice el atributo `size` para establecer tamaños adicionales con `medium`, `small` o `mini`.
 
 ```html
-<el-tag>Default</el-tag>
-<el-tag size="medium">Medium</el-tag>
-<el-tag size="small">Small</el-tag>
-<el-tag size="mini">Mini</el-tag>
+<my-tag>Default</my-tag>
+<my-tag size="medium">Medium</my-tag>
+<my-tag size="small">Small</my-tag>
+<my-tag size="mini">Mini</my-tag>
 ```
 :::
 
@@ -147,23 +147,23 @@ Tag tiene tres diferentes temas: `dark`、`light` y `plain`
 ```html
 <div class="tag-group">
   <span class="tag-group__title">Dark</span>
-  <el-tag
+  <my-tag
     v-for="item in items"
     :key="item.label"
     :type="item.type"
     effect="dark">
     {{ item.label }}
-  </el-tag>
+  </my-tag>
 </div>
 <div class="tag-group">
   <span class="tag-group__title">Plain</span>
-  <el-tag
+  <my-tag
     v-for="item in items"
     :key="item.label"
     :type="item.type"
     effect="plain">
     {{ item.label }}
-  </el-tag>
+  </my-tag>
 </div>
 
 <script>

@@ -10,19 +10,19 @@ Presenta una serie de imágenes o textos en un espacio limitado
 <template>
   <div class="block">
     <span class="demonstration">Switch when indicator is hovered (default)</span>
-    <el-carousel height="150px">
-      <el-carousel-item v-for="item in 4" :key="item">
+    <my-carousel height="150px">
+      <my-carousel-item v-for="item in 4" :key="item">
         <h3 class="small">{{ item }}</h3>
-      </el-carousel-item>
-    </el-carousel>
+      </my-carousel-item>
+    </my-carousel>
   </div>
   <div class="block">
     <span class="demonstration">Switch when indicator is clicked</span>
-    <el-carousel trigger="click" height="150px">
-      <el-carousel-item v-for="item in 4" :key="item">
+    <my-carousel trigger="click" height="150px">
+      <my-carousel-item v-for="item in 4" :key="item">
         <h3 class="small">{{ item }}</h3>
-      </el-carousel-item>
-    </el-carousel>
+      </my-carousel-item>
+    </my-carousel>
   </div>
 </template>
 
@@ -54,11 +54,11 @@ Los indicadores de paginación pueden mostrarse fuera del carrusel
 
 ```html
 <template>
-  <el-carousel indicator-position="outside">
-    <el-carousel-item v-for="item in 4" :key="item">
+  <my-carousel indicator-position="outside">
+    <my-carousel-item v-for="item in 4" :key="item">
       <h3>{{ item }}</h3>
-    </el-carousel-item>
-  </el-carousel>
+    </my-carousel-item>
+  </my-carousel>
 </template>
 
 <style>
@@ -89,11 +89,11 @@ Puede definir cuando se visualizan las flechas
 
 ```html
 <template>
-  <el-carousel :interval="5000" arrow="always">
-    <el-carousel-item v-for="item in 4" :key="item">
+  <my-carousel :interval="5000" arrow="always">
+    <my-carousel-item v-for="item in 4" :key="item">
       <h3>{{ item }}</h3>
-    </el-carousel-item>
-  </el-carousel>
+    </my-carousel-item>
+  </my-carousel>
 </template>
 
 <style>
@@ -124,11 +124,11 @@ Cuando una página es suficientemente ancha pero tiene una altura limitada, pued
 
 ```html
 <template>
-  <el-carousel :interval="4000" type="card" height="200px">
-    <el-carousel-item v-for="item in 6" :key="item">
+  <my-carousel :interval="4000" type="card" height="200px">
+    <my-carousel-item v-for="item in 6" :key="item">
       <h3 class="medium">{{ item }}</h3>
-    </el-carousel-item>
-  </el-carousel>
+    </my-carousel-item>
+  </my-carousel>
 </template>
 
 <style>
@@ -156,11 +156,11 @@ Por defecto, `direction` es `horizontal`. El carousel puede ser mostrado de form
 :::demo
 ```html
 <template>
-  <el-carousel height="200px" direction="vertical" :autoplay="false">
-    <el-carousel-item v-for="item in 4" :key="item">
+  <my-carousel height="200px" direction="vertical" :autoplay="false">
+    <my-carousel-item v-for="item in 4" :key="item">
       <h3 class="medium">{{ item }}</h3>
-    </el-carousel-item>
-  </el-carousel>
+    </my-carousel-item>
+  </my-carousel>
 </template>
 
 <style>

@@ -130,12 +130,12 @@
         }
 
         return (
-          <el-checkbox
+          <my-checkbox
             value={ node.checked }
             indeterminate={ node.indeterminate }
             disabled={ isDisabled }
             { ...events }
-          ></el-checkbox>
+          ></my-checkbox>
         );
       },
 
@@ -148,7 +148,7 @@
         }
 
         return (
-          <el-radio
+          <my-radio
             value={ checkedValue }
             label={ value }
             disabled={ isDisabled }
@@ -156,7 +156,7 @@
             nativeOnClick={ stopPropagation }>
             {/* add an empty element to avoid render label */}
             <span></span>
-          </el-radio>
+          </my-radio>
         );
       },
 

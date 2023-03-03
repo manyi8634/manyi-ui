@@ -10,18 +10,18 @@ There are two ways to expand child option items.
 ```html
 <div class="block">
   <span class="demonstration">Child options expand when clicked (default)</span>
-  <el-cascader
+  <my-cascader
     v-model="value"
     :options="options"
-    @change="handleChange"></el-cascader>
+    @change="handleChange"></my-cascader>
 </div>
 <div class="block">
   <span class="demonstration">Child options expand when hovered</span>
-  <el-cascader
+  <my-cascader
     v-model="value"
     :options="options"
     :props="{ expandTrigger: 'hover' }"
-    @change="handleChange"></el-cascader>
+    @change="handleChange"></my-cascader>
 </div>
 
 <script>
@@ -242,7 +242,7 @@ Disable an option by setting a `disabled` field in the option object.
 
 :::demo In this example, the first item in `options` array has a `disabled: true` field, so it is disabled. By default, Cascader checks the `disabled` field in each option object; if you are using another field name to indicate whether an option is disabled, you can assign it in the `props.disabled` attribute (see the API table below for details). And of course, field name `value`, `label` and `children` can also be customized in the same way.
 ```html
-<el-cascader :options="options"></el-cascader>
+<my-cascader :options="options"></my-cascader>
 
 <script>
   export default {
@@ -457,7 +457,7 @@ Set `clearable` attribute for `el-cascader` and a clear icon will appear when se
 
 :::demo
 ```html
-<el-cascader :options="options" clearable></el-cascader>
+<my-cascader :options="options" clearable></my-cascader>
 
 <script>
   export default {
@@ -671,7 +671,7 @@ The input can display only the last level instead of all levels.
 
 :::demo The `show-all-levels` attribute defines if all levels are displayed. If it is `false`, only the last level is displayed.
 ```html
-<el-cascader :options="options" :show-all-levels="false"></el-cascader>
+<my-cascader :options="options" :show-all-levels="false"></my-cascader>
 <script>
   export default {
     data() {
@@ -886,18 +886,18 @@ Set `props.multiple = true` to use multiple selection.
 ```html
 <div class="block">
   <span class="demonstration">Display all tags (default)</span>
-  <el-cascader
+  <my-cascader
     :options="options"
     :props="props"
-    clearable></el-cascader>
+    clearable></my-cascader>
 </div>
 <div class="block">
   <span class="demonstration">Collapse tags</span>
-  <el-cascader
+  <my-cascader
     :options="options"
     :props="props"
     collapse-tags
-    clearable></el-cascader>
+    clearable></my-cascader>
 </div>
 
 <script>
@@ -990,17 +990,17 @@ In single selection, only the leaf nodes can be checked, and in multiple selecti
 ```html
 <div class="block">
   <span class="demonstration">Select any level of options (Single selection)</span>
-  <el-cascader
+  <my-cascader
     :options="options"
     :props="{ checkStrictly: true }"
-    clearable></el-cascader>
+    clearable></my-cascader>
 </div>
 <div class="block">
   <span class="demonstration">Select any level of options (Multiple selection)</span>
-  <el-cascader
+  <my-cascader
     :options="options"
     :props="{ multiple: true, checkStrictly: true }"
-    clearable></el-cascader>
+    clearable></my-cascader>
 </div>
 
 <script>
@@ -1215,7 +1215,7 @@ Dynamic load its child nodes when checked a node.
 
 :::demo Set `lazy = true` to use dynamic loading, and you have to specify how to load the data source by `lazyload`. There are two parameters of `lazyload`,the first parameter `node` is the node currently clicked, and the `resolve` is a callback that indicate loading is finished which must invoke. To display the status of node more accurately, you can add a `leaf` field (can be modified by `props.leaf`) to indicate whether it is a leaf node. Otherwise, it will be inferred by if has any child nodes.
 ```html
-<el-cascader :props="props"></el-cascader>
+<my-cascader :props="props"></my-cascader>
 
 <script>
   let id = 0;
@@ -1254,18 +1254,18 @@ Search and select options with a keyword.
 ```html
 <div class="block">
   <span class="demonstration">Filterable (Single selection)</span>
-  <el-cascader
+  <my-cascader
     placeholder="Try searchingL Guide"
     :options="options"
-    filterable></el-cascader>
+    filterable></my-cascader>
 </div>
 <div class="block">
   <span class="demonstration">Filterable (Multiple selection)</span>
-  <el-cascader
+  <my-cascader
     placeholder="Try searchingL Guide"
     :options="options"
     :props="{ multiple: true }"
-    filterable></el-cascader>
+    filterable></my-cascader>
 </div>
 
 <script>
@@ -1480,12 +1480,12 @@ You can customize the content of cascader node.
 
 :::demo You can customize the content of cascader node by `scoped slot`. You'll have access to `node` and `data` in the scope,  standing for the Node object and node data of the current node respectively。
 ```html
-<el-cascader :options="options">
+<my-cascader :options="options">
   <template slot-scope="{ node, data }">
     <span>{{ data.label }}</span>
     <span v-if="!node.isLeaf"> ({{ data.children.length }}) </span>
   </template>
-</el-cascader>
+</my-cascader>
 
 <script>
   export default {
@@ -1699,7 +1699,7 @@ You can customize the content of cascader node.
 
 :::demo Just like `el-cascader`, you can set alternative options by `options`, and enable other features by `props`, see the API form below for details.
 ```html
-<el-cascader-panel :options="options"></el-cascader-panel>
+<my-cascader-panel :options="options"></my-cascader-panel>
 
 <script>
   export default {

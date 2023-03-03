@@ -11,7 +11,7 @@ Séparer le texte de deux paragraphes.
 <template>
   <div>
     <span>Je suis assis à ma fenêtre ce matin où le monde, tel un passant, s’arrête un instant, me fait signe de la tête et part.</span>
-    <el-divider></el-divider>
+    <my-divider></my-divider>
     <span>Les petites pensées sont le bruissement des feuilles; ils ont leur murmure de joie dans mon esprit.</span>
   </div>
 </template>
@@ -27,11 +27,11 @@ Vous ajouter du contenu dans la ligne de séparation.
 <template>
   <div>
     <span>Vous ne voyez pas ce que vous êtes, ce que vous voyez est votre ombre.</span>
-    <el-divider content-position="left">Rabindranath Tagore</el-divider>
+    <my-divider content-position="left">Rabindranath Tagore</my-divider>
     <span>Je ne peux pas choisir le meilleur. Le meilleur me choisit.</span>
-    <el-divider><i class="el-icon-star-on"></i></el-divider>
+    <my-divider><i class="el-icon-star-on"></i></my-divider>
     <span>Mes souhaits sont des imbéciles, ils crient à travers ta chanson, mon Maître. Laisse-moi mais écoute.</span>
-    <el-divider content-position="right">Rabindranath Tagore</el-divider>
+    <my-divider content-position="right">Rabindranath Tagore</my-divider>
   </div>
 </template>
 ```
@@ -44,9 +44,9 @@ Vous ajouter du contenu dans la ligne de séparation.
 <template>
   <div>
     <span>Pluie</span>
-    <el-divider direction="vertical"></el-divider>
+    <my-divider direction="vertical"></my-divider>
     <span>Maison</span>
-    <el-divider direction="vertical"></el-divider>
+    <my-divider direction="vertical"></my-divider>
     <span>Herbe</span>
   </div>
 </template>

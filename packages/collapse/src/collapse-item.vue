@@ -28,7 +28,7 @@
         </i>
       </div>
     </div>
-    <el-collapse-transition>
+    <my-collapse-transition>
       <div
         class="el-collapse-item__wrap"
         v-show="isActive"
@@ -41,7 +41,7 @@
           <slot></slot>
         </div>
       </div>
-    </el-collapse-transition>
+    </my-collapse-transition>
   </div>
 </template>
 <script>

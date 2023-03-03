@@ -8,14 +8,14 @@ Utile lorsqu'il faut sélectionner des options parmi un large choix, affiché gr
 
 ```html
 <template>
-  <el-select v-model="value" placeholder="Select">
-    <el-option
+  <my-select v-model="value" placeholder="Select">
+    <my-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value">
-    </el-option>
-  </el-select>
+    </my-option>
+  </my-select>
 </template>
 
 <script>
@@ -52,15 +52,15 @@ Utile lorsqu'il faut sélectionner des options parmi un large choix, affiché gr
 
 ```html
 <template>
-  <el-select v-model="value" placeholder="Select">
-    <el-option
+  <my-select v-model="value" placeholder="Select">
+    <my-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value"
       :disabled="item.disabled">
-    </el-option>
-  </el-select>
+    </my-option>
+  </my-select>
 </template>
 
 <script>
@@ -99,14 +99,14 @@ Vous pouvez désactiver le composant lui-même.
 :::demo Ajoutez `disabled` à `el-select` pour le désactiver.
 ```html
 <template>
-  <el-select v-model="value" disabled placeholder="Select">
-    <el-option
+  <my-select v-model="value" disabled placeholder="Select">
+    <my-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value">
-    </el-option>
-  </el-select>
+    </my-option>
+  </my-select>
 </template>
 
 <script>
@@ -144,14 +144,14 @@ Vous pouvez ajouter un bouton pour effacer la sélection.
 :::demo Ajoutez l'attribut `clearable` à `el-select` et l'icône de fermeture s'affichera après une sélection. Notez que `clearable` ne marche qu'avec les sélecteurs à choix unique.
 ```html
 <template>
-  <el-select v-model="value" clearable placeholder="Select">
-    <el-option
+  <my-select v-model="value" clearable placeholder="Select">
+    <my-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value">
-    </el-option>
-  </el-select>
+    </my-option>
+  </my-select>
 </template>
 
 <script>
@@ -189,28 +189,28 @@ Les sélecteurs multiples utilisent des tags pour afficher les différentes opti
 :::demo Ajoutez `multiple` à `el-select` pour le changer en sélecteur multiple. La valeur de `v-model` devient un tableau contenant toutes les options. Par défaut les différents choix sont affichés sous forme de tags. Vous pouvez réduire leur nombre en utilisant l'attribut `collapse-tags`.
 ```html
 <template>
-  <el-select v-model="value1" multiple placeholder="Select">
-    <el-option
+  <my-select v-model="value1" multiple placeholder="Select">
+    <my-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value">
-    </el-option>
-  </el-select>
+    </my-option>
+  </my-select>
 
-  <el-select
+  <my-select
     v-model="value2"
     multiple
     collapse-tags
     style="margin-left: 20px;"
     placeholder="Select">
-    <el-option
+    <my-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value">
-    </el-option>
-  </el-select>
+    </my-option>
+  </my-select>
 </template>
 
 <script>
@@ -250,16 +250,16 @@ Vous pouvez définir un template HTML pour l'affichage des options.
 
 ```html
 <template>
-  <el-select v-model="value" placeholder="Select">
-    <el-option
+  <my-select v-model="value" placeholder="Select">
+    <my-option
       v-for="item in cities"
       :key="item.value"
       :label="item.label"
       :value="item.value">
       <span style="float: left">{{ item.label }}</span>
       <span style="float: right; color: #8492a6; font-size: 13px">{{ item.value }}</span>
-    </el-option>
-  </el-select>
+    </my-option>
+  </my-select>
 </template>
 
 <script>
@@ -301,19 +301,19 @@ Vous pouvez définir des groupes pour les options du menu.
 
 ```html
 <template>
-  <el-select v-model="value" placeholder="Select">
-    <el-option-group
+  <my-select v-model="value" placeholder="Select">
+    <my-option-group
       v-for="group in options"
       :key="group.label"
       :label="group.label">
-      <el-option
+      <my-option
         v-for="item in group.options"
         :key="item.value"
         :label="item.label"
         :value="item.value">
-      </el-option>
-    </el-option-group>
-  </el-select>
+      </my-option>
+    </my-option-group>
+  </my-select>
 </template>
 
 <script>
@@ -360,14 +360,14 @@ Vous pouvez ajouter un mode de filtrage pour trouver les options désirées plus
 :::demo Ajoutez `filterable` à `el-select` pour activer le filtrage. Par défaut, Select cherchera les options dont le `label` contient la valeur du filtre. Si vous préférez une autre stratégie de filtrage, utilisez `filter-method`. C'est une `Function` qui est appelée quand la valeur change, avec pour paramètre la valeur courante.
 ```html
 <template>
-  <el-select v-model="value" filterable placeholder="Select">
-    <el-option
+  <my-select v-model="value" filterable placeholder="Select">
+    <my-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value">
-    </el-option>
-  </el-select>
+    </my-option>
+  </my-select>
 </template>
 
 <script>
@@ -406,7 +406,7 @@ Vous pouvez aller chercher les options sur le serveur de manière dynamique.
 
 ```html
 <template>
-  <el-select
+  <my-select
     v-model="value"
     multiple
     filterable
@@ -415,13 +415,13 @@ Vous pouvez aller chercher les options sur le serveur de manière dynamique.
     placeholder="Entrez un mot-clé"
     :remote-method="remoteMethod"
     :loading="loading">
-    <el-option
+    <my-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value">
-    </el-option>
-  </el-select>
+    </my-option>
+  </my-select>
 </template>
 
 <script>
@@ -484,20 +484,20 @@ Vous pouvez entrer des choix dans le champ de sélection qui ne sont pas incluse
 :::demo En utilisant `allow-create`, peuvent créer de nouveaux choix en les entrant dans le champ d'input. Cette option ne marche que si `filterable` est activé. Cette exemple montre aussi `default-first-option`, qui permet de sélectionner la première option en pressant Entrée sans avoir à utiliser la souris ou le clavier.
 ```html
 <template>
-  <el-select
+  <my-select
     v-model="value"
     multiple
     filterable
     allow-create
     default-first-option
     placeholder="Choisissez les tags de vos articles">
-    <el-option
+    <my-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value">
-    </el-option>
-  </el-select>
+    </my-option>
+  </my-select>
 </template>
 
 <script>

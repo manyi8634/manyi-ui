@@ -12,23 +12,23 @@ La valeur est affichée lorsque le slider est utilisé.
 <template>
   <div class="block">
     <span class="demonstration">Valeur par défaut</span>
-    <el-slider v-model="value1"></el-slider>
+    <my-slider v-model="value1"></my-slider>
   </div>
   <div class="block">
     <span class="demonstration">Valeur initiale personnalisée</span>
-    <el-slider v-model="value2"></el-slider>
+    <my-slider v-model="value2"></my-slider>
   </div>
   <div class="block">
     <span class="demonstration">Pas de tooltip</span>
-    <el-slider v-model="value3" :show-tooltip="false"></el-slider>
+    <my-slider v-model="value3" :show-tooltip="false"></my-slider>
   </div>
   <div class="block">
     <span class="demonstration">Tooltip formatté</span>
-    <el-slider v-model="value4" :format-tooltip="formatTooltip"></el-slider>
+    <my-slider v-model="value4" :format-tooltip="formatTooltip"></my-slider>
   </div>
   <div class="block">
     <span class="demonstration">Désactivé</span>
-    <el-slider v-model="value5" disabled></el-slider>
+    <my-slider v-model="value5" disabled></my-slider>
   </div>
 </template>
 
@@ -63,18 +63,18 @@ Les valeurs peuvent être discrètes.
 <template>
   <div class="block">
     <span class="demonstration">Points absents</span>
-    <el-slider
+    <my-slider
       v-model="value1"
       :step="10">
-    </el-slider>
+    </my-slider>
   </div>
   <div class="block">
     <span class="demonstration">Points affichés</span>
-    <el-slider
+    <my-slider
       v-model="value2"
       :step="10"
       show-stops>
-    </el-slider>
+    </my-slider>
   </div>
 </template>
 
@@ -100,10 +100,10 @@ Vous pouvez afficher un champ d'input synchronisé pour entrer une valeur préci
 ```html
 <template>
   <div class="block">
-    <el-slider
+    <my-slider
       v-model="value"
       show-input>
-    </el-slider>
+    </my-slider>
   </div>
 </template>
 
@@ -127,12 +127,12 @@ Vous pouvez sélectionner des intervalles de valeurs au lieu d'une valeur unique
 ```html
 <template>
   <div class="block">
-    <el-slider
+    <my-slider
       v-model="value"
       range
       show-stops
       :max="10">
-    </el-slider>
+    </my-slider>
   </div>
 </template>
 
@@ -154,11 +154,11 @@ Vous pouvez sélectionner des intervalles de valeurs au lieu d'une valeur unique
 ```html
 <template>
   <div class="block">
-    <el-slider
+    <my-slider
       v-model="value"
       vertical
       height="200px">
-    </el-slider>
+    </my-slider>
   </div>
 </template>
 
@@ -178,11 +178,11 @@ Vous pouvez sélectionner des intervalles de valeurs au lieu d'une valeur unique
 ```html
 <template>
   <div class="block">
-    <el-slider
+    <my-slider
       v-model="value"
       range
       :marks="marks">
-    </el-slider>
+    </my-slider>
   </div>
 </template>
 

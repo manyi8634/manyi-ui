@@ -29,14 +29,14 @@ export const cellStarts = {
 export const cellForced = {
   selection: {
     renderHeader: function(h, { store }) {
-      return <el-checkbox
+      return <my-checkbox
         disabled={ store.states.data && store.states.data.length === 0 }
         indeterminate={ store.states.selection.length > 0 && !this.isAllSelected }
         on-input={ this.toggleAllSelection }
         value={ this.isAllSelected } />;
     },
     renderCell: function(h, { row, column, isSelected, store, $index }) {
-      return <el-checkbox
+      return <my-checkbox
         nativeOn-click={ (event) => event.stopPropagation() }
         value={ isSelected }
         disabled={ column.selectable ? !column.selectable.call(null, row, $index) : false }

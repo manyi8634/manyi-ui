@@ -8,16 +8,16 @@ Muestra un mensaje de notificación global en una esquina de la página.
 
 ```html
 <template>
-  <el-button
+  <my-button
     plain
     @click="open1">
     Closes automatically
-  </el-button>
-  <el-button
+  </my-button>
+  <my-button
     plain
     @click="open2">
     Won't close automatically
-    </el-button>
+    </my-button>
 </template>
 
 <script>
@@ -53,26 +53,26 @@ Proporcionamos cuatro tipos: success, warning, info y error.
 
 ```html
 <template>
-  <el-button
+  <my-button
     plain
     @click="open1">
     Success
-  </el-button>
-  <el-button
+  </my-button>
+  <my-button
     plain
     @click="open2">
     Warning
-  </el-button>
-  <el-button
+  </my-button>
+  <my-button
     plain
     @click="open3">
     Info
-  </el-button>
-  <el-button
+  </my-button>
+  <my-button
     plain
     @click="open4">
     Error
-  </el-button>
+  </my-button>
 </template>
 
 <script>
@@ -121,26 +121,26 @@ La notificación puede surgir de cualquier rincón que uno desee.
 
 ```html
 <template>
-  <el-button
+  <my-button
     plain
     @click="open1">
     Top Right
-  </el-button>
-  <el-button
+  </my-button>
+  <my-button
     plain
     @click="open2">
     Bottom Right
-  </el-button>
-  <el-button
+  </my-button>
+  <my-button
     plain
     @click="open3">
     Bottom Left
-  </el-button>
-  <el-button
+  </my-button>
+  <my-button
     plain
     @click="open4">
     Top Left
-  </el-button>
+  </my-button>
 </template>
 
 <script>
@@ -190,11 +190,11 @@ Personalizar el desplazamiento de notificación desde el borde de la pantalla.
 
 ```html
 <template>
-  <el-button
+  <my-button
     plain
     @click="open">
     Notification with offset
-  </el-button>
+  </my-button>
 </template>
 
 <script>
@@ -220,11 +220,11 @@ Personalizar el desplazamiento de notificación desde el borde de la pantalla.
 
 ```html
 <template>
-  <el-button
+  <my-button
     plain
     @click="open">
     Use HTML String
-  </el-button>
+  </my-button>
 </template>
 
 <script>
@@ -257,11 +257,11 @@ Es posible ocultar el botón de cerrar
 
 ```html
 <template>
-  <el-button
+  <my-button
     plain
     @click="open">
     Hide close button
-    </el-button>
+    </my-button>
 </template>
 
 <script>
@@ -289,7 +289,7 @@ Element ha añadido un método global `$notify` para Vue.prototype. Así que en 
 Importar `Notification`:
 
 ```javascript
-import { Notification } from 'element-ui';
+import { Notification } from 'manyi-ui';
 ```
 
 En este caso, debe llamar a `Notification(options)`. También se han registrado métodos para diferentes tipos, e.j. `Notification.success(options)`. Puede llamar al método `Notification.closeAll()` para cerrar manualmente todas las instancias.

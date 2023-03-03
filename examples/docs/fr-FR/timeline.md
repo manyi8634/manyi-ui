@@ -11,20 +11,20 @@ La timeline peut être divisée en plusieurs activités en ordre ascendant ou de
 <div class="block">
   <div class="radio">
     Order:
-    <el-radio-group v-model="reverse">
-      <el-radio :label="true">Descendant</el-radio>
-      <el-radio :label="false">Ascendant</el-radio>
-    </el-radio-group>
+    <my-radio-group v-model="reverse">
+      <my-radio :label="true">Descendant</my-radio>
+      <my-radio :label="false">Ascendant</my-radio>
+    </my-radio-group>
   </div>
 
-  <el-timeline :reverse="reverse">
-    <el-timeline-item
+  <my-timeline :reverse="reverse">
+    <my-timeline-item
       v-for="(activity, index) in activities"
       :key="index"
       :timestamp="activity.timestamp">
       {{activity.content}}
-    </el-timeline-item>
-  </el-timeline>
+    </my-timeline-item>
+  </my-timeline>
 </div>
 
 <script>
@@ -56,8 +56,8 @@ Vous pouvez personnaliser la taille, la couleur et les icônes de chaque Noeud.
 :::demo
 ```html
 <div class="block">
-  <el-timeline>
-    <el-timeline-item
+  <my-timeline>
+    <my-timeline-item
       v-for="(activity, index) in activities"
       :key="index"
       :icon="activity.icon"
@@ -66,8 +66,8 @@ Vous pouvez personnaliser la taille, la couleur et les icônes de chaque Noeud.
       :size="activity.size"
       :timestamp="activity.timestamp">
       {{activity.content}}
-    </el-timeline-item>
-  </el-timeline>
+    </my-timeline-item>
+  </my-timeline>
 </div>
 
 <script>
@@ -106,26 +106,26 @@ Le timestamp peut être placé au-dessus du contenu lorsque celui-ci est trop ha
 :::demo
 ```html
 <div class="block">
-  <el-timeline>
-    <el-timeline-item timestamp="2018/4/12" placement="top">
-      <el-card>
+  <my-timeline>
+    <my-timeline-item timestamp="2018/4/12" placement="top">
+      <my-card>
         <h4>Mise à jour du template GitHub</h4>
         <p>Commit de Tom le 2018/4/12 20:46</p>
-      </el-card>
-    </el-timeline-item>
-    <el-timeline-item timestamp="2018/4/3" placement="top">
-      <el-card>
+      </my-card>
+    </my-timeline-item>
+    <my-timeline-item timestamp="2018/4/3" placement="top">
+      <my-card>
         <h4>Mise à jour du template GitHub</h4>
         <p>Commit de Tom le 2018/4/3 20:46</p>
-      </el-card>
-    </el-timeline-item>
-    <el-timeline-item timestamp="2018/4/2" placement="top">
-      <el-card>
+      </my-card>
+    </my-timeline-item>
+    <my-timeline-item timestamp="2018/4/2" placement="top">
+      <my-card>
         <h4>Mise à jour du template GitHub</h4>
         <p>Commit de Tom le 2018/4/2 20:46</p>
-      </el-card>
-    </el-timeline-item>
-  </el-timeline>
+      </my-card>
+    </my-timeline-item>
+  </my-timeline>
 </div>
 ```
 :::

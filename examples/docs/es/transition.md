@@ -8,7 +8,7 @@ Puede usar directamente las transiciones incorporadas en Element. Antes de hacer
 ```html
 <template>
   <div>
-    <el-button @click="show = !show">Click Me</el-button>
+    <my-button @click="show = !show">Click Me</my-button>
 
     <div style="display: flex; margin-top: 20px; height: 100px;">
       <transition name="el-fade-in-linear">
@@ -52,7 +52,7 @@ Puede usar directamente las transiciones incorporadas en Element. Antes de hacer
 ```html
 <template>
   <div>
-    <el-button @click="show2 = !show2">Click Me</el-button>
+    <my-button @click="show2 = !show2">Click Me</my-button>
 
     <div style="display: flex; margin-top: 20px; height: 100px;">
       <transition name="el-zoom-in-center">
@@ -103,15 +103,15 @@ Para efectos de colapsado usar el componente `el-collapse-transition`.
 ```html
 <template>
   <div>
-    <el-button @click="show3 = !show3">Click Me</el-button>
+    <my-button @click="show3 = !show3">Click Me</my-button>
 
     <div style="margin-top: 20px; height: 200px;">
-      <el-collapse-transition>
+      <my-collapse-transition>
         <div v-show="show3">
           <div class="transition-box">el-collapse-transition</div>
           <div class="transition-box">el-collapse-transition</div>
         </div>
-      </el-collapse-transition>
+      </my-collapse-transition>
     </div>
   </div>
 </template>
@@ -145,9 +145,9 @@ Para efectos de colapsado usar el componente `el-collapse-transition`.
 
 ```js
 // fade/zoom
-import 'element-ui/lib/theme-chalk/base.css';
+import 'manyi-ui/lib/theme-chalk/base.css';
 // colapsar
-import CollapseTransition from 'element-ui/lib/transitions/collapse-transition';
+import CollapseTransition from 'manyi-ui/lib/transitions/collapse-transition';
 import Vue from 'vue'
 
 Vue.component(CollapseTransition.name, CollapseTransition)

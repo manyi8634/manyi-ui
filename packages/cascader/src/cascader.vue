@@ -12,7 +12,7 @@
     @click="() => toggleDropDownVisible(readonly ? undefined : true)"
     @keydown="handleKeyDown">
 
-    <el-input
+    <my-input
       ref="input"
       v-model="multiple ? presentText : inputValue"
       :size="realSize"
@@ -40,10 +40,10 @@
           ]"
           @click.stop="toggleDropDownVisible()"></i>
       </template>
-    </el-input>
+    </my-input>
 
     <div v-if="multiple" class="el-cascader__tags">
-      <el-tag
+      <my-tag
         v-for="tag in presentTags"
         :key="tag.key"
         type="info"
@@ -53,7 +53,7 @@
         disable-transitions
         @close="deleteTag(tag)">
         <span>{{ tag.text }}</span>
-      </el-tag>
+      </my-tag>
       <input
         v-if="filterable && !isDisabled"
         v-model.trim="inputValue"
@@ -70,7 +70,7 @@
         v-show="dropDownVisible"
         ref="popper"
         :class="['el-popper', 'el-cascader__dropdown', popperClass]">
-        <el-cascader-panel
+        <my-cascader-panel
           ref="panel"
           v-show="!filtering"
           v-model="checkedValue"
@@ -79,8 +79,8 @@
           :border="false"
           :render-label="$scopedSlots.default"
           @expand-change="handleExpandChange"
-          @close="toggleDropDownVisible(false)"></el-cascader-panel>
-        <el-scrollbar
+          @close="toggleDropDownVisible(false)"></my-cascader-panel>
+        <my-scrollbar
           ref="suggestionPanel"
           v-if="filterable"
           v-show="filtering"
@@ -105,7 +105,7 @@
           <slot v-else name="empty">
             <li class="el-cascader__empty-text">{{ t('el.cascader.noMatch') }}</li>
           </slot>
-        </el-scrollbar>
+        </my-scrollbar>
       </div>
     </transition>
   </div>

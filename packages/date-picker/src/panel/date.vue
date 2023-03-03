@@ -20,7 +20,7 @@
         <div class="el-picker-panel__body">
           <div class="el-date-picker__time-header" v-if="showTime">
             <span class="el-date-picker__editor-wrap">
-              <el-input
+              <my-input
                 :placeholder="t('el.datepicker.selectDate')"
                 :value="visibleDate"
                 size="small"
@@ -28,7 +28,7 @@
                 @change="handleVisibleDateChange" />
             </span>
             <span class="el-date-picker__editor-wrap" v-clickoutside="handleTimePickClose">
-              <el-input
+              <my-input
                 ref="input"
                 @focus="timePickerVisible = true"
                 :placeholder="t('el.datepicker.selectTime')"
@@ -122,21 +122,21 @@
       <div
         class="el-picker-panel__footer"
         v-show="footerVisible && currentView === 'date'">
-        <el-button
+        <my-button
           size="mini"
           type="text"
           class="el-picker-panel__link-btn"
           @click="changeToNow"
           v-show="selectionMode !== 'dates'">
           {{ t('el.datepicker.now') }}
-        </el-button>
-        <el-button
+        </my-button>
+        <my-button
           plain
           size="mini"
           class="el-picker-panel__link-btn"
           @click="confirm">
           {{ t('el.datepicker.confirm') }}
-        </el-button>
+        </my-button>
       </div>
     </div>
   </transition>

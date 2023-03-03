@@ -89,34 +89,34 @@ Il y a plusieurs styles de bordure que vous pouvez choisir.
 
 Il y a plusieurs styles de radius que vous pouvez choisir.
 
-<el-row :gutter="12" class="demo-radius">
-  <el-col :span="6" :xs="{span: 12}">
+<my-row :gutter="12" class="demo-radius">
+  <my-col :span="6" :xs="{span: 12}">
     <div class="title">Pas de radius</div>
     <div class="value">border-radius: 0px</div>
     <div class="radius"></div>
-  </el-col>
-  <el-col :span="6" :xs="{span: 12}">
+  </my-col>
+  <my-col :span="6" :xs="{span: 12}">
     <div class="title">Petit radius</div>
     <div class="value">border-radius: {{borderRadiusSmall}}</div>
     <div
       class="radius"
       :style="{ borderRadius: borderRadiusSmall }"
     ></div>
-  </el-col>
-  <el-col :span="6" :xs="{span: 12}">
+  </my-col>
+  <my-col :span="6" :xs="{span: 12}">
     <div class="title">Grand radius</div>
     <div class="value">border-radius: {{borderRadiusBase}}</div>
     <div
       class="radius"
       :style="{ borderRadius: borderRadiusBase }"
     ></div>
-  </el-col>
-  <el-col :span="6" :xs="{span: 12}">
+  </my-col>
+  <my-col :span="6" :xs="{span: 12}">
     <div class="title">Radius rond</div>
     <div class="value">border-radius: 30px</div>
     <div class="radius radius-30"></div>
-  </el-col>
-</el-row>
+  </my-col>
+</my-row>
 
 ### Ombres
 

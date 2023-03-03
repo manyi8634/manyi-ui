@@ -9,24 +9,24 @@
 :::demo 需要设置 `visible` 属性，它的**类型**是 `boolean`,当为 **true** 时显示 Drawer。Drawer 分为两个部分：`title` 和 `body`，`title` 需要具名为 **title** 的 `slot`, 也可以通过 `title` 属性来定义，默认值为空。需要注意的是, Drawer 默认是从右往左打开, 当然可以设置对应的 `direction`, 详细请参考 `direction` 用法 最后，本例还展示了 `before-close` 的用法
 
 ```html
-<el-radio-group v-model="direction">
-  <el-radio label="ltr">从左往右开</el-radio>
-  <el-radio label="rtl">从右往左开</el-radio>
-  <el-radio label="ttb">从上往下开</el-radio>
-  <el-radio label="btt">从下往上开</el-radio>
-</el-radio-group>
+<my-radio-group v-model="direction">
+  <my-radio label="ltr">从左往右开</my-radio>
+  <my-radio label="rtl">从右往左开</my-radio>
+  <my-radio label="ttb">从上往下开</my-radio>
+  <my-radio label="btt">从下往上开</my-radio>
+</my-radio-group>
 
-<el-button @click="drawer = true" type="primary" style="margin-left: 16px;">
+<my-button @click="drawer = true" type="primary" style="margin-left: 16px;">
   点我打开
-</el-button>
+</my-button>
 
-<el-drawer
+<my-drawer
   title="我是标题"
   :visible.sync="drawer"
   :direction="direction"
   :before-close="handleClose">
   <span>我来啦!</span>
-</el-drawer>
+</my-drawer>
 
 <script>
   export default {
@@ -57,16 +57,16 @@
 :::demo 当遇到不需要 title 的场景时, 可以通过 `withHeader` 这个属性来关闭掉 title 的显示, 这样可以留出更大的空间给到用户, 为了用户的可访问性, 请务必设定 `title` 的值
 
 ```html
-<el-button @click="drawer = true" type="primary" style="margin-left: 16px;">
+<my-button @click="drawer = true" type="primary" style="margin-left: 16px;">
   点我打开
-</el-button>
+</my-button>
 
-<el-drawer
+<my-drawer
   title="我是标题"
   :visible.sync="drawer"
   :with-header="false">
   <span>我来啦!</span>
-</el-drawer>
+</my-drawer>
 
 <script>
   export default {
@@ -88,21 +88,21 @@
 :::demo
 
 ```html
-<el-button type="text" @click="table = true">打开嵌套表格的 Drawer</el-button>
-<el-button type="text" @click="dialog = true">打开嵌套 Form 的 Drawer</el-button>
-<el-drawer
+<my-button type="text" @click="table = true">打开嵌套表格的 Drawer</my-button>
+<my-button type="text" @click="dialog = true">打开嵌套 Form 的 Drawer</my-button>
+<my-drawer
   title="我嵌套了表格!"
   :visible.sync="table"
   direction="rtl"
   size="50%">
-   <el-table :data="gridData">
-      <el-table-column property="date" label="日期" width="150"></el-table-column>
-      <el-table-column property="name" label="姓名" width="200"></el-table-column>
-      <el-table-column property="address" label="地址"></el-table-column>
-    </el-table>
-</el-drawer>
+   <my-table :data="gridData">
+      <my-table-column property="date" label="日期" width="150"></my-table-column>
+      <my-table-column property="name" label="姓名" width="200"></my-table-column>
+      <my-table-column property="address" label="地址"></my-table-column>
+    </my-table>
+</my-drawer>
 
-<el-drawer
+<my-drawer
   title="我嵌套了 Form !"
   :before-close="handleClose"
   :visible.sync="dialog"
@@ -111,23 +111,23 @@
   ref="drawer"
   >
   <div class="demo-drawer__content">
-    <el-form :model="form">
-      <el-form-item label="活动名称" :label-width="formLabelWidth">
-        <el-input v-model="form.name" autocomplete="off"></el-input>
-      </el-form-item>
-      <el-form-item label="活动区域" :label-width="formLabelWidth">
-        <el-select v-model="form.region" placeholder="请选择活动区域">
-          <el-option label="区域一" value="shanghai"></el-option>
-          <el-option label="区域二" value="beijing"></el-option>
-        </el-select>
-      </el-form-item>
-    </el-form>
+    <my-form :model="form">
+      <my-form-item label="活动名称" :label-width="formLabelWidth">
+        <my-input v-model="form.name" autocomplete="off"></my-input>
+      </my-form-item>
+      <my-form-item label="活动区域" :label-width="formLabelWidth">
+        <my-select v-model="form.region" placeholder="请选择活动区域">
+          <my-option label="区域一" value="shanghai"></my-option>
+          <my-option label="区域二" value="beijing"></my-option>
+        </my-select>
+      </my-form-item>
+    </my-form>
     <div class="demo-drawer__footer">
-      <el-button @click="cancelForm">取 消</el-button>
-      <el-button type="primary" @click="$refs.drawer.closeDrawer()" :loading="loading">{{ loading ? '提交中 ...' : '确 定' }}</el-button>
+      <my-button @click="cancelForm">取 消</my-button>
+      <my-button type="primary" @click="$refs.drawer.closeDrawer()" :loading="loading">{{ loading ? '提交中 ...' : '确 定' }}</my-button>
     </div>
   </div>
-</el-drawer>
+</my-drawer>
 
 <script>
 export default {
@@ -204,25 +204,25 @@ export default {
 
 ```html
 
-<el-button @click="drawer = true" type="primary" style="margin-left: 16px;">
+<my-button @click="drawer = true" type="primary" style="margin-left: 16px;">
   点我打开
-</el-button>
+</my-button>
 
-<el-drawer
+<my-drawer
   title="我是外面的 Drawer"
   :visible.sync="drawer"
   size="50%">
   <div>
-   <el-button @click="innerDrawer = true">打开里面的!</el-button>
-   <el-drawer
+   <my-button @click="innerDrawer = true">打开里面的!</my-button>
+   <my-drawer
      title="我是里面的"
      :append-to-body="true"
      :before-close="handleClose"
      :visible.sync="innerDrawer">
      <p>_(:зゝ∠)_</p>
-   </el-drawer>
+   </my-drawer>
   </div>
-</el-drawer>
+</my-drawer>
 
 <script>
   export default {

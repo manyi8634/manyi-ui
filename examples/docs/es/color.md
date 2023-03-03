@@ -97,8 +97,8 @@ Element utiliza un conjunto de paletas para especificar colores, y así, proporc
 
 El color principal de Element es el azul brillante y amigable.
 
-<el-row :gutter="12">
-  <el-col :span="10" :xs="{span: 12}">
+<my-row :gutter="12">
+  <my-col :span="10" :xs="{span: 12}">
     <div 
       class="demo-color-box"
       :style="{ background: primary }"
@@ -117,15 +117,15 @@ El color principal de Element es el azul brillante y amigable.
     </div>
     </div>
     </div>
-  </el-col>
-</el-row>
+  </my-col>
+</my-row>
 
 ### Color secundario
 
 Además del color principal, se necesitan utilizar distintos colores para diferentes escenarios (por ejemplo, el color en tono rojo indica una operación peligrosa).
 
-<el-row :gutter="12">
-  <el-col :span="6" :xs="{span: 12}">
+<my-row :gutter="12">
+  <my-col :span="6" :xs="{span: 12}">
     <div class="demo-color-box"
     :style="{ background: success }"
     >Success<div class="value">#67C23A</div>
@@ -141,8 +141,8 @@ Además del color principal, se necesitan utilizar distintos colores para difere
         </div>
       </div>
     </div>
-  </el-col>
-  <el-col :span="6" :xs="{span: 12}">
+  </my-col>
+  <my-col :span="6" :xs="{span: 12}">
     <div class="demo-color-box"
     :style="{ background: warning }"
     >Warning<div class="value">#E6A23C</div>
@@ -158,8 +158,8 @@ Además del color principal, se necesitan utilizar distintos colores para difere
         </div>
       </div>
     </div>
-  </el-col>
-  <el-col :span="6" :xs="{span: 12}">
+  </my-col>
+  <my-col :span="6" :xs="{span: 12}">
     <div class="demo-color-box"
     :style="{ background: danger }"
     >Danger<div class="value">#F56C6C</div>
@@ -175,8 +175,8 @@ Además del color principal, se necesitan utilizar distintos colores para difere
         </div>
       </div>
     </div>
-  </el-col>
-  <el-col :span="6" :xs="{span: 12}">
+  </my-col>
+  <my-col :span="6" :xs="{span: 12}">
     <div class="demo-color-box"
     :style="{ background: info }"
     >Info<div class="value">#909399</div>
@@ -192,15 +192,15 @@ Además del color principal, se necesitan utilizar distintos colores para difere
         </div>
       </div>
     </div>
-  </el-col>
-</el-row>
+  </my-col>
+</my-row>
 
 ### Color neutro
 
 Los colores neutrales son para texto, fondos y bordes. Puede usar diferentes colores neutrales para representar una estructura jerárquica.
 
-<el-row :gutter="12">
-  <el-col :span="6" :xs="{span: 12}">
+<my-row :gutter="12">
+  <my-col :span="6" :xs="{span: 12}">
     <div class="demo-color-box-group">
       <div class="demo-color-box demo-color-box-other"
       :style="{ background: textPrimary }"
@@ -216,8 +216,8 @@ Los colores neutrales son para texto, fondos y bordes. Puede usar diferentes col
       :style="{ background: textPlaceholder }"
       >Texto de placeholder<div class="value">{{textPlaceholder}}</div></div>
     </div>
-  </el-col>
-  <el-col :span="6" :xs="{span: 12}">
+  </my-col>
+  <my-col :span="6" :xs="{span: 12}">
     <div class="demo-color-box-group">
       <div class="demo-color-box demo-color-box-other demo-color-box-lite"
       :style="{ background: borderBase }"
@@ -232,8 +232,8 @@ Los colores neutrales son para texto, fondos y bordes. Puede usar diferentes col
       :style="{ background: borderExtraLight }"
       >Borde extra claro<div class="value">{{borderExtraLight}}</div></div>
     </div>
-  </el-col>
-  <el-col :span="6" :xs="{span: 12}">
+  </my-col>
+  <my-col :span="6" :xs="{span: 12}">
     <div class="demo-color-box-group">
       <div 
       class="demo-color-box demo-color-box-other"
@@ -246,5 +246,5 @@ Los colores neutrales son para texto, fondos y bordes. Puede usar diferentes col
       <div class="demo-color-box demo-color-box-other bg-transparent">Transparent<div class="value">Transparent</div>
       </div>
     </div>
-  </el-col>
-</el-row>
+  </my-col>
+</my-row>

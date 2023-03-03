@@ -183,6 +183,7 @@ const install = function(Vue, opts = {}) {
   locale.i18n(opts.i18n);
 
   components.forEach(component => {
+    component.name = 'My' + component.name.slice(2);
     Vue.component(component.name, component);
   });
 

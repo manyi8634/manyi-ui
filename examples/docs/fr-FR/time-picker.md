@@ -8,7 +8,7 @@ Vous pouvez fournir une liste d'horaires fixés pour que l'utilisateur en choisi
 
 :::demo Utilisez `el-time-select` puis assignez un horaire de début, de fin et un pas grâce aux propriétés `start`, `end` et `step` de l'attribut `picker-options`.
 ```html
-<el-time-select
+<my-time-select
   v-model="value"
   :picker-options="{
     start: '08:30',
@@ -16,7 +16,7 @@ Vous pouvez fournir une liste d'horaires fixés pour que l'utilisateur en choisi
     end: '18:30'
   }"
   placeholder="Choisissez un horaire">
-</el-time-select>
+</my-time-select>
 
 <script>
   export default {
@@ -38,21 +38,21 @@ Vous pouvez aussi laisser l'utilisateur choisir librement un horaire.
 
 ```html
 <template>
-  <el-time-picker
+  <my-time-picker
     v-model="value1"
     :picker-options="{
       selectableRange: '18:30:00 - 20:30:00'
     }"
     placeholder="Horaire libre">
-  </el-time-picker>
-  <el-time-picker
+  </my-time-picker>
+  <my-time-picker
     arrow-control
     v-model="value2"
     :picker-options="{
       selectableRange: '18:30:00 - 20:30:00'
     }"
     placeholder="Horaire libre">
-  </el-time-picker>
+  </my-time-picker>
 </template>
 
 <script>
@@ -75,7 +75,7 @@ Vous pouvez définir un intervalle de temps. Si l'horaire de début est sélecti
 :::demo
 ```html
 <template>
-  <el-time-select
+  <my-time-select
     placeholder="Horaire de début"
     v-model="startTime"
     :picker-options="{
@@ -83,8 +83,8 @@ Vous pouvez définir un intervalle de temps. Si l'horaire de début est sélecti
       step: '00:15',
       end: '18:30'
     }">
-  </el-time-select>
-  <el-time-select
+  </my-time-select>
+  <my-time-select
     placeholder="Horaire de fin"
     v-model="endTime"
     :picker-options="{
@@ -93,7 +93,7 @@ Vous pouvez définir un intervalle de temps. Si l'horaire de début est sélecti
       end: '18:30',
       minTime: startTime
     }">
-  </el-time-select>
+  </my-time-select>
 </template>
 
 <script>
@@ -116,21 +116,21 @@ Vous pouvez également définir un intervalle libre.
 :::demo Ajoutez l'attribut `is-range`. L'attribut `arrow-control` est aussi supporté dans ce mode.
 ```html
 <template>
-  <el-time-picker
+  <my-time-picker
     is-range
     v-model="value1"
     range-separator="To"
     start-placeholder="Horaire de début"
     end-placeholder="Horaire de fin">
-  </el-time-picker>
-  <el-time-picker
+  </my-time-picker>
+  <my-time-picker
     is-range
     arrow-control
     v-model="value2"
     range-separator="To"
     start-placeholder="Horaire de début"
     end-placeholder="Horaire de fin">
-  </el-time-picker>
+  </my-time-picker>
 </template>
 
 <script>
@@ -159,8 +159,8 @@ Vous pouvez également définir un intervalle libre.
 | placeholder | Placeholder en mode non-intervalle. | string | — | — |
 | start-placeholder | Placeholder de l'horaire de début en mode intervalle. | string | — | — |
 | end-placeholder | Placeholder de l'horaire de fin en mode intervalle. | string | — | — |
-| is-range | Si le mode intervalle est activé, marche avec `<el-time-picker>`. | boolean | — | false |
-| arrow-control | Si les flèches directionnelles peuvent être utilisées, marche avec `<el-time-picker>`. | boolean | — | false |
+| is-range | Si le mode intervalle est activé, marche avec `<my-time-picker>`. | boolean | — | false |
+| arrow-control | Si les flèches directionnelles peuvent être utilisées, marche avec `<my-time-picker>`. | boolean | — | false |
 | align | Alignement. | left / center / right | left |
 | popper-class | Classe du menu du TimePicker. | string | — | — |
 | picker-options | Options additionnelles, voir la table ci-dessous. | object | — | {} |

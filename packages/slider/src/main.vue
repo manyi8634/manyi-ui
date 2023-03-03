@@ -8,7 +8,7 @@
     :aria-orientation="vertical ? 'vertical': 'horizontal'"
     :aria-disabled="sliderDisabled"
   >
-    <el-input-number
+    <my-input-number
       v-model="firstValue"
       v-if="showInput && !range"
       class="el-slider__input"
@@ -21,7 +21,7 @@
       :max="max"
       :debounce="debounce"
       :size="inputSize">
-    </el-input-number>
+    </my-input-number>
     <div
       class="el-slider__runway"
       :class="{ 'show-input': showInput, 'disabled': sliderDisabled }"

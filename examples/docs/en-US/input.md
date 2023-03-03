@@ -16,7 +16,7 @@ Do not support `v-model` modifiers.
 :::demo
 
 ```html
-<el-input placeholder="Please input" v-model="input"></el-input>
+<my-input placeholder="Please input" v-model="input"></my-input>
 
 <script>
 export default {
@@ -35,11 +35,11 @@ export default {
 :::demo Disable the Input with the `disabled` attribute.
 
 ```html
-<el-input
+<my-input
   placeholder="Please input"
   v-model="input"
   :disabled="true">
-</el-input>
+</my-input>
 
 <script>
 export default {
@@ -58,11 +58,11 @@ export default {
 :::demo Make the Input clearable with the `clearable` attribute.
 
 ```html
-<el-input
+<my-input
   placeholder="Please input"
   v-model="input"
   clearable>
-</el-input>
+</my-input>
 
 <script>
 export default {
@@ -81,7 +81,7 @@ export default {
 :::demo Make a toggleable password Input with the `show-password` attribute.
 
 ```html
-<el-input placeholder="Please input password" v-model="input" show-password></el-input>
+<my-input placeholder="Please input password" v-model="input" show-password></my-input>
 
 <script>
   export default {
@@ -103,29 +103,29 @@ Add an icon to indicate input type.
 ```html
 <div class="demo-input-suffix">
   <span class="demo-input-label">Using attributes</span>
-  <el-input
+  <my-input
     placeholder="Pick a date"
     suffix-icon="el-icon-date"
     v-model="input1">
-  </el-input>
-  <el-input
+  </my-input>
+  <my-input
     placeholder="Type something"
     prefix-icon="el-icon-search"
     v-model="input2">
-  </el-input>
+  </my-input>
 </div>
 <div class="demo-input-suffix">
   <span class="demo-input-label">Using slots</span>
-  <el-input
+  <my-input
     placeholder="Pick a date"
     v-model="input3">
     <i slot="suffix" class="el-input__icon el-icon-date"></i>
-  </el-input>
-  <el-input
+  </my-input>
+  <my-input
     placeholder="Type something"
     v-model="input4">
     <i slot="prefix" class="el-input__icon el-icon-search"></i>
-  </el-input>
+  </my-input>
 </div>
 
 <style>
@@ -157,12 +157,12 @@ Resizable for entering multiple lines of text information. Add attribute `type="
 :::demo Control the height by setting the `rows` prop.
 
 ```html
-<el-input
+<my-input
   type="textarea"
   :rows="2"
   placeholder="Please input"
   v-model="textarea">
-</el-input>
+</my-input>
 
 <script>
 export default {
@@ -183,19 +183,19 @@ Setting the `autosize` prop for a textarea type of Input makes the height to aut
 :::demo
 
 ```html
-<el-input
+<my-input
   type="textarea"
   autosize
   placeholder="Please input"
   v-model="textarea1">
-</el-input>
+</my-input>
 <div style="margin: 20px 0;"></div>
-<el-input
+<my-input
   type="textarea"
   :autosize="{ minRows: 2, maxRows: 4}"
   placeholder="Please input"
   v-model="textarea2">
-</el-input>
+</my-input>
 
 <script>
 export default {
@@ -218,24 +218,24 @@ Prepend or append an element, generally a label or a button.
 
 ```html
 <div>
-  <el-input placeholder="Please input" v-model="input1">
+  <my-input placeholder="Please input" v-model="input1">
     <template slot="prepend">Http://</template>
-  </el-input>
+  </my-input>
 </div>
 <div style="margin-top: 15px;">
-  <el-input placeholder="Please input" v-model="input2">
+  <my-input placeholder="Please input" v-model="input2">
     <template slot="append">.com</template>
-  </el-input>
+  </my-input>
 </div>
 <div style="margin-top: 15px;">
-  <el-input placeholder="Please input" v-model="input3" class="input-with-select">
-    <el-select v-model="select" slot="prepend" placeholder="Select">
-      <el-option label="Restaurant" value="1"></el-option>
-      <el-option label="Order No." value="2"></el-option>
-      <el-option label="Tel" value="3"></el-option>
-    </el-select>
-    <el-button slot="append" icon="el-icon-search"></el-button>
-  </el-input>
+  <my-input placeholder="Please input" v-model="input3" class="input-with-select">
+    <my-select v-model="select" slot="prepend" placeholder="Select">
+      <my-option label="Restaurant" value="1"></my-option>
+      <my-option label="Order No." value="2"></my-option>
+      <my-option label="Tel" value="3"></my-option>
+    </my-select>
+    <my-button slot="append" icon="el-icon-search"></my-button>
+  </my-input>
 </div>
 
 <style>
@@ -266,25 +266,25 @@ export default {
 :::demo Add `size` attribute to change the size of Input. In addition to the default size, there are three other options: `large`, `small` and `mini`.
 ```html
 <div class="demo-input-size">
-  <el-input
+  <my-input
     placeholder="Please Input"
     v-model="input1">
-  </el-input>
-  <el-input
+  </my-input>
+  <my-input
     size="medium"
     placeholder="Please Input"
     v-model="input2">
-  </el-input>
-  <el-input
+  </my-input>
+  <my-input
     size="small"
     placeholder="Please Input"
     v-model="input3">
-  </el-input>
-  <el-input
+  </my-input>
+  <my-input
     size="mini"
     placeholder="Please Input"
     v-model="input4">
-  </el-input>
+  </my-input>
 </div>
 
 <script>
@@ -308,29 +308,29 @@ You can get some recommended tips based on the current input.
 
 :::demo Autocomplete component provides input suggestions. The `fetch-suggestions` attribute is a method that returns suggested input. In this example, `querySearch(queryString, cb)` returns suggestions to Autocomplete via `cb(data)` when suggestions are ready.
 ```html
-<el-row class="demo-autocomplete">
-  <el-col :span="12">
+<my-row class="demo-autocomplete">
+  <my-col :span="12">
     <div class="sub-title">list suggestions when activated</div>
-    <el-autocomplete
+    <my-autocomplete
       class="inline-input"
       v-model="state1"
       :fetch-suggestions="querySearch"
       placeholder="Please Input"
       @select="handleSelect"
-    ></el-autocomplete>
-  </el-col>
-  <el-col :span="12">
+    ></my-autocomplete>
+  </my-col>
+  <my-col :span="12">
     <div class="sub-title">list suggestions on input</div>
-    <el-autocomplete
+    <my-autocomplete
       class="inline-input"
       v-model="state2"
       :fetch-suggestions="querySearch"
       placeholder="Please Input"
       :trigger-on-focus="false"
       @select="handleSelect"
-    ></el-autocomplete>
-  </el-col>
-</el-row>
+    ></my-autocomplete>
+  </my-col>
+</my-row>
 <script>
   export default {
     data() {
@@ -381,7 +381,7 @@ Customize how suggestions are displayed.
 
 :::demo Use `scoped slot` to customize suggestion items. In the scope, you can access the suggestion object via the `item` key.
 ```html
-<el-autocomplete
+<my-autocomplete
   popper-class="my-autocomplete"
   v-model="state"
   :fetch-suggestions="querySearch"
@@ -396,7 +396,7 @@ Customize how suggestions are displayed.
     <div class="value">{{ item.value }}</div>
     <span class="link">{{ item.link }}</span>
   </template>
-</el-autocomplete>
+</my-autocomplete>
 
 <style>
   .my-autocomplete {
@@ -468,12 +468,12 @@ Search data from server-side.
 
 :::demo
 ```html
-<el-autocomplete
+<my-autocomplete
   v-model="state"
   :fetch-suggestions="querySearchAsync"
   placeholder="Please input"
   @select="handleSelect"
-></el-autocomplete>
+></my-autocomplete>
 <script>
   export default {
     data() {
@@ -526,23 +526,23 @@ Search data from server-side.
 :::demo `maxlength` and `minlength` are attributes of native input, they declare a limit on the number of characters a user can input. The "number of characters" is measured using JavaScript string length.Setting the `maxlength` prop for a text or textarea type of Input can limit the length of input value, allows you to show word count by setting `show-word-limit` to `true` at the same time.
 
 ```html
-<el-input
+<my-input
   type="text"
   placeholder="Please input"
   v-model="text"
   maxlength="10"
   show-word-limit
 >
-</el-input>
+</my-input>
 <div style="margin: 20px 0;"></div>
-<el-input
+<my-input
   type="textarea"
   placeholder="Please input"
   v-model="textarea"
   maxlength="30"
   show-word-limit
 >
-</el-input>
+</my-input>
 
 <script>
 export default {

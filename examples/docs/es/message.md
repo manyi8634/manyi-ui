@@ -10,8 +10,8 @@ Se muestra en la parte superior de la pagina y desaparece después de 3 segundos
 
 ```html
 <template>
-  <el-button :plain="true" @click="open">Show message</el-button>
-  <el-button :plain="true" @click="openVn">VNode</el-button>
+  <my-button :plain="true" @click="open">Show message</my-button>
+  <my-button :plain="true" @click="openVn">VNode</my-button>
 </template>
 
 <script>
@@ -43,10 +43,10 @@ Utilizados para mostrar retroalimentación de Success, Warning, Message y Error 
 :::demo Cuando necesite mas personalización, el componente Message también puede tomar un objeto como parámetro. Por ejemplo, estableciendo el valor de `type` puede definir diferentes tipos, el predeterminado es `info`. En tales casos el cuerpo principal se pasa como el valor de `message`. También, hay registrados métodos para los diferentes tipos, así que, puedes llamarlos sin necesidad de pasar un tipo como `open4`.
 ```html
 <template>
-  <el-button :plain="true" @click="open2">success</el-button>
-  <el-button :plain="true" @click="open3">warning</el-button>
-  <el-button :plain="true" @click="open1">message</el-button>
-  <el-button :plain="true" @click="open4">error</el-button>
+  <my-button :plain="true" @click="open2">success</my-button>
+  <my-button :plain="true" @click="open3">warning</my-button>
+  <my-button :plain="true" @click="open1">message</my-button>
+  <my-button :plain="true" @click="open4">error</my-button>
 </template>
 
 <script>
@@ -85,10 +85,10 @@ Un botón para cerrar que puede ser agregado.
 :::demo Un componente Message predeterminado no se puede cerrar manualmente. Si necesitas un componente message que pueda cerrarse, puedes establecer el campo `showClose`. Ademas, al igual que las notificaciones, message tiene un atributo `duration` que puede ser controlado. Por defecto la duración es de 3000 ms, y no desaparecerá al llegar a `0`.
 ```html
 <template>
-  <el-button :plain="true" @click="open1">message</el-button>
-  <el-button :plain="true" @click="open2">success</el-button>
-  <el-button :plain="true" @click="open3">warning</el-button>
-  <el-button :plain="true" @click="open4">error</el-button>
+  <my-button :plain="true" @click="open1">message</my-button>
+  <my-button :plain="true" @click="open2">success</my-button>
+  <my-button :plain="true" @click="open3">warning</my-button>
+  <my-button :plain="true" @click="open4">error</my-button>
 </template>
 
 <script>
@@ -137,7 +137,7 @@ Utiliza el atributo `center` para centrar el texto.
 
 ```html
 <template>
-  <el-button :plain="true" @click="openCenter">Centered text</el-button>
+  <my-button :plain="true" @click="openCenter">Centered text</my-button>
 </template>
 
 <script>
@@ -162,7 +162,7 @@ Utiliza el atributo `center` para centrar el texto.
 
 ```html
 <template>
-  <el-button :plain="true" @click="openHTML">Use HTML String</el-button>
+  <my-button :plain="true" @click="openHTML">Use HTML String</my-button>
 </template>
 
 <script>
@@ -193,7 +193,7 @@ Element ha agregado un método global llamado `$message` para Vue.prototype. Ent
 Import `Message`:
 
 ```javascript
-import { Message } from 'element-ui';
+import { Message } from 'manyi-ui';
 ```
 
 En este caso debería llamar al método `Message(options)`. También se han registrado métodos para los diferentes tipos, e.g. `Message.success(options)`. Puede llamar al método `Message.closeAll()` para cerrar manualmente todas las instancias.

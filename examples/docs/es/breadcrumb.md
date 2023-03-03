@@ -8,12 +8,12 @@ Muestra la localización de la página actual, haciendo más fácil el poder ir 
 :::demo En `el-breadcrumb`, cada `el-breadcrumb-item` es un tag que representa cada nivel empezando desde la homepage. Este componente tiene un atributo `String` llamado `separator`, el mismo determina el carácter separador. El valor por defecto es '/'.
 
 ```html
-<el-breadcrumb separator="/">
-  <el-breadcrumb-item :to="{ path: '/' }">homepage</el-breadcrumb-item>
-  <el-breadcrumb-item><a href="/">promotion management</a></el-breadcrumb-item>
-  <el-breadcrumb-item>promotion list</el-breadcrumb-item>
-  <el-breadcrumb-item>promotion detail</el-breadcrumb-item>
-</el-breadcrumb>
+<my-breadcrumb separator="/">
+  <my-breadcrumb-item :to="{ path: '/' }">homepage</my-breadcrumb-item>
+  <my-breadcrumb-item><a href="/">promotion management</a></my-breadcrumb-item>
+  <my-breadcrumb-item>promotion list</my-breadcrumb-item>
+  <my-breadcrumb-item>promotion detail</my-breadcrumb-item>
+</my-breadcrumb>
 ```
 :::
 
@@ -22,12 +22,12 @@ Muestra la localización de la página actual, haciendo más fácil el poder ir 
 :::demo Setee `separator-class` para que utilice `iconfont` como separador，el mismo va a cubrir `separator`
 
 ```html
-<el-breadcrumb separator-class="el-icon-arrow-right">
-  <el-breadcrumb-item :to="{ path: '/' }">homepage</el-breadcrumb-item>
-  <el-breadcrumb-item>promotion management</el-breadcrumb-item>
-  <el-breadcrumb-item>promotion list</el-breadcrumb-item>
-  <el-breadcrumb-item>promotion detail</el-breadcrumb-item>
-</el-breadcrumb>
+<my-breadcrumb separator-class="el-icon-arrow-right">
+  <my-breadcrumb-item :to="{ path: '/' }">homepage</my-breadcrumb-item>
+  <my-breadcrumb-item>promotion management</my-breadcrumb-item>
+  <my-breadcrumb-item>promotion list</my-breadcrumb-item>
+  <my-breadcrumb-item>promotion detail</my-breadcrumb-item>
+</my-breadcrumb>
 ```
 :::
 

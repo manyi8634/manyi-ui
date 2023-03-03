@@ -9,13 +9,13 @@ Barra de pasos simple.
 :::demo Defina el atributo `active` con un valor de tipo `Number`, que indica el índice de pasos y comienza desde 0. Puede definir el atributo `space` cuando es necesario fijar el ancho del paso que acepta el tipo `Number`. La unidad del atributo `space` es px. Si no está configurado, es responsive. La configuración del atributo `finish-status` puede cambiar el estado de los pasos completados.
 
 ```html
-<el-steps :active="active" finish-status="success">
-  <el-step title="Step 1"></el-step>
-  <el-step title="Step 2"></el-step>
-  <el-step title="Step 3"></el-step>
-</el-steps>
+<my-steps :active="active" finish-status="success">
+  <my-step title="Step 1"></my-step>
+  <my-step title="Step 2"></my-step>
+  <my-step title="Step 3"></my-step>
+</my-steps>
 
-<el-button style="margin-top: 12px;" @click="next">Next step</el-button>
+<my-button style="margin-top: 12px;" @click="next">Next step</my-button>
 
 <script>
   export default {
@@ -42,11 +42,11 @@ Muestra el estado del step para cada paso.
 :::demo Utilice el atributo `title` para establecer el nombre del paso, o sobrescriba el atributo usando un slot con nombre. Hemos enumerado todos los nombres de slots al final de esta página.
 
 ```html
-<el-steps :space="200" :active="1" finish-status="success">
-  <el-step title="Done"></el-step>
-  <el-step title="Processing"></el-step>
-  <el-step title="Step 3"></el-step>
-</el-steps>
+<my-steps :space="200" :active="1" finish-status="success">
+  <my-step title="Done"></my-step>
+  <my-step title="Processing"></my-step>
+  <my-step title="Step 3"></my-step>
+</my-steps>
 ```
 :::
 
@@ -56,12 +56,12 @@ El título y la descripción pueden estar centrados.
 
 :::demo
 ```html
-<el-steps :active="2" align-center>
-  <el-step title="Step 1" description="Some description"></el-step>
-  <el-step title="Step 2" description="Some description"></el-step>
-  <el-step title="Step 3" description="Some description"></el-step>
-  <el-step title="Step 4" description="Some description"></el-step>
-</el-steps>
+<my-steps :active="2" align-center>
+  <my-step title="Step 1" description="Some description"></my-step>
+  <my-step title="Step 2" description="Some description"></my-step>
+  <my-step title="Step 3" description="Some description"></my-step>
+  <my-step title="Step 4" description="Some description"></my-step>
+</my-steps>
 ```
 :::
 
@@ -71,11 +71,11 @@ Puede poner una descripción para cada paso.
 
 :::demo
 ```html
-<el-steps :active="1">
-  <el-step title="Step 1" description="Some description"></el-step>
-  <el-step title="Step 2" description="Some description"></el-step>
-  <el-step title="Step 3" description="Some description"></el-step>
-</el-steps>
+<my-steps :active="1">
+  <my-step title="Step 1" description="Some description"></my-step>
+  <my-step title="Step 2" description="Some description"></my-step>
+  <my-step title="Step 3" description="Some description"></my-step>
+</my-steps>
 ```
 :::
 
@@ -86,11 +86,11 @@ En la barra de pasos se pueden utilizar diversos iconos personalizados.
 :::demo El icono se define mediante la propiedad `icon`. Los tipos de iconos se pueden encontrar en la descripción del componente Icono. Además, puede personalizar el icono a través de un slot con nombre.
 
 ```html
-<el-steps :active="1">
-  <el-step title="Step 1" icon="el-icon-edit"></el-step>
-  <el-step title="Step 2" icon="el-icon-upload"></el-step>
-  <el-step title="Step 3" icon="el-icon-picture"></el-step>
-</el-steps>
+<my-steps :active="1">
+  <my-step title="Step 1" icon="el-icon-edit"></my-step>
+  <my-step title="Step 2" icon="el-icon-upload"></my-step>
+  <my-step title="Step 3" icon="el-icon-picture"></my-step>
+</my-steps>
 ```
 :::
 
@@ -102,11 +102,11 @@ Step bar vertical.
 
 ```html
 <div style="height: 300px;">
-  <el-steps direction="vertical" :active="1">
-    <el-step title="Step 1"></el-step>
-    <el-step title="Step 2"></el-step>
-    <el-step title="Step 3"></el-step>
-  </el-steps>
+  <my-steps direction="vertical" :active="1">
+    <my-step title="Step 1"></my-step>
+    <my-step title="Step 2"></my-step>
+    <my-step title="Step 3"></my-step>
+  </my-steps>
 </div>
 ```
 :::
@@ -117,17 +117,17 @@ Step bar simple, donde se ignorará `align-center`, `description`, `direction` y
 :::demo
 ```html
 
-<el-steps :space="200" :active="1" simple>
-  <el-step title="Step 1" icon="el-icon-edit"></el-step>
-  <el-step title="Step 2" icon="el-icon-upload"></el-step>
-  <el-step title="Step 3" icon="el-icon-picture"></el-step>
-</el-steps>
+<my-steps :space="200" :active="1" simple>
+  <my-step title="Step 1" icon="el-icon-edit"></my-step>
+  <my-step title="Step 2" icon="el-icon-upload"></my-step>
+  <my-step title="Step 3" icon="el-icon-picture"></my-step>
+</my-steps>
 
-<el-steps :active="1" finish-status="success" simple style="margin-top: 20px">
-  <el-step title="Step 1" ></el-step>
-  <el-step title="Step 2" ></el-step>
-  <el-step title="Step 3" ></el-step>
-</el-steps>
+<my-steps :active="1" finish-status="success" simple style="margin-top: 20px">
+  <my-step title="Step 1" ></my-step>
+  <my-step title="Step 2" ></my-step>
+  <my-step title="Step 3" ></my-step>
+</my-steps>
 ```
 :::
 

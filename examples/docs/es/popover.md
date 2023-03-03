@@ -8,43 +8,43 @@ Similar a un Tooltip, Popover está construido con `Vue-popper`. Así que para a
 
 ```html
 <template>
-  <el-popover
+  <my-popover
     placement="top-start"
     title="Title"
     width="200"
     trigger="hover"
     content="this is content, this is content, this is content">
-    <el-button slot="reference">Hover to activate</el-button>
-  </el-popover>
+    <my-button slot="reference">Hover to activate</my-button>
+  </my-popover>
 
-  <el-popover
+  <my-popover
     placement="bottom"
     title="Title"
     width="200"
     trigger="click"
     content="this is content, this is content, this is content">
-    <el-button slot="reference">Click to activate</el-button>
-  </el-popover>
+    <my-button slot="reference">Click to activate</my-button>
+  </my-popover>
 
-  <el-popover
+  <my-popover
     ref="popover"
     placement="right"
     title="Title"
     width="200"
     trigger="focus"
     content="this is content, this is content, this is content">
-  </el-popover>
-  <el-button v-popover:popover>Focus to activate</el-button>
+  </my-popover>
+  <my-button v-popover:popover>Focus to activate</my-button>
 
-  <el-popover
+  <my-popover
     placement="bottom"
     title="Title"
     width="200"
     trigger="manual"
     content="this is content, this is content, this is content"
     v-model="visible">
-    <el-button slot="reference" @click="visible = !visible">Manual to activate</el-button>
-  </el-popover>
+    <my-button slot="reference" @click="visible = !visible">Manual to activate</my-button>
+  </my-popover>
 </template>
 
 <script>
@@ -65,17 +65,17 @@ Otros componentes pueden anidarse dentro de popover. A continuación un ejemplo 
 :::demo Reemplaza el atributo `content` con un `slot`.
 
 ```html
-<el-popover
+<my-popover
   placement="right"
   width="400"
   trigger="click">
-  <el-table :data="gridData">
-    <el-table-column width="150" property="date" label="date"></el-table-column>
-    <el-table-column width="100" property="name" label="name"></el-table-column>
-    <el-table-column width="300" property="address" label="address"></el-table-column>
-  </el-table>
-  <el-button slot="reference">Click to activate</el-button>
-</el-popover>
+  <my-table :data="gridData">
+    <my-table-column width="150" property="date" label="date"></my-table-column>
+    <my-table-column width="100" property="name" label="name"></my-table-column>
+    <my-table-column width="300" property="address" label="address"></my-table-column>
+  </my-table>
+  <my-button slot="reference">Click to activate</my-button>
+</my-popover>
 
 <script>
   export default {
@@ -111,17 +111,17 @@ Por supuesto, puedes anidar otras operaciones. Es más ligero que utilizar un `d
 
 :::demo
 ```html
-<el-popover
+<my-popover
   placement="top"
   width="160"
   v-model="visible">
   <p>Are you sure to delete this?</p>
   <div style="text-align: right; margin: 0">
-    <el-button size="mini" type="text" @click="visible = false">cancel</el-button>
-    <el-button type="primary" size="mini" @click="visible = false">confirm</el-button>
+    <my-button size="mini" type="text" @click="visible = false">cancel</my-button>
+    <my-button type="primary" size="mini" @click="visible = false">confirm</my-button>
   </div>
-  <el-button slot="reference">Delete</el-button>
-</el-popover>
+  <my-button slot="reference">Delete</my-button>
+</my-popover>
 
 <script>
   export default {

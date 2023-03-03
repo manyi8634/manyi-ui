@@ -4,7 +4,7 @@
       <div :class="['el-skeleton', animated ? 'is-animated' : '', ]" v-bind="$attrs">
         <template v-for="i in count">
           <slot v-if="loading" name="template">
-            <el-skeleton-item
+            <my-skeleton-item
               v-for="item in rows"
               :key="`${i}-${item}`"
               :class="{

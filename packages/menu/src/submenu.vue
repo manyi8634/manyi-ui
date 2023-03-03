@@ -299,7 +299,7 @@
       );
 
       const inlineMenu = (
-        <el-collapse-transition>
+        <my-collapse-transition>
           <ul
             role="menu"
             class="el-menu el-menu--inline"
@@ -307,7 +307,7 @@
             style={{ backgroundColor: rootMenu.backgroundColor || '' }}>
             {$slots.default}
           </ul>
-        </el-collapse-transition>
+        </my-collapse-transition>
       );
 
       const submenuTitleIcon = (

@@ -6,7 +6,7 @@ Carga archivos haciendo clic o arrastrándolos.
 
 :::demo Personalice el tipo y texto del botón utilizando la propiedad `slot`. Defina las propiedades `limit` y `on-exceed` para limitar el número máximo de archivos a subir y especifique un método para cuando el límite ha sido excedido.
 ```html
-<el-upload
+<my-upload
   class="upload-demo"
   action="https://jsonplaceholder.typicode.com/posts/"
   :on-preview="handlePreview"
@@ -15,9 +15,9 @@ Carga archivos haciendo clic o arrastrándolos.
   :limit="3"
   :on-exceed="handleExceed"
   :file-list="fileList">
-  <el-button size="small" type="primary">Clic para subir archivo</el-button>
+  <my-button size="small" type="primary">Clic para subir archivo</my-button>
   <div slot="tip" class="el-upload__tip">Solo archivos jpg/png con un tamaño menor de 500kb</div>
-</el-upload>
+</my-upload>
 <script>
   export default {
     data() {
@@ -47,7 +47,7 @@ Utilice el _hook_ `before-upload` para limitar el formato de archivo y su tamañ
 
 :::demo
 ```html
-<el-upload
+<my-upload
   class="avatar-uploader"
   action="https://jsonplaceholder.typicode.com/posts/"
   :show-file-list="false"
@@ -55,7 +55,7 @@ Utilice el _hook_ `before-upload` para limitar el formato de archivo y su tamañ
   :before-upload="beforeAvatarUpload">
   <img v-if="imageUrl" :src="imageUrl" class="avatar">
   <i v-else class="el-icon-plus avatar-uploader-icon"></i>
-</el-upload>
+</my-upload>
 
 <style>
   .avatar-uploader .el-upload {
@@ -118,16 +118,16 @@ Utilice la propiedad `list-type` para cambiar el estilo a un listado de archivos
 
 :::demo
 ```html
-<el-upload
+<my-upload
   action="https://jsonplaceholder.typicode.com/posts/"
   list-type="picture-card"
   :on-preview="handlePictureCardPreview"
   :on-remove="handleRemove">
   <i class="el-icon-plus"></i>
-</el-upload>
-<el-dialog :visible.sync="dialogVisible">
+</my-upload>
+<my-dialog :visible.sync="dialogVisible">
   <img width="100%" :src="dialogImageUrl" alt="">
-</el-dialog>
+</my-dialog>
 <script>
   export default {
     data() {
@@ -156,7 +156,7 @@ Use el `scoped-slot`  para cambiar el template por defecto del thumbnail.
 
 :::demo
 ```html
-<el-upload
+<my-upload
   action="#"
   list-type="picture-card"
   :auto-upload="false">
@@ -189,10 +189,10 @@ Use el `scoped-slot`  para cambiar el template por defecto del thumbnail.
         </span>
       </span>
     </div>
-</el-upload>
-<el-dialog :visible.sync="dialogVisible">
+</my-upload>
+<my-dialog :visible.sync="dialogVisible">
   <img width="100%" :src="dialogImageUrl" alt="">
-</el-dialog>
+</my-dialog>
 <script>
   export default {
     data() {
@@ -223,16 +223,16 @@ Use el `scoped-slot`  para cambiar el template por defecto del thumbnail.
 
 :::demo
 ```html
-<el-upload
+<my-upload
   class="upload-demo"
   action="https://jsonplaceholder.typicode.com/posts/"
   :on-preview="handlePreview"
   :on-remove="handleRemove"
   :file-list="fileList"
   list-type="picture">
-  <el-button size="small" type="primary">Clic para subir archivo</el-button>
+  <my-button size="small" type="primary">Clic para subir archivo</my-button>
   <div slot="tip" class="el-upload__tip">Solo archivos jpg/png con un tamaño menor de 500kb</div>
-</el-upload>
+</my-upload>
 <script>
   export default {
     data() {
@@ -259,14 +259,14 @@ Utilice el _hook_ `on-change` para controlar la funcionalidad de la lista de arc
 
 :::demo
 ```html
-<el-upload
+<my-upload
   class="upload-demo"
   action="https://jsonplaceholder.typicode.com/posts/"
   :on-change="handleChange"
   :file-list="fileList">
-  <el-button size="small" type="primary">Clic para subir archivo</el-button>
+  <my-button size="small" type="primary">Clic para subir archivo</my-button>
   <div slot="tip" class="el-upload__tip">Solo archivos jpg/png con un tamaño menor de 500kb</div>
-</el-upload>
+</my-upload>
 <script>
   export default {
     data() {
@@ -296,7 +296,7 @@ Puede arrastrar el archivo dentro de un área en especifico para cargar el archi
 
 :::demo
 ```html
-<el-upload
+<my-upload
   class="upload-demo"
   drag
   action="https://jsonplaceholder.typicode.com/posts/"
@@ -307,7 +307,7 @@ Puede arrastrar el archivo dentro de un área en especifico para cargar el archi
   <i class="el-icon-upload"></i>
   <div class="el-upload__text">Suelta tu archivo aquí o <em>haz clic para cargar</em></div>
   <div slot="tip" class="el-upload__tip">Solo archivos jpg/png con un tamaño menor de 500kb</div>
-</el-upload>
+</my-upload>
 ```
 :::
 
@@ -315,15 +315,15 @@ Puede arrastrar el archivo dentro de un área en especifico para cargar el archi
 
 :::demo
 ```html
-<el-upload
+<my-upload
   class="upload-demo"
   ref="upload"
   action="https://jsonplaceholder.typicode.com/posts/"
   :auto-upload="false">
-  <el-button slot="trigger" size="small" type="primary">Selecciona un archivo</el-button>
-  <el-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">Cargar al servidor</el-button>
+  <my-button slot="trigger" size="small" type="primary">Selecciona un archivo</my-button>
+  <my-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">Cargar al servidor</my-button>
   <div slot="tip" class="el-upload__tip">Solo archivos jpg/png con un tamaño menor de 500kb</div>
-</el-upload>
+</my-upload>
 <script>
   export default {
     methods: {

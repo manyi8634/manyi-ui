@@ -14,20 +14,20 @@ Date Picker básico por "día".
 <template>
   <div class="block">
     <span class="demonstration">Default</span>
-    <el-date-picker
+    <my-date-picker
       v-model="value1"
       type="date"
       placeholder="Pick a day">
-    </el-date-picker>
+    </my-date-picker>
   </div>
   <div class="block">
     <span class="demonstration">Picker with quick options</span>
-    <el-date-picker
+    <my-date-picker
       v-model="value2"
       type="date"
       placeholder="Pick a day"
       :picker-options="pickerOptions">
-    </el-date-picker>
+    </my-date-picker>
   </div>
 </template>
 
@@ -80,38 +80,38 @@ Puede elegir la semana, el mes, el año o varias fechas ampliando el componente 
 <div class="container">
   <div class="block">
     <span class="demonstration">Week</span>
-    <el-date-picker
+    <my-date-picker
       v-model="value1"
       type="week"
       format="Week WW"
       placeholder="Pick a week">
-    </el-date-picker>
+    </my-date-picker>
   </div>
   <div class="block">
     <span class="demonstration">Month</span>
-    <el-date-picker
+    <my-date-picker
       v-model="value2"
       type="month"
       placeholder="Pick a month">
-    </el-date-picker>
+    </my-date-picker>
   </div>
 </div>
 <div class="container">
   <div class="block">
     <span class="demonstration">Year</span>
-    <el-date-picker
+    <my-date-picker
       v-model="value3"
       type="year"
       placeholder="Pick a year">
-    </el-date-picker>
+    </my-date-picker>
   </div>
   <div class="block">
     <span class="demonstration">Dates</span>
-    <el-date-picker
+    <my-date-picker
       type="dates"
       v-model="value4"
       placeholder="Pick one or more dates">
-    </el-date-picker>
+    </my-date-picker>
   </div>
 </div>
 
@@ -141,17 +141,17 @@ Se soporta la selección de un rango de fechas.
 <template>
   <div class="block">
     <span class="demonstration">Default</span>
-    <el-date-picker
+    <my-date-picker
       v-model="value1"
       type="daterange"
       range-separator="To"
       start-placeholder="Start date"
       end-placeholder="End date">
-    </el-date-picker>
+    </my-date-picker>
   </div>
   <div class="block">
     <span class="demonstration">With quick options</span>
-    <el-date-picker
+    <my-date-picker
       v-model="value2"
       type="daterange"
       align="right"
@@ -160,7 +160,7 @@ Se soporta la selección de un rango de fechas.
       start-placeholder="Start date"
       end-placeholder="End date"
       :picker-options="pickerOptions">
-    </el-date-picker>
+    </my-date-picker>
   </div>
 </template>
 
@@ -214,17 +214,17 @@ Se admite la selección de un intervalo de un mes.
 <template>
   <div class="block">
     <span class="demonstration">Default</span>
-    <el-date-picker
+    <my-date-picker
       v-model="value1"
       type="monthrange"
       range-separator="To"
       start-placeholder="Start month"
       end-placeholder="End month">
-    </el-date-picker>
+    </my-date-picker>
   </div>
   <div class="block">
     <span class="demonstration">With quick options</span>
-    <el-date-picker
+    <my-date-picker
       v-model="value2"
       type="monthrange"
       align="right"
@@ -233,7 +233,7 @@ Se admite la selección de un intervalo de un mes.
       start-placeholder="Start month"
       end-placeholder="End month"
       :picker-options="pickerOptions">
-    </el-date-picker>
+    </my-date-picker>
   </div>
 </template>
 
@@ -284,23 +284,23 @@ Si el tipo es `daterange`, `default-value` establece el calendario del lado izqu
 <template>
   <div class="block">
     <span class="demonstration">date</span>
-    <el-date-picker
+    <my-date-picker
       v-model="value1"
       type="date"
       placeholder="Pick a date"
       default-value="2010-10-01">
-    </el-date-picker>
+    </my-date-picker>
   </div>
   <div class="block">
     <span class="demonstration">daterange</span>
-    <el-date-picker
+    <my-date-picker
       v-model="value2"
       type="daterange"
       align="right"
       start-placeholder="Start Date"
       end-placeholder="End Date"
       default-value="2010-10-01">
-    </el-date-picker>
+    </my-date-picker>
   </div>
 </template>
 
@@ -354,34 +354,34 @@ Preste atención a la capitalización
   <div class="block">
     <span class="demonstration">Emits Date object</span>
     <div class="demonstration">Value: {{ value1 }}</div>
-    <el-date-picker
+    <my-date-picker
       v-model="value1"
       type="date"
       placeholder="Pick a Date"
       format="yyyy/MM/dd">
-    </el-date-picker>
+    </my-date-picker>
   </div>
   <div class="block">
     <span class="demonstration">Use value-format</span>
     <div class="demonstration">Value: {{ value2 }}</div>
-    <el-date-picker
+    <my-date-picker
       v-model="value2"
       type="date"
       placeholder="Pick a Date"
       format="yyyy/MM/dd"
       value-format="yyyy-MM-dd">
-    </el-date-picker>
+    </my-date-picker>
   </div>
   <div class="block">
     <span class="demonstration">Timestamp</span>
     <div class="demonstration">Value：{{ value3 }}</div>
-    <el-date-picker
+    <my-date-picker
       v-model="value3"
       type="date"
       placeholder="Pick a Date"
       format="yyyy/MM/dd"
       value-format="timestamp">
-    </el-date-picker>
+    </my-date-picker>
   </div>
 </template>
 
@@ -409,13 +409,13 @@ Al seleccionar un intervalo de fechas, puede asignar la hora para la fecha de in
 <template>
   <div class="block">
     <p>Component value：{{ value }}</p>
-    <el-date-picker
+    <my-date-picker
       v-model="value"
       type="daterange"
       start-placeholder="Start date"
       end-placeholder="End date"
       :default-time="['00:00:00', '23:59:59']">
-    </el-date-picker>
+    </my-date-picker>
   </div>
 </template>
 

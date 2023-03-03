@@ -11,7 +11,7 @@ Divide the text of different paragraphs.
 <template>
   <div>
     <span>I sit at my window this morning where the world like a passer-by stops for a moment, nods to me and goes.</span>
-    <el-divider></el-divider>
+    <my-divider></my-divider>
     <span>There little thoughts are the rustle of leaves; they have their whisper of joy in my mind.</span>
   </div>
 </template>
@@ -28,11 +28,11 @@ You can customize the content on the divider line.
 <template>
   <div>
     <span>What you are you do not see, what you see is your shadow. </span>
-    <el-divider content-position="left">Rabindranath Tagore</el-divider>
+    <my-divider content-position="left">Rabindranath Tagore</my-divider>
     <span>I cannot choose the best. The best chooses me.</span>
-    <el-divider><i class="el-icon-star-on"></i></el-divider>
+    <my-divider><i class="el-icon-star-on"></i></my-divider>
     <span>My wishes are fools, they shout across thy song, my Master. Let me but listen.</span>
-    <el-divider content-position="right">Rabindranath Tagore</el-divider>
+    <my-divider content-position="right">Rabindranath Tagore</my-divider>
   </div>
 </template>
 ```
@@ -45,9 +45,9 @@ You can customize the content on the divider line.
 <template>
   <div>
     <span>Rain</span>
-    <el-divider direction="vertical"></el-divider>
+    <my-divider direction="vertical"></my-divider>
     <span>Home</span>
-    <el-divider direction="vertical"></el-divider>
+    <my-divider direction="vertical"></my-divider>
     <span>Grass</span>
   </div>
 </template>

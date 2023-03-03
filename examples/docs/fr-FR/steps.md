@@ -9,13 +9,13 @@ Voici une barre d'étapes basique.
 :::demo Réglez l'attribut `active` avec une variable `Number`, qui indique l'index des étapes et commence à 0. L'attribut `space` permet de déterminer si l'espace entre les étapes doit être fixe à l'aide d'un `Number`. L'unité de `space` est `px`. Si cet attribut est absent, la barre sera responsive. L'attribut `finish-status` change le statut d'accomplissement des étapes.
 
 ```html
-<el-steps :active="active" finish-status="success">
-  <el-step title="Étape 1"></el-step>
-  <el-step title="Étape 2"></el-step>
-  <el-step title="Étape 3"></el-step>
-</el-steps>
+<my-steps :active="active" finish-status="success">
+  <my-step title="Étape 1"></my-step>
+  <my-step title="Étape 2"></my-step>
+  <my-step title="Étape 3"></my-step>
+</my-steps>
 
-<el-button style="margin-top: 12px;" @click="next">Prochaine étape</el-button>
+<my-button style="margin-top: 12px;" @click="next">Prochaine étape</my-button>
 
 <script>
   export default {
@@ -42,11 +42,11 @@ Vous pouvez afficher le statut de chaque étape.
 :::demo Utilisez `title` pour définir le nom de l'étape, ou écrasez cet attribut en utilisant un `slot`. La liste complète des slots se trouve en fin de page.
 
 ```html
-<el-steps :space="200" :active="1" finish-status="success">
-  <el-step title="Terminé"></el-step>
-  <el-step title="En cours"></el-step>
-  <el-step title="Étape 3"></el-step>
-</el-steps>
+<my-steps :space="200" :active="1" finish-status="success">
+  <my-step title="Terminé"></my-step>
+  <my-step title="En cours"></my-step>
+  <my-step title="Étape 3"></my-step>
+</my-steps>
 ```
 :::
 
@@ -56,11 +56,11 @@ Vous pouvez ajouter une description pour chaque étape.
 
 :::demo
 ```html
-<el-steps :active="1">
-  <el-step title="Étape 1" description="Une description"></el-step>
-  <el-step title="Étape 2" description="Une description"></el-step>
-  <el-step title="Étape 3" description="Une description"></el-step>
-</el-steps>
+<my-steps :active="1">
+  <my-step title="Étape 1" description="Une description"></my-step>
+  <my-step title="Étape 2" description="Une description"></my-step>
+  <my-step title="Étape 3" description="Une description"></my-step>
+</my-steps>
 ```
 :::
 
@@ -70,12 +70,12 @@ Le titre et la description peuvent être centrés.
 
 :::demo
 ```html
-<el-steps :active="2" align-center>
-  <el-step title="Étape 1" description="Une description"></el-step>
-  <el-step title="Étape 2" description="Une description"></el-step>
-  <el-step title="Étape 3" description="Une description"></el-step>
-  <el-step title="Étape 4" description="Une description"></el-step>
-</el-steps>
+<my-steps :active="2" align-center>
+  <my-step title="Étape 1" description="Une description"></my-step>
+  <my-step title="Étape 2" description="Une description"></my-step>
+  <my-step title="Étape 3" description="Une description"></my-step>
+  <my-step title="Étape 4" description="Une description"></my-step>
+</my-steps>
 ```
 :::
 
@@ -86,11 +86,11 @@ Une grande variété d'icônes peut être utilisée dans la barre d'étapes.
 :::demo L'icône est ajoutée en utilisant `icon`. Les types d'icônes possibles sont référencés dans la documentation du composant Icon. De plus, vous pouvez utilisé une icône personnalisée en utilisant un `slot`.
 
 ```html
-<el-steps :active="1">
-  <el-step title="Étape 1" icon="el-icon-edit"></el-step>
-  <el-step title="Étape 2" icon="el-icon-upload"></el-step>
-  <el-step title="Étape 3" icon="el-icon-picture"></el-step>
-</el-steps>
+<my-steps :active="1">
+  <my-step title="Étape 1" icon="el-icon-edit"></my-step>
+  <my-step title="Étape 2" icon="el-icon-upload"></my-step>
+  <my-step title="Étape 3" icon="el-icon-picture"></my-step>
+</my-steps>
 ```
 :::
 
@@ -102,11 +102,11 @@ La barre d'étape peut être affichée de manière verticale.
 
 ```html
 <div style="height: 300px;">
-  <el-steps direction="vertical" :active="1">
-    <el-step title="Étape 1"></el-step>
-    <el-step title="Étape 2"></el-step>
-    <el-step title="Étape 3"></el-step>
-  </el-steps>
+  <my-steps direction="vertical" :active="1">
+    <my-step title="Étape 1"></my-step>
+    <my-step title="Étape 2"></my-step>
+    <my-step title="Étape 3"></my-step>
+  </my-steps>
 </div>
 ```
 :::
@@ -118,17 +118,17 @@ La barre peut être simplifiée de manière à ce que `align-center`, `descripti
 :::demo
 ```html
 
-<el-steps :space="200" :active="1" simple>
-  <el-step title="Étape 1" icon="el-icon-edit"></el-step>
-  <el-step title="Étape 2" icon="el-icon-upload"></el-step>
-  <el-step title="Étape 3" icon="el-icon-picture"></el-step>
-</el-steps>
+<my-steps :space="200" :active="1" simple>
+  <my-step title="Étape 1" icon="el-icon-edit"></my-step>
+  <my-step title="Étape 2" icon="el-icon-upload"></my-step>
+  <my-step title="Étape 3" icon="el-icon-picture"></my-step>
+</my-steps>
 
-<el-steps :active="1" finish-status="success" simple style="margin-top: 20px">
-  <el-step title="Étape 1" ></el-step>
-  <el-step title="Étape 2" ></el-step>
-  <el-step title="Étape 3" ></el-step>
-</el-steps>
+<my-steps :active="1" finish-status="success" simple style="margin-top: 20px">
+  <my-step title="Étape 1" ></my-step>
+  <my-step title="Étape 2" ></my-step>
+  <my-step title="Étape 3" ></my-step>
+</my-steps>
 ```
 :::
 

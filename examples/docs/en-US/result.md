@@ -7,36 +7,36 @@ Used to give feedback on the result of user's operation or access exception.
 :::demo
 
 ```html
-<el-row>
-  <el-col :sm="12" :lg="6">
-    <el-result icon="success" title="Success Tip" subTitle="Please follow the instructions">
+<my-row>
+  <my-col :sm="12" :lg="6">
+    <my-result icon="success" title="Success Tip" subTitle="Please follow the instructions">
       <template slot="extra">
-        <el-button type="primary" size="medium">Back</el-button>
+        <my-button type="primary" size="medium">Back</my-button>
       </template>
-    </el-result>
-  </el-col>
-  <el-col :sm="12" :lg="6">
-    <el-result icon="warning" title="Warning Tip" subTitle="Please follow the instructions">
+    </my-result>
+  </my-col>
+  <my-col :sm="12" :lg="6">
+    <my-result icon="warning" title="Warning Tip" subTitle="Please follow the instructions">
       <template slot="extra">
-        <el-button type="primary" size="medium">Back</el-button>
+        <my-button type="primary" size="medium">Back</my-button>
       </template>
-    </el-result>
-  </el-col>
-  <el-col :sm="12" :lg="6">
-    <el-result icon="error" title="Error Tip" subTitle="Please follow the instructions">
+    </my-result>
+  </my-col>
+  <my-col :sm="12" :lg="6">
+    <my-result icon="error" title="Error Tip" subTitle="Please follow the instructions">
       <template slot="extra">
-        <el-button type="primary" size="medium">Back</el-button>
+        <my-button type="primary" size="medium">Back</my-button>
       </template>
-    </el-result>
-  </el-col>
-  <el-col :sm="12" :lg="6">
-    <el-result icon="info" title="Info Tip" subTitle="Please follow the instructions">
+    </my-result>
+  </my-col>
+  <my-col :sm="12" :lg="6">
+    <my-result icon="info" title="Info Tip" subTitle="Please follow the instructions">
       <template slot="extra">
-        <el-button type="primary" size="medium">Back</el-button>
+        <my-button type="primary" size="medium">Back</my-button>
       </template>
-    </el-result>
-  </el-col>
-</el-row>
+    </my-result>
+  </my-col>
+</my-row>
 ```
 
 :::
@@ -46,14 +46,14 @@ Used to give feedback on the result of user's operation or access exception.
 :::demo
 
 ```html
-<el-result title="404" subTitle="Sorry, request error">
+<my-result title="404" subTitle="Sorry, request error">
   <template slot="icon">
-    <el-image src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"></el-image>
+    <my-image src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"></my-image>
   </template>
   <template slot="extra">
-    <el-button type="primary" size="medium">Back</el-button>
+    <my-button type="primary" size="medium">Back</my-button>
   </template>
-</el-result>
+</my-result>
 ```
 
 :::

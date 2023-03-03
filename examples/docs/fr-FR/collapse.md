@@ -8,25 +8,25 @@ Vous pouvez agrandir plusieurs panneaux.
 
 :::demo
 ```html
-<el-collapse v-model="activeNames" @change="handleChange">
-  <el-collapse-item title="Cohérence" name="1">
+<my-collapse v-model="activeNames" @change="handleChange">
+  <my-collapse-item title="Cohérence" name="1">
     <div>Cohérence avec la vraie vie: en accord avec les processus habituels de la vie réelle, conforme aux langages et habitudes des utilisateurs;</div>
     <div>Cohérence au sein de l'interface: tout les éléments doivent être cohérents entre eux et suivre les mêmes règles, par exemple: le style global, les icônes, la position des éléments, etc.</div>
-  </el-collapse-item>
-  <el-collapse-item title="Feedback" name="2">
+  </my-collapse-item>
+  <my-collapse-item title="Feedback" name="2">
     <div>Retour d'expérience: permets aux utilisateurs de percevoir clairement leurs opérations par le biais d'animations et d'effets interactifs.</div>
     <div>Retour visuel: reflète l'état actuel de la page via le réarrangement ou la mise à jour des éléments.</div>
-  </el-collapse-item>
-  <el-collapse-item title="Efficacité" name="3">
+  </my-collapse-item>
+  <my-collapse-item title="Efficacité" name="3">
     <div>Simplifier le processus: garde chaque opération simple et intuitive.;</div>
     <div>Clair et défini: énonce clairement ses intentions afin que l'utilisateur puisse comprendre et prendre une décision rapidement;</div>
     <div>Facile à identifier: l'interface devrait être simple et facile d'accès, afin que les utilisateurs n'ai pas d'efforts de mémorisation à faire.</div>
-  </el-collapse-item>
-  <el-collapse-item title="Controllabilité" name="4">
+  </my-collapse-item>
+  <my-collapse-item title="Controllabilité" name="4">
     <div>Prise de décision: possibilité de donner des conseils sur les opérations, mais ne jamais prendre de décisions à la place des utilisateurs;</div>
     <div>Contrôle des conséquences: les utilisateurs devraient pouvoir contrôler l'exécution de leurs opérations, y compris l'annulation et la suppression des opérations courantes.</div>
-  </el-collapse-item>
-</el-collapse>
+  </my-collapse-item>
+</my-collapse>
 <script>
   export default {
     data() {
@@ -50,25 +50,25 @@ En mode accordéon, un seul panneau peut être ouvert à la fois.
 
 :::demo Utilisez l'attribut `accordion` pour activer le mode accordéon.
 ```html
-<el-collapse v-model="activeName" accordion>
-    <el-collapse-item title="Cohérence" name="1">
+<my-collapse v-model="activeName" accordion>
+    <my-collapse-item title="Cohérence" name="1">
       <div>Cohérence avec la vraie vie: en accord avec les processus habituels de la vie réelle, conforme aux langages et habitudes des utilisateurs;</div>
       <div>Cohérence au sein de l'interface: tout les éléments doivent être cohérents entre eux et suivre les mêmes règles, par exemple: le style global, les icônes, la position des éléments, etc.</div>
-    </el-collapse-item>
-    <el-collapse-item title="Feedback" name="2">
+    </my-collapse-item>
+    <my-collapse-item title="Feedback" name="2">
       <div>Retour d'expèrience: permets aux utilisateurs de percevoir clairement leur opérations par le biais d'animations et d'effets interactifs.</div>
       <div>Retour visuel: reflète l'état actuel de la page via le réarrangement ou la mise à jour des éléments.</div>
-    </el-collapse-item>
-    <el-collapse-item title="Efficacité" name="3">
+    </my-collapse-item>
+    <my-collapse-item title="Efficacité" name="3">
       <div>Simplifier le processus: garde chaque opération simple et intuitive.;</div>
       <div>Clair et défini: énonce clairement ses intentions afin que l'utilisateur puisse comprendre et prendre une décision rapidement;</div>
       <div>Facile à identifier: l'interface devrait être simple et facile d'accès, afin que les utilisateurs n'ai pas d'efforts de mémorisation à faire.</div>
-    </el-collapse-item>
-    <el-collapse-item title="Controllabilité" name="4">
+    </my-collapse-item>
+    <my-collapse-item title="Controllabilité" name="4">
       <div>Prise de décision: possibilité de donner des conseils sur les opérations, mais ne jamais prendre de décisions à la place des utilisateurs;</div>
       <div>Contrôle des conséquences: les utilisateurs devraient pouvoir contrôler l'exécution de leurs opérations, y compris l'annulation et la suppression des opérations courantes.</div>
-    </el-collapse-item>
-</el-collapse>
+    </my-collapse-item>
+</my-collapse>
 <script>
   export default {
     data() {
@@ -87,28 +87,28 @@ En plus de l'utilisation de l'attribut `title`, vous pouvez configurer les titre
 
 :::demo
 ```html
-<el-collapse accordion>
-  <el-collapse-item name="1">
+<my-collapse accordion>
+  <my-collapse-item name="1">
     <template slot="title">
       Cohérence<i class="header-icon el-icon-info"></i>
     </template>
     <div>Cohérence avec la vraie vie: en accord avec les processus habituels de la vie réelle, conforme aux langages et habitudes des utilisateurs;</div>
     <div>Cohérence au sein de l'interface: tout les éléments doivent être cohérents entre eux et suivre les mêmes règles, par exemple: le style global, les icônes, la position des éléments, etc.</div>
-  </el-collapse-item>
-  <el-collapse-item title="Feedback" name="2">
+  </my-collapse-item>
+  <my-collapse-item title="Feedback" name="2">
       <div>Retour d'expèrience: permets aux utilisateurs de percevoir clairement leur opérations par le biais d'animations et d'effets interactifs.</div>
       <div>Retour visuel: reflète l'état actuel de la page via le réarrangement ou la mise à jour des éléments.</div>
-  </el-collapse-item>
-  <el-collapse-item title="Efficacité" name="3">
+  </my-collapse-item>
+  <my-collapse-item title="Efficacité" name="3">
       <div>Simplifier le processus: garde chaque opération simple et intuitive.;</div>
       <div>Clair et défini: énonce clairement ses intentions afin que l'utilisateur puisse comprendre et prendre une décision rapidement;</div>
       <div>Facile à identifier: l'interface devrait être simple et facile d'accès, afin que les utilisateurs n'ai pas d'efforts de mémorisation à faire.</div>
-  </el-collapse-item>
-  <el-collapse-item title="Controllabilité" name="4">
+  </my-collapse-item>
+  <my-collapse-item title="Controllabilité" name="4">
       <div>Prise de décision: possibilité de donner des conseils sur les opérations, mais ne jamais prendre de décisions à la place des utilisateurs;</div>
       <div>Contrôle des conséquences: les utilisateurs devraient pouvoir contrôler l'exécution de leurs opérations, y compris l'annulation et la suppression des opérations courantes.</div>
-  </el-collapse-item>
-</el-collapse>
+  </my-collapse-item>
+</my-collapse>
 ```
 :::
 

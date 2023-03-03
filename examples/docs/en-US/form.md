@@ -9,50 +9,50 @@ It includes all kinds of input items, such as `input`, `select`, `radio` and `ch
 :::demo In each `form` component, you need a `form-item` field to be the container of your input item.
 
 ```html
-<el-form ref="form" :model="form" label-width="120px">
-  <el-form-item label="Activity name">
-    <el-input v-model="form.name"></el-input>
-  </el-form-item>
-  <el-form-item label="Activity zone">
-    <el-select v-model="form.region" placeholder="please select your zone">
-      <el-option label="Zone one" value="shanghai"></el-option>
-      <el-option label="Zone two" value="beijing"></el-option>
-    </el-select>
-  </el-form-item>
-  <el-form-item label="Activity time">
-    <el-col :span="11">
-      <el-date-picker type="date" placeholder="Pick a date" v-model="form.date1" style="width: 100%;"></el-date-picker>
-    </el-col>
-    <el-col class="line" :span="2">-</el-col>
-    <el-col :span="11">
-      <el-time-picker placeholder="Pick a time" v-model="form.date2" style="width: 100%;"></el-time-picker>
-    </el-col>
-  </el-form-item>
-  <el-form-item label="Instant delivery">
-    <el-switch v-model="form.delivery"></el-switch>
-  </el-form-item>
-  <el-form-item label="Activity type">
-    <el-checkbox-group v-model="form.type">
-      <el-checkbox label="Online activities" name="type"></el-checkbox>
-      <el-checkbox label="Promotion activities" name="type"></el-checkbox>
-      <el-checkbox label="Offline activities" name="type"></el-checkbox>
-      <el-checkbox label="Simple brand exposure" name="type"></el-checkbox>
-    </el-checkbox-group>
-  </el-form-item>
-  <el-form-item label="Resources">
-    <el-radio-group v-model="form.resource">
-      <el-radio label="Sponsor"></el-radio>
-      <el-radio label="Venue"></el-radio>
-    </el-radio-group>
-  </el-form-item>
-  <el-form-item label="Activity form">
-    <el-input type="textarea" v-model="form.desc"></el-input>
-  </el-form-item>
-  <el-form-item>
-    <el-button type="primary" @click="onSubmit">Create</el-button>
-    <el-button>Cancel</el-button>
-  </el-form-item>
-</el-form>
+<my-form ref="form" :model="form" label-width="120px">
+  <my-form-item label="Activity name">
+    <my-input v-model="form.name"></my-input>
+  </my-form-item>
+  <my-form-item label="Activity zone">
+    <my-select v-model="form.region" placeholder="please select your zone">
+      <my-option label="Zone one" value="shanghai"></my-option>
+      <my-option label="Zone two" value="beijing"></my-option>
+    </my-select>
+  </my-form-item>
+  <my-form-item label="Activity time">
+    <my-col :span="11">
+      <my-date-picker type="date" placeholder="Pick a date" v-model="form.date1" style="width: 100%;"></my-date-picker>
+    </my-col>
+    <my-col class="line" :span="2">-</my-col>
+    <my-col :span="11">
+      <my-time-picker placeholder="Pick a time" v-model="form.date2" style="width: 100%;"></my-time-picker>
+    </my-col>
+  </my-form-item>
+  <my-form-item label="Instant delivery">
+    <my-switch v-model="form.delivery"></my-switch>
+  </my-form-item>
+  <my-form-item label="Activity type">
+    <my-checkbox-group v-model="form.type">
+      <my-checkbox label="Online activities" name="type"></my-checkbox>
+      <my-checkbox label="Promotion activities" name="type"></my-checkbox>
+      <my-checkbox label="Offline activities" name="type"></my-checkbox>
+      <my-checkbox label="Simple brand exposure" name="type"></my-checkbox>
+    </my-checkbox-group>
+  </my-form-item>
+  <my-form-item label="Resources">
+    <my-radio-group v-model="form.resource">
+      <my-radio label="Sponsor"></my-radio>
+      <my-radio label="Venue"></my-radio>
+    </my-radio-group>
+  </my-form-item>
+  <my-form-item label="Activity form">
+    <my-input type="textarea" v-model="form.desc"></my-input>
+  </my-form-item>
+  <my-form-item>
+    <my-button type="primary" @click="onSubmit">Create</my-button>
+    <my-button>Cancel</my-button>
+  </my-form-item>
+</my-form>
 <script>
   export default {
     data() {
@@ -83,7 +83,7 @@ It includes all kinds of input items, such as `input`, `select`, `radio` and `ch
 [W3C](https://www.w3.org/MarkUp/html-spec/html-spec_8.html#SEC8.2) regulates that
 > <i>When there is only one single-line text input field in a form, the user agent should accept Enter in that field as a request to submit the form.</i>
 
-To prevent this behavior, you can add `@submit.native.prevent` on `<el-form>`.
+To prevent this behavior, you can add `@submit.native.prevent` on `<my-form>`.
   :::
 
 ### Inline form
@@ -93,20 +93,20 @@ When the vertical space is limited and the form is relatively simple, you can pu
 :::demo Set the `inline` attribute to `true` and the form will be inline.
 
 ```html
-<el-form :inline="true" :model="formInline" class="demo-form-inline">
-  <el-form-item label="Approved by">
-    <el-input v-model="formInline.user" placeholder="Approved by"></el-input>
-  </el-form-item>
-  <el-form-item label="Activity zone">
-    <el-select v-model="formInline.region" placeholder="Activity zone">
-      <el-option label="Zone one" value="shanghai"></el-option>
-      <el-option label="Zone two" value="beijing"></el-option>
-    </el-select>
-  </el-form-item>
-  <el-form-item>
-    <el-button type="primary" @click="onSubmit">Query</el-button>
-  </el-form-item>
-</el-form>
+<my-form :inline="true" :model="formInline" class="demo-form-inline">
+  <my-form-item label="Approved by">
+    <my-input v-model="formInline.user" placeholder="Approved by"></my-input>
+  </my-form-item>
+  <my-form-item label="Activity zone">
+    <my-select v-model="formInline.region" placeholder="Activity zone">
+      <my-option label="Zone one" value="shanghai"></my-option>
+      <my-option label="Zone two" value="beijing"></my-option>
+    </my-select>
+  </my-form-item>
+  <my-form-item>
+    <my-button type="primary" @click="onSubmit">Query</my-button>
+  </my-form-item>
+</my-form>
 <script>
   export default {
     data() {
@@ -134,23 +134,23 @@ Depending on your design, there are several different ways to align your label e
 :::demo The `label-position` attribute decides how labels align, it can be `top` or `left`. When set to `top`, labels will be placed at the top of the form field.
 
 ```html
-<el-radio-group v-model="labelPosition" size="small">
-  <el-radio-button label="left">Left</el-radio-button>
-  <el-radio-button label="right">Right</el-radio-button>
-  <el-radio-button label="top">Top</el-radio-button>
-</el-radio-group>
+<my-radio-group v-model="labelPosition" size="small">
+  <my-radio-button label="left">Left</my-radio-button>
+  <my-radio-button label="right">Right</my-radio-button>
+  <my-radio-button label="top">Top</my-radio-button>
+</my-radio-group>
 <div style="margin: 20px;"></div>
-<el-form :label-position="labelPosition" label-width="100px" :model="formLabelAlign">
-  <el-form-item label="Name">
-    <el-input v-model="formLabelAlign.name"></el-input>
-  </el-form-item>
-  <el-form-item label="Activity zone">
-    <el-input v-model="formLabelAlign.region"></el-input>
-  </el-form-item>
-  <el-form-item label="Activity form">
-    <el-input v-model="formLabelAlign.type"></el-input>
-  </el-form-item>
-</el-form>
+<my-form :label-position="labelPosition" label-width="100px" :model="formLabelAlign">
+  <my-form-item label="Name">
+    <my-input v-model="formLabelAlign.name"></my-input>
+  </my-form-item>
+  <my-form-item label="Activity zone">
+    <my-input v-model="formLabelAlign.region"></my-input>
+  </my-form-item>
+  <my-form-item label="Activity form">
+    <my-input v-model="formLabelAlign.type"></my-input>
+  </my-form-item>
+</my-form>
 <script>
   export default {
     data() {
@@ -175,54 +175,54 @@ Form component allows you to verify your data, helping you find and correct erro
 :::demo Just add the `rules` attribute for `Form` component, pass validation rules, and set `prop` attribute for `Form-Item` as a specific key that needs to be validated. See more information at [async-validator](https://github.com/yiminghe/async-validator).
 
 ```html
-<el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="120px" class="demo-ruleForm">
-  <el-form-item label="Activity name" prop="name">
-    <el-input v-model="ruleForm.name"></el-input>
-  </el-form-item>
-  <el-form-item label="Activity zone" prop="region">
-    <el-select v-model="ruleForm.region" placeholder="Activity zone">
-      <el-option label="Zone one" value="shanghai"></el-option>
-      <el-option label="Zone two" value="beijing"></el-option>
-    </el-select>
-  </el-form-item>
-  <el-form-item label="Activity time" required>
-    <el-col :span="11">
-      <el-form-item prop="date1">
-        <el-date-picker type="date" placeholder="Pick a date" v-model="ruleForm.date1" style="width: 100%;"></el-date-picker>
-      </el-form-item>
-    </el-col>
-    <el-col class="line" :span="2">-</el-col>
-    <el-col :span="11">
-      <el-form-item prop="date2">
-        <el-time-picker placeholder="Pick a time" v-model="ruleForm.date2" style="width: 100%;"></el-time-picker>
-      </el-form-item>
-    </el-col>
-  </el-form-item>
-  <el-form-item label="Instant delivery" prop="delivery">
-    <el-switch v-model="ruleForm.delivery"></el-switch>
-  </el-form-item>
-  <el-form-item label="Activity type" prop="type">
-    <el-checkbox-group v-model="ruleForm.type">
-      <el-checkbox label="Online activities" name="type"></el-checkbox>
-      <el-checkbox label="Promotion activities" name="type"></el-checkbox>
-      <el-checkbox label="Offline activities" name="type"></el-checkbox>
-      <el-checkbox label="Simple brand exposure" name="type"></el-checkbox>
-    </el-checkbox-group>
-  </el-form-item>
-  <el-form-item label="Resources" prop="resource">
-    <el-radio-group v-model="ruleForm.resource">
-      <el-radio label="Sponsorship"></el-radio>
-      <el-radio label="Venue"></el-radio>
-    </el-radio-group>
-  </el-form-item>
-  <el-form-item label="Activity form" prop="desc">
-    <el-input type="textarea" v-model="ruleForm.desc"></el-input>
-  </el-form-item>
-  <el-form-item>
-    <el-button type="primary" @click="submitForm('ruleForm')">Create</el-button>
-    <el-button @click="resetForm('ruleForm')">Reset</el-button>
-  </el-form-item>
-</el-form>
+<my-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="120px" class="demo-ruleForm">
+  <my-form-item label="Activity name" prop="name">
+    <my-input v-model="ruleForm.name"></my-input>
+  </my-form-item>
+  <my-form-item label="Activity zone" prop="region">
+    <my-select v-model="ruleForm.region" placeholder="Activity zone">
+      <my-option label="Zone one" value="shanghai"></my-option>
+      <my-option label="Zone two" value="beijing"></my-option>
+    </my-select>
+  </my-form-item>
+  <my-form-item label="Activity time" required>
+    <my-col :span="11">
+      <my-form-item prop="date1">
+        <my-date-picker type="date" placeholder="Pick a date" v-model="ruleForm.date1" style="width: 100%;"></my-date-picker>
+      </my-form-item>
+    </my-col>
+    <my-col class="line" :span="2">-</my-col>
+    <my-col :span="11">
+      <my-form-item prop="date2">
+        <my-time-picker placeholder="Pick a time" v-model="ruleForm.date2" style="width: 100%;"></my-time-picker>
+      </my-form-item>
+    </my-col>
+  </my-form-item>
+  <my-form-item label="Instant delivery" prop="delivery">
+    <my-switch v-model="ruleForm.delivery"></my-switch>
+  </my-form-item>
+  <my-form-item label="Activity type" prop="type">
+    <my-checkbox-group v-model="ruleForm.type">
+      <my-checkbox label="Online activities" name="type"></my-checkbox>
+      <my-checkbox label="Promotion activities" name="type"></my-checkbox>
+      <my-checkbox label="Offline activities" name="type"></my-checkbox>
+      <my-checkbox label="Simple brand exposure" name="type"></my-checkbox>
+    </my-checkbox-group>
+  </my-form-item>
+  <my-form-item label="Resources" prop="resource">
+    <my-radio-group v-model="ruleForm.resource">
+      <my-radio label="Sponsorship"></my-radio>
+      <my-radio label="Venue"></my-radio>
+    </my-radio-group>
+  </my-form-item>
+  <my-form-item label="Activity form" prop="desc">
+    <my-input type="textarea" v-model="ruleForm.desc"></my-input>
+  </my-form-item>
+  <my-form-item>
+    <my-button type="primary" @click="submitForm('ruleForm')">Create</my-button>
+    <my-button @click="resetForm('ruleForm')">Reset</my-button>
+  </my-form-item>
+</my-form>
 <script>
   export default {
     data() {
@@ -289,21 +289,21 @@ This example shows how to customize your own validation rules to finish a two-fa
 
 :::demo Here we use `status-icon` to reflect validation result as an icon.
 ```html
-<el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="120px" class="demo-ruleForm">
-  <el-form-item label="Password" prop="pass">
-    <el-input type="password" v-model="ruleForm.pass" autocomplete="off"></el-input>
-  </el-form-item>
-  <el-form-item label="Confirm" prop="checkPass">
-    <el-input type="password" v-model="ruleForm.checkPass" autocomplete="off"></el-input>
-  </el-form-item>
-  <el-form-item label="Age" prop="age">
-    <el-input v-model.number="ruleForm.age"></el-input>
-  </el-form-item>
-  <el-form-item>
-    <el-button type="primary" @click="submitForm('ruleForm')">Submit</el-button>
-    <el-button @click="resetForm('ruleForm')">Reset</el-button>
-  </el-form-item>
-</el-form>
+<my-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="120px" class="demo-ruleForm">
+  <my-form-item label="Password" prop="pass">
+    <my-input type="password" v-model="ruleForm.pass" autocomplete="off"></my-input>
+  </my-form-item>
+  <my-form-item label="Confirm" prop="checkPass">
+    <my-input type="password" v-model="ruleForm.checkPass" autocomplete="off"></my-input>
+  </my-form-item>
+  <my-form-item label="Age" prop="age">
+    <my-input v-model.number="ruleForm.age"></my-input>
+  </my-form-item>
+  <my-form-item>
+    <my-button type="primary" @click="submitForm('ruleForm')">Submit</my-button>
+    <my-button @click="resetForm('ruleForm')">Reset</my-button>
+  </my-form-item>
+</my-form>
 <script>
   export default {
     data() {
@@ -390,8 +390,8 @@ Custom validate callback function must be called. See more advanced usage at [as
 :::demo In addition to passing all validation rules at once on the form component, you can also pass the validation rules or delete rules on a single form field dynamically.
 
 ```html
-<el-form :model="dynamicValidateForm" ref="dynamicValidateForm" label-width="120px" class="demo-dynamic">
-  <el-form-item
+<my-form :model="dynamicValidateForm" ref="dynamicValidateForm" label-width="120px" class="demo-dynamic">
+  <my-form-item
     prop="email"
     label="Email"
     :rules="[
@@ -399,9 +399,9 @@ Custom validate callback function must be called. See more advanced usage at [as
       { type: 'email', message: 'Please input correct email address', trigger: ['blur', 'change'] }
     ]"
   >
-    <el-input v-model="dynamicValidateForm.email"></el-input>
-  </el-form-item>
-  <el-form-item
+    <my-input v-model="dynamicValidateForm.email"></my-input>
+  </my-form-item>
+  <my-form-item
     v-for="(domain, index) in dynamicValidateForm.domains"
     :label="'Domain' + index"
     :key="domain.key"
@@ -410,14 +410,14 @@ Custom validate callback function must be called. See more advanced usage at [as
       required: true, message: 'domain can not be null', trigger: 'blur'
     }"
   >
-    <el-input v-model="domain.value"></el-input><el-button @click.prevent="removeDomain(domain)">Delete</el-button>
-  </el-form-item>
-  <el-form-item>
-    <el-button type="primary" @click="submitForm('dynamicValidateForm')">Submit</el-button>
-    <el-button @click="addDomain">New domain</el-button>
-    <el-button @click="resetForm('dynamicValidateForm')">Reset</el-button>
-  </el-form-item>
-</el-form>
+    <my-input v-model="domain.value"></my-input><my-button @click.prevent="removeDomain(domain)">Delete</my-button>
+  </my-form-item>
+  <my-form-item>
+    <my-button type="primary" @click="submitForm('dynamicValidateForm')">Submit</my-button>
+    <my-button @click="addDomain">New domain</my-button>
+    <my-button @click="resetForm('dynamicValidateForm')">Reset</my-button>
+  </my-form-item>
+</my-form>
 <script>
   export default {
     data() {
@@ -467,8 +467,8 @@ Custom validate callback function must be called. See more advanced usage at [as
 
 :::demo Number Validate need a `.number` modifier added on the input `v-model` binding，it's used to transform the string value to the number which is provided by Vuejs.
 ```html
-<el-form :model="numberValidateForm" ref="numberValidateForm" label-width="100px" class="demo-ruleForm">
-  <el-form-item
+<my-form :model="numberValidateForm" ref="numberValidateForm" label-width="100px" class="demo-ruleForm">
+  <my-form-item
     label="age"
     prop="age"
     :rules="[
@@ -476,13 +476,13 @@ Custom validate callback function must be called. See more advanced usage at [as
       { type: 'number', message: 'age must be a number'}
     ]"
   >
-    <el-input type="age" v-model.number="numberValidateForm.age" autocomplete="off"></el-input>
-  </el-form-item>
-  <el-form-item>
-    <el-button type="primary" @click="submitForm('numberValidateForm')">Submit</el-button>
-    <el-button @click="resetForm('numberValidateForm')">Reset</el-button>
-  </el-form-item>
-</el-form>
+    <my-input type="age" v-model.number="numberValidateForm.age" autocomplete="off"></my-input>
+  </my-form-item>
+  <my-form-item>
+    <my-button type="primary" @click="submitForm('numberValidateForm')">Submit</my-button>
+    <my-button @click="resetForm('numberValidateForm')">Reset</my-button>
+  </my-form-item>
+</my-form>
 <script>
   export default {
     data() {
@@ -522,42 +522,42 @@ All components in a Form inherit their `size` attribute from that Form. Similarl
 
 :::demo Still you can fine tune each component's `size` if you don't want that component to inherit its size from From or FormIten.
 ```html
-<el-form ref="form" :model="sizeForm" label-width="120px" size="mini">
-  <el-form-item label="Activity name">
-    <el-input v-model="sizeForm.name"></el-input>
-  </el-form-item>
-  <el-form-item label="Activity zone">
-    <el-select v-model="sizeForm.region" placeholder="please select your zone">
-      <el-option label="Zone one" value="shanghai"></el-option>
-      <el-option label="Zone two" value="beijing"></el-option>
-    </el-select>
-  </el-form-item>
-  <el-form-item label="Activity time">
-    <el-col :span="11">
-      <el-date-picker type="date" placeholder="Pick a date" v-model="sizeForm.date1" style="width: 100%;"></el-date-picker>
-    </el-col>
-    <el-col class="line" :span="2">-</el-col>
-    <el-col :span="11">
-      <el-time-picker placeholder="Pick a time" v-model="sizeForm.date2" style="width: 100%;"></el-time-picker>
-    </el-col>
-  </el-form-item>
-  <el-form-item label="Activity type">
-    <el-checkbox-group v-model="sizeForm.type">
-      <el-checkbox-button label="Online activities" name="type"></el-checkbox-button>
-      <el-checkbox-button label="Promotion activities" name="type"></el-checkbox-button>
-    </el-checkbox-group>
-  </el-form-item>
-  <el-form-item label="Resources">
-    <el-radio-group v-model="sizeForm.resource" size="medium">
-      <el-radio border label="Sponsor"></el-radio>
-      <el-radio border label="Venue"></el-radio>
-    </el-radio-group>
-  </el-form-item>
-  <el-form-item size="large">
-    <el-button type="primary" @click="onSubmit">Create</el-button>
-    <el-button>Cancel</el-button>
-  </el-form-item>
-</el-form>
+<my-form ref="form" :model="sizeForm" label-width="120px" size="mini">
+  <my-form-item label="Activity name">
+    <my-input v-model="sizeForm.name"></my-input>
+  </my-form-item>
+  <my-form-item label="Activity zone">
+    <my-select v-model="sizeForm.region" placeholder="please select your zone">
+      <my-option label="Zone one" value="shanghai"></my-option>
+      <my-option label="Zone two" value="beijing"></my-option>
+    </my-select>
+  </my-form-item>
+  <my-form-item label="Activity time">
+    <my-col :span="11">
+      <my-date-picker type="date" placeholder="Pick a date" v-model="sizeForm.date1" style="width: 100%;"></my-date-picker>
+    </my-col>
+    <my-col class="line" :span="2">-</my-col>
+    <my-col :span="11">
+      <my-time-picker placeholder="Pick a time" v-model="sizeForm.date2" style="width: 100%;"></my-time-picker>
+    </my-col>
+  </my-form-item>
+  <my-form-item label="Activity type">
+    <my-checkbox-group v-model="sizeForm.type">
+      <my-checkbox-button label="Online activities" name="type"></my-checkbox-button>
+      <my-checkbox-button label="Promotion activities" name="type"></my-checkbox-button>
+    </my-checkbox-group>
+  </my-form-item>
+  <my-form-item label="Resources">
+    <my-radio-group v-model="sizeForm.resource" size="medium">
+      <my-radio border label="Sponsor"></my-radio>
+      <my-radio border label="Venue"></my-radio>
+    </my-radio-group>
+  </my-form-item>
+  <my-form-item size="large">
+    <my-button type="primary" @click="onSubmit">Create</my-button>
+    <my-button>Cancel</my-button>
+  </my-form-item>
+</my-form>
 
 <script>
   export default {

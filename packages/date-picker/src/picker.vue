@@ -1,5 +1,5 @@
 <template>
-  <el-input
+  <my-input
     class="el-date-editor"
     :class="'el-date-editor--' + type"
     :readonly="!editable || readonly || type === 'dates' || type === 'week'"
@@ -30,7 +30,7 @@
       :class="[showClose ? '' + clearIcon : '']"
       v-if="haveTrigger">
     </i>
-  </el-input>
+  </my-input>
   <div
     class="el-date-editor el-range-editor el-input__inner"
     :class="[

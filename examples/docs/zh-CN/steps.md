@@ -7,13 +7,13 @@
 
 :::demo 设置`active`属性，接受一个`Number`，表明步骤的 index，从 0 开始。需要定宽的步骤条时，设置`space`属性即可，它接受`Number`，单位为`px`，如果不设置，则为自适应。设置`finish-status`属性可以改变已经完成的步骤的状态。
 ```html
-<el-steps :active="active" finish-status="success">
-  <el-step title="步骤 1"></el-step>
-  <el-step title="步骤 2"></el-step>
-  <el-step title="步骤 3"></el-step>
-</el-steps>
+<my-steps :active="active" finish-status="success">
+  <my-step title="步骤 1"></my-step>
+  <my-step title="步骤 2"></my-step>
+  <my-step title="步骤 3"></my-step>
+</my-steps>
 
-<el-button style="margin-top: 12px;" @click="next">下一步</el-button>
+<my-button style="margin-top: 12px;" @click="next">下一步</my-button>
 
 <script>
   export default {
@@ -39,11 +39,11 @@
 
 :::demo 也可以使用`title`具名分发，可以用`slot`的方式来取代属性的设置，在本文档最后的列表中有所有的 slot name 可供参考。
 ```html
-<el-steps :space="200" :active="1" finish-status="success">
-  <el-step title="已完成"></el-step>
-  <el-step title="进行中"></el-step>
-  <el-step title="步骤 3"></el-step>
-</el-steps>
+<my-steps :space="200" :active="1" finish-status="success">
+  <my-step title="已完成"></my-step>
+  <my-step title="进行中"></my-step>
+  <my-step title="步骤 3"></my-step>
+</my-steps>
 ```
 :::
 
@@ -53,11 +53,11 @@
 
 :::demo
 ```html
-<el-steps :active="1">
-  <el-step title="步骤 1" description="这是一段很长很长很长的描述性文字"></el-step>
-  <el-step title="步骤 2" description="这是一段很长很长很长的描述性文字"></el-step>
-  <el-step title="步骤 3" description="这段就没那么长了"></el-step>
-</el-steps>
+<my-steps :active="1">
+  <my-step title="步骤 1" description="这是一段很长很长很长的描述性文字"></my-step>
+  <my-step title="步骤 2" description="这是一段很长很长很长的描述性文字"></my-step>
+  <my-step title="步骤 3" description="这段就没那么长了"></my-step>
+</my-steps>
 ```
 :::
 
@@ -67,12 +67,12 @@
 
 :::demo
 ```html
-<el-steps :active="2" align-center>
-  <el-step title="步骤1" description="这是一段很长很长很长的描述性文字"></el-step>
-  <el-step title="步骤2" description="这是一段很长很长很长的描述性文字"></el-step>
-  <el-step title="步骤3" description="这是一段很长很长很长的描述性文字"></el-step>
-  <el-step title="步骤4" description="这是一段很长很长很长的描述性文字"></el-step>
-</el-steps>
+<my-steps :active="2" align-center>
+  <my-step title="步骤1" description="这是一段很长很长很长的描述性文字"></my-step>
+  <my-step title="步骤2" description="这是一段很长很长很长的描述性文字"></my-step>
+  <my-step title="步骤3" description="这是一段很长很长很长的描述性文字"></my-step>
+  <my-step title="步骤4" description="这是一段很长很长很长的描述性文字"></my-step>
+</my-steps>
 ```
 :::
 
@@ -82,11 +82,11 @@
 :::demo 通过`icon`属性来设置图标，图标的类型可以参考 Icon 组件的文档，除此以外，还能通过具名`slot`来使用自定义的图标。
 ```html
 
-<el-steps :active="1">
-  <el-step title="步骤 1" icon="el-icon-edit"></el-step>
-  <el-step title="步骤 2" icon="el-icon-upload"></el-step>
-  <el-step title="步骤 3" icon="el-icon-picture"></el-step>
-</el-steps>
+<my-steps :active="1">
+  <my-step title="步骤 1" icon="el-icon-edit"></my-step>
+  <my-step title="步骤 2" icon="el-icon-upload"></my-step>
+  <my-step title="步骤 3" icon="el-icon-picture"></my-step>
+</my-steps>
 ```
 :::
 
@@ -94,14 +94,14 @@
 
 竖直方向的步骤条。
 
-:::demo 只需要在`el-steps`元素中设置`direction`属性为`vertical`即可。
+:::demo 只需要在`my-steps`元素中设置`direction`属性为`vertical`即可。
 ```html
 <div style="height: 300px;">
-  <el-steps direction="vertical" :active="1">
-    <el-step title="步骤 1"></el-step>
-    <el-step title="步骤 2"></el-step>
-    <el-step title="步骤 3" description="这是一段很长很长很长的描述性文字"></el-step>
-  </el-steps>
+  <my-steps direction="vertical" :active="1">
+    <my-step title="步骤 1"></my-step>
+    <my-step title="步骤 2"></my-step>
+    <my-step title="步骤 3" description="这是一段很长很长很长的描述性文字"></my-step>
+  </my-steps>
 </div>
 ```
 :::
@@ -112,17 +112,17 @@
 :::demo
 ```html
 
-<el-steps :active="1" simple>
-  <el-step title="步骤 1" icon="el-icon-edit"></el-step>
-  <el-step title="步骤 2" icon="el-icon-upload"></el-step>
-  <el-step title="步骤 3" icon="el-icon-picture"></el-step>
-</el-steps>
+<my-steps :active="1" simple>
+  <my-step title="步骤 1" icon="el-icon-edit"></my-step>
+  <my-step title="步骤 2" icon="el-icon-upload"></my-step>
+  <my-step title="步骤 3" icon="el-icon-picture"></my-step>
+</my-steps>
 
-<el-steps :active="1" finish-status="success" simple style="margin-top: 20px">
-  <el-step title="步骤 1" ></el-step>
-  <el-step title="步骤 2" ></el-step>
-  <el-step title="步骤 3" ></el-step>
-</el-steps>
+<my-steps :active="1" finish-status="success" simple style="margin-top: 20px">
+  <my-step title="步骤 1" ></my-step>
+  <my-step title="步骤 2" ></my-step>
+  <my-step title="步骤 3" ></my-step>
+</my-steps>
 ```
 :::
 

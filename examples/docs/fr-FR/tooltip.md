@@ -10,49 +10,49 @@ Tooltip a 9 emplacements.
 ```html
 <div class="box">
   <div class="top">
-    <el-tooltip class="item" effect="dark" content="Top Left prompts info" placement="top-start">
-      <el-button>top-start</el-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Top Center prompts info" placement="top">
-      <el-button>top</el-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Top Right prompts info" placement="top-end">
-      <el-button>top-end</el-button>
-    </el-tooltip>
+    <my-tooltip class="item" effect="dark" content="Top Left prompts info" placement="top-start">
+      <my-button>top-start</my-button>
+    </my-tooltip>
+    <my-tooltip class="item" effect="dark" content="Top Center prompts info" placement="top">
+      <my-button>top</my-button>
+    </my-tooltip>
+    <my-tooltip class="item" effect="dark" content="Top Right prompts info" placement="top-end">
+      <my-button>top-end</my-button>
+    </my-tooltip>
   </div>
   <div class="left">
-    <el-tooltip class="item" effect="dark" content="Left Top prompts info" placement="left-start">
-      <el-button>left-start</el-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Left Center prompts info" placement="left">
-      <el-button>left</el-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Left Bottom prompts info" placement="left-end">
-      <el-button>left-end</el-button>
-    </el-tooltip>
+    <my-tooltip class="item" effect="dark" content="Left Top prompts info" placement="left-start">
+      <my-button>left-start</my-button>
+    </my-tooltip>
+    <my-tooltip class="item" effect="dark" content="Left Center prompts info" placement="left">
+      <my-button>left</my-button>
+    </my-tooltip>
+    <my-tooltip class="item" effect="dark" content="Left Bottom prompts info" placement="left-end">
+      <my-button>left-end</my-button>
+    </my-tooltip>
   </div>
 
   <div class="right">
-    <el-tooltip class="item" effect="dark" content="Right Top prompts info" placement="right-start">
-      <el-button>right-start</el-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Right Center prompts info" placement="right">
-      <el-button>right</el-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Right Bottom prompts info" placement="right-end">
-      <el-button>right-end</el-button>
-    </el-tooltip>
+    <my-tooltip class="item" effect="dark" content="Right Top prompts info" placement="right-start">
+      <my-button>right-start</my-button>
+    </my-tooltip>
+    <my-tooltip class="item" effect="dark" content="Right Center prompts info" placement="right">
+      <my-button>right</my-button>
+    </my-tooltip>
+    <my-tooltip class="item" effect="dark" content="Right Bottom prompts info" placement="right-end">
+      <my-button>right-end</my-button>
+    </my-tooltip>
   </div>
   <div class="bottom">
-    <el-tooltip class="item" effect="dark" content="Bottom Left prompts info" placement="bottom-start">
-      <el-button>bottom-start</el-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Bottom Center prompts info" placement="bottom">
-      <el-button>bottom</el-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Bottom Right prompts info" placement="bottom-end">
-      <el-button>bottom-end</el-button>
-    </el-tooltip>
+    <my-tooltip class="item" effect="dark" content="Bottom Left prompts info" placement="bottom-start">
+      <my-button>bottom-start</my-button>
+    </my-tooltip>
+    <my-tooltip class="item" effect="dark" content="Bottom Center prompts info" placement="bottom">
+      <my-button>bottom</my-button>
+    </my-tooltip>
+    <my-tooltip class="item" effect="dark" content="Bottom Right prompts info" placement="bottom-end">
+      <my-button>bottom-end</my-button>
+    </my-tooltip>
   </div>
 </div>
 
@@ -103,12 +103,12 @@ Tooltip a deux thèmes: `dark` et `light`。
 
 :::demo Utilisez `effect` pour modifier le thème, le défaut étant `dark`.
 ```html
-<el-tooltip content="Top center" placement="top">
-  <el-button>Dark</el-button>
-</el-tooltip>
-<el-tooltip content="Bottom center" placement="bottom" effect="light">
-  <el-button>Light</el-button>
-</el-tooltip>
+<my-tooltip content="Top center" placement="top">
+  <my-button>Dark</my-button>
+</my-tooltip>
+<my-tooltip content="Bottom center" placement="bottom" effect="light">
+  <my-button>Light</my-button>
+</my-tooltip>
 ```
 :::
 
@@ -118,10 +118,10 @@ Vous pouvez afficher plus de lignes et formater leur contenu.
 
 :::demo Utiliser un slot nommé `content` au lieu de l'attribut.
 ```html
-<el-tooltip placement="top">
+<my-tooltip placement="top">
   <div slot="content">Multiples lignes<br/>Seconde ligne</div>
-  <el-button>Top center</el-button>
-</el-tooltip>
+  <my-button>Top center</my-button>
+</my-tooltip>
 ```
 :::
 
@@ -138,9 +138,9 @@ En réalité, Tooltip est une extension de [Vue-popper](https://github.com/eleme
 :::demo
 ```html
 <template>
-  <el-tooltip :disabled="disabled" content="Cliquez pour désactiver le tooltip" placement="bottom" effect="light">
-    <el-button @click="disabled = !disabled">Cliquez pour {{disabled ? 'activer' : 'désactiver'}} le tooltip</el-button>
-  </el-tooltip>
+  <my-tooltip :disabled="disabled" content="Cliquez pour désactiver le tooltip" placement="bottom" effect="light">
+    <my-button @click="disabled = !disabled">Cliquez pour {{disabled ? 'activer' : 'désactiver'}} le tooltip</my-button>
+  </my-tooltip>
 </template>
 
 <script>

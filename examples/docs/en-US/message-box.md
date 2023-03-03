@@ -13,7 +13,7 @@ Alert interrupts user operation until the user confirms.
 
 ```html
 <template>
-  <el-button type="text" @click="open">Click to open the Message Box</el-button>
+  <my-button type="text" @click="open">Click to open the Message Box</my-button>
 </template>
 
 <script>
@@ -44,7 +44,7 @@ Confirm is used to ask users' confirmation.
 
 ```html
 <template>
-  <el-button type="text" @click="open">Click to open the Message Box</el-button>
+  <my-button type="text" @click="open">Click to open the Message Box</my-button>
 </template>
 
 <script>
@@ -82,7 +82,7 @@ Prompt is used when user input is required.
 
 ```html
 <template>
-  <el-button type="text" @click="open">Click to open Message Box</el-button>
+  <my-button type="text" @click="open">Click to open Message Box</my-button>
 </template>
 
 <script>
@@ -120,7 +120,7 @@ Can be customized to show various content.
 
 ```html
 <template>
-  <el-button type="text" @click="open">Click to open Message Box</el-button>
+  <my-button type="text" @click="open">Click to open Message Box</my-button>
 </template>
 
 <script>
@@ -176,7 +176,7 @@ The content of MessageBox can be `VNode`, allowing us to pass custom components.
 
 ```html
 <template>
-  <el-button type="text" @click="open">Click to open Message Box</el-button>
+  <my-button type="text" @click="open">Click to open Message Box</my-button>
 </template>
 
 <script>
@@ -205,7 +205,7 @@ In some cases, clicking the cancel button and close button may have different me
 
 ```html
 <template>
-  <el-button type="text" @click="open">Click to open Message Box</el-button>
+  <my-button type="text" @click="open">Click to open Message Box</my-button>
 </template>
 
 <script>
@@ -245,7 +245,7 @@ Content of MessageBox can be centered.
 
 ```html
 <template>
-  <el-button type="text" @click="open">Click to open Message Box</el-button>
+  <my-button type="text" @click="open">Click to open Message Box</my-button>
 </template>
 
 <script>
@@ -288,7 +288,7 @@ If Element is fully imported, it will add the following global methods for Vue.p
 If you prefer importing `MessageBox` on demand:
 
 ```javascript
-import { MessageBox } from 'element-ui';
+import { MessageBox } from 'manyi-ui';
 ```
 
 The corresponding methods are: `MessageBox`, `MessageBox.alert`, `MessageBox.confirm` and `MessageBox.prompt`. The parameters are the same as above.

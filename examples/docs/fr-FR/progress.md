@@ -6,11 +6,11 @@ Progress est utilisé pour afficher la progression d'une opération et informer 
 
 :::demo Utilisez l'attribut `percentage` pour indiquer le pourcentage. Cet attribut est **requis** et doit être compris entre 0 et 100. Vous pouvez personnaliser le format du texte en définissant le `format`.
 ```html
-<el-progress :percentage="50"></el-progress>
-<el-progress :percentage="100" :format="format"></el-progress>
-<el-progress :percentage="100" status="success"></el-progress>
-<el-progress :percentage="100" status="warning"></el-progress>
-<el-progress :percentage="50" status="exception"></el-progress>
+<my-progress :percentage="50"></my-progress>
+<my-progress :percentage="100" :format="format"></my-progress>
+<my-progress :percentage="100" status="success"></my-progress>
+<my-progress :percentage="100" status="warning"></my-progress>
+<my-progress :percentage="50" status="exception"></my-progress>
 
 <script>
   export default {
@@ -30,10 +30,10 @@ Dans ce cas le pourcentage ne prends pas de place en plus.
 
 :::demo L'attribut `stroke-width` détermine le `width` de la barre de progression. Utilisez `text-inside` mettre la description à l'intérieur de la barre.
 ```html
-<el-progress :text-inside="true" :stroke-width="26" :percentage="70"></el-progress>
-<el-progress :text-inside="true" :stroke-width="24" :percentage="100" status="success"></el-progress>
-<el-progress :text-inside="true" :stroke-width="22" :percentage="80" status="warning"></el-progress>
-<el-progress :text-inside="true" :stroke-width="20" :percentage="50" status="exception"></el-progress>
+<my-progress :text-inside="true" :stroke-width="26" :percentage="70"></my-progress>
+<my-progress :text-inside="true" :stroke-width="24" :percentage="100" status="success"></my-progress>
+<my-progress :text-inside="true" :stroke-width="22" :percentage="80" status="warning"></my-progress>
+<my-progress :text-inside="true" :stroke-width="20" :percentage="50" status="exception"></my-progress>
 ```
 :::
 
@@ -44,16 +44,16 @@ Vous pouvez utiliser l'attribut `color` pour définir la couleur de la barre de 
 :::demo
 
 ```html
-<el-progress :percentage="percentage" :color="customColor"></el-progress>
+<my-progress :percentage="percentage" :color="customColor"></my-progress>
 
-<el-progress :percentage="percentage" :color="customColorMethod"></el-progress>
+<my-progress :percentage="percentage" :color="customColorMethod"></my-progress>
 
-<el-progress :percentage="percentage" :color="customColors"></el-progress>
+<my-progress :percentage="percentage" :color="customColors"></my-progress>
 <div>
-  <el-button-group>
-    <el-button icon="el-icon-minus" @click="decrease"></el-button>
-    <el-button icon="el-icon-plus" @click="increase"></el-button>
-  </el-button-group>
+  <my-button-group>
+    <my-button icon="el-icon-minus" @click="decrease"></my-button>
+    <my-button icon="el-icon-plus" @click="increase"></my-button>
+  </my-button-group>
 </div>
 
 <script>
@@ -103,11 +103,11 @@ Vous pouvez utiliser l'attribut `color` pour définir la couleur de la barre de 
 
 :::demo Vous pouvez mettre l'attribut `type` à `circle` pour obtenir une barre circulaire, et utiliser `width` pour changer la taille du cercle.
 ```html
-<el-progress type="circle" :percentage="0"></el-progress>
-<el-progress type="circle" :percentage="25"></el-progress>
-<el-progress type="circle" :percentage="100" status="success"></el-progress>
-<el-progress type="circle" :percentage="70" status="warning"></el-progress>
-<el-progress type="circle" :percentage="50" status="exception"></el-progress>
+<my-progress type="circle" :percentage="0"></my-progress>
+<my-progress type="circle" :percentage="25"></my-progress>
+<my-progress type="circle" :percentage="100" status="success"></my-progress>
+<my-progress type="circle" :percentage="70" status="warning"></my-progress>
+<my-progress type="circle" :percentage="50" status="exception"></my-progress>
 ```
 :::
 
@@ -118,12 +118,12 @@ Vous pouvez également spécifier l'attribut `type` de `dashboard` pour utiliser
 :::demo
 
 ```html
-<el-progress type="dashboard" :percentage="percentage" :color="colors"></el-progress>
+<my-progress type="dashboard" :percentage="percentage" :color="colors"></my-progress>
 <div>
-  <el-button-group>
-    <el-button icon="el-icon-minus" @click="decrease"></el-button>
-    <el-button icon="el-icon-plus" @click="increase"></el-button>
-  </el-button-group>
+  <my-button-group>
+    <my-button icon="el-icon-minus" @click="decrease"></my-button>
+    <my-button icon="el-icon-plus" @click="increase"></my-button>
+  </my-button-group>
 </div>
 
 <script>

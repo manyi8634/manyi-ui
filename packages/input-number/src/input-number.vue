@@ -26,7 +26,7 @@
       @keydown.enter="increase">
       <i :class="`el-icon-${controlsAtRight ? 'arrow-up' : 'plus'}`"></i>
     </span>
-    <el-input
+    <my-input
       ref="input"
       :value="displayValue"
       :placeholder="placeholder"
@@ -42,7 +42,7 @@
       @focus="handleFocus"
       @input="handleInput"
       @change="handleInputChange">
-    </el-input>
+    </my-input>
   </div>
 </template>
 <script>

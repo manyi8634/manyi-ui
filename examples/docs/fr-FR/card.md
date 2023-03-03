@@ -8,15 +8,15 @@ Le composant Card comprend un titre, un contenu et des opérations.
 
 :::demo Card est composé d'un `header` et d'un `body`. `header` est optionnel et son contenu nécessite l'utilisation d'un slot.
 ```html
-<el-card class="box-card">
+<my-card class="box-card">
   <div slot="header" class="clearfix">
     <span>Card name</span>
-    <el-button style="float: right; padding: 3px 0" type="text">Bouton</el-button>
+    <my-button style="float: right; padding: 3px 0" type="text">Bouton</my-button>
   </div>
   <div v-for="o in 4" :key="o" class="text item">
     {{'List item ' + o }}
   </div>
-</el-card>
+</my-card>
 
 <style>
   .text {
@@ -49,11 +49,11 @@ Le header peut être omis.
 
 :::demo
 ```html
-<el-card class="box-card">
+<my-card class="box-card">
   <div v-for="o in 4" :key="o" class="text item">
     {{'List item ' + o }}
   </div>
-</el-card>
+</my-card>
 
 <style>
   .text {
@@ -77,20 +77,20 @@ Affichez un contenu plus riche grâce à la configuration.
 
 :::demo L'attribut `body-style` définit le style CSS du `body`. Cet exemple utilise aussi `el-col` pour la mise en page.
 ```html
-<el-row>
-  <el-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
-    <el-card :body-style="{ padding: '0px' }">
+<my-row>
+  <my-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
+    <my-card :body-style="{ padding: '0px' }">
       <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
       <div style="padding: 14px;">
         <span>Yummy hamburger</span>
         <div class="bottom clearfix">
           <time class="time">{{ currentDate }}</time>
-          <el-button type="text" class="button">Operating</el-button>
+          <my-button type="text" class="button">Operating</my-button>
         </div>
       </div>
-    </el-card>
-  </el-col>
-</el-row>
+    </my-card>
+  </my-col>
+</my-row>
 
 <style>
   .time {
@@ -142,23 +142,23 @@ Vous pouvez définir quand l'ombre des Cards doivent apparaître.
 
 :::demo L'attribut `shadow` détermine quand l'ombre doit apparaître. Les valeurs possibles sont `always`, `hover` ou `never`.
 ```html
-<el-row :gutter="12">
-  <el-col :span="8">
-    <el-card shadow="always">
+<my-row :gutter="12">
+  <my-col :span="8">
+    <my-card shadow="always">
       Always
-    </el-card>
-  </el-col>
-  <el-col :span="8">
-    <el-card shadow="hover">
+    </my-card>
+  </my-col>
+  <my-col :span="8">
+    <my-card shadow="hover">
       Hover
-    </el-card>
-  </el-col>
-  <el-col :span="8">
-    <el-card shadow="never">
+    </my-card>
+  </my-col>
+  <my-col :span="8">
+    <my-card shadow="never">
       Never
-    </el-card>
-  </el-col>
-</el-row>
+    </my-card>
+  </my-col>
+</my-row>
 ```
 :::
 

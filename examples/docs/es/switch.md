@@ -7,13 +7,13 @@ Switch es utilizado para realizar cambios entre dos estados opuestos.
 :::demo Enlace `v-model` a una variable de tipo `Boolean`. Los atributos `active-color` y `inactive-color` deciden el color de fondo en cada estado.
 
 ```html
-<el-switch v-model="value1">
-</el-switch>
-<el-switch
+<my-switch v-model="value1">
+</my-switch>
+<my-switch
   v-model="value2"
   active-color="#13ce66"
   inactive-color="#ff4949">
-</el-switch>
+</my-switch>
 
 <script>
   export default {
@@ -32,19 +32,19 @@ Switch es utilizado para realizar cambios entre dos estados opuestos.
 :::demo Puede agregar los atributos `active-text` y `inactive-text` para mostrar los textos.
 
 ```html
-<el-switch
+<my-switch
   v-model="value1"
   active-text="Pay by month"
   inactive-text="Pay by year">
-</el-switch>
-<el-switch
+</my-switch>
+<my-switch
   style="display: block"
   v-model="value2"
   active-color="#13ce66"
   inactive-color="#ff4949"
   active-text="Pay by month"
   inactive-text="Pay by year">
-</el-switch>
+</my-switch>
 
 <script>
   export default {
@@ -64,15 +64,15 @@ Switch es utilizado para realizar cambios entre dos estados opuestos.
 :::demo Puede establecer los atributos `active-value` y `inactive-value`. Ambos reciben valores de tipo `Boolean`, `String` o `Number`.
 
 ```html
-<el-tooltip :content="'Switch value: ' + value" placement="top">
-  <el-switch
+<my-tooltip :content="'Switch value: ' + value" placement="top">
+  <my-switch
     v-model="value"
     active-color="#13ce66"
     inactive-color="#ff4949"
     active-value="100"
     inactive-value="0">
-  </el-switch>
-</el-tooltip>
+  </my-switch>
+</my-tooltip>
 
 <script>
   export default {
@@ -92,14 +92,14 @@ Switch es utilizado para realizar cambios entre dos estados opuestos.
 :::demo Agregar el atributo `disabled` desactiva el componente Switch.
 
 ```html
-<el-switch
+<my-switch
   v-model="value1"
   disabled>
-</el-switch>
-<el-switch
+</my-switch>
+<my-switch
   v-model="value2"
   disabled>
-</el-switch>
+</my-switch>
 
 <script>
   export default {

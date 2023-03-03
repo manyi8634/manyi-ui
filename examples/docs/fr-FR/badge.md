@@ -9,34 +9,34 @@ Affiche le nombre de nouveaux messages.
 :::demo La quantité est définit par `value` qui accepte un `Number` ou un `String`.
 
 ```html
-<el-badge :value="12" class="item">
-  <el-button size="small">Commentaires</el-button>
-</el-badge>
-<el-badge :value="3" class="item">
-  <el-button size="small">Réponses</el-button>
-</el-badge>
-<el-badge :value="1" class="item" type="primary">
-  <el-button size="small">Commentaires</el-button>
-</el-badge>
-<el-badge :value="2" class="item" type="warning">
-  <el-button size="small">Réponses</el-button>
-</el-badge>
+<my-badge :value="12" class="item">
+  <my-button size="small">Commentaires</my-button>
+</my-badge>
+<my-badge :value="3" class="item">
+  <my-button size="small">Réponses</my-button>
+</my-badge>
+<my-badge :value="1" class="item" type="primary">
+  <my-button size="small">Commentaires</my-button>
+</my-badge>
+<my-badge :value="2" class="item" type="warning">
+  <my-button size="small">Réponses</my-button>
+</my-badge>
 
-<el-dropdown trigger="click">
+<my-dropdown trigger="click">
   <span class="el-dropdown-link">
     Cliquez<i class="el-icon-caret-bottom el-icon--right"></i>
   </span>
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item class="clearfix">
+  <my-dropdown-menu slot="dropdown">
+    <my-dropdown-item class="clearfix">
       Commentaires
-      <el-badge class="mark" :value="12" />
-    </el-dropdown-item>
-    <el-dropdown-item class="clearfix">
+      <my-badge class="mark" :value="12" />
+    </my-dropdown-item>
+    <my-dropdown-item class="clearfix">
       Réponses
-      <el-badge class="mark" :value="3" />
-    </el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+      <my-badge class="mark" :value="3" />
+    </my-dropdown-item>
+  </my-dropdown-menu>
+</my-dropdown>
 
 <style>
 .item {
@@ -54,12 +54,12 @@ Vous pouvez configurer la valeur maximale.
 :::demo La valeur maximale est définit par `max` qui accepte un `Number`. Ceci ne marche qui si `value` est également un `Number`.
 
 ```html
-<el-badge :value="200" :max="99" class="item">
-  <el-button size="small">Commentaires</el-button>
-</el-badge>
-<el-badge :value="100" :max="10" class="item">
-  <el-button size="small">Réponses</el-button>
-</el-badge>
+<my-badge :value="200" :max="99" class="item">
+  <my-button size="small">Commentaires</my-button>
+</my-badge>
+<my-badge :value="100" :max="10" class="item">
+  <my-button size="small">Réponses</my-button>
+</my-badge>
 
 <style>
 .item {
@@ -77,12 +77,12 @@ Affiche du texte autre que des nombres.
 :::demo Quand `value` est un `String`, il affiche un texte personnalisé.
 
 ```html
-<el-badge value="new" class="item">
-  <el-button size="small">Commentaires</el-button>
-</el-badge>
-<el-badge value="hot" class="item">
-  <el-button size="small">Réponses</el-button>
-</el-badge>
+<my-badge value="new" class="item">
+  <my-button size="small">Commentaires</my-button>
+</my-badge>
+<my-badge value="hot" class="item">
+  <my-button size="small">Réponses</my-button>
+</my-badge>
 
 <style>
 .item {
@@ -100,10 +100,10 @@ Utilisez un point rouge pour signaler du contenu devant être remarqué.
 :::demo Utilisez l'attribut `is-dot` qui est un `Boolean`.
 
 ```html
-<el-badge is-dot class="item">Requète</el-badge>
-<el-badge is-dot class="item">
-  <el-button class="share-button" icon="el-icon-share" type="primary"></el-button>
-</el-badge>
+<my-badge is-dot class="item">Requète</my-badge>
+<my-badge is-dot class="item">
+  <my-button class="share-button" icon="el-icon-share" type="primary"></my-button>
+</my-badge>
 
 <style>
 .item {

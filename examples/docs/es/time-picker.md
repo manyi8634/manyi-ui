@@ -8,7 +8,7 @@ Provee una lista de tiempo fijo para que los usuarios escojan.
 
 :::demo Use el tag `el-time-select`, se pueden asignar tiempo de inicio, tiempo de finalización y salto de tiempo con `start`, `end` y `step`.
 ```html
-<el-time-select
+<my-time-select
   v-model="value"
   :picker-options="{
     start: '08:30',
@@ -16,7 +16,7 @@ Provee una lista de tiempo fijo para que los usuarios escojan.
     end: '18:30'
   }"
   placeholder="Select time">
-</el-time-select>
+</my-time-select>
 
 <script>
   export default {
@@ -38,21 +38,21 @@ Un tiempo arbitrario puede ser escogido.
 
 ```html
 <template>
-  <el-time-picker
+  <my-time-picker
     v-model="value1"
     :picker-options="{
       selectableRange: '18:30:00 - 20:30:00'
     }"
     placeholder="Arbitrary time">
-  </el-time-picker>
-  <el-time-picker
+  </my-time-picker>
+  <my-time-picker
     arrow-control
     v-model="value2"
     :picker-options="{
       selectableRange: '18:30:00 - 20:30:00'
     }"
     placeholder="Arbitrary time">
-  </el-time-picker>
+  </my-time-picker>
 </template>
 
 <script>
@@ -75,7 +75,7 @@ Si se escoge el tiempo de inicio al principio, el tiempo de finalización cambia
 :::demo
 ```html
 <template>
-  <el-time-select
+  <my-time-select
     placeholder="Start time"
     v-model="startTime"
     :picker-options="{
@@ -83,8 +83,8 @@ Si se escoge el tiempo de inicio al principio, el tiempo de finalización cambia
       step: '00:15',
       end: '18:30'
     }">
-  </el-time-select>
-  <el-time-select
+  </my-time-select>
+  <my-time-select
     placeholder="End time"
     v-model="endTime"
     :picker-options="{
@@ -93,7 +93,7 @@ Si se escoge el tiempo de inicio al principio, el tiempo de finalización cambia
       end: '18:30',
       minTime: startTime
     }">
-  </el-time-select>
+  </my-time-select>
 </template>
 
 <script>
@@ -116,21 +116,21 @@ Es posible escoger un rango de tiempo arbitrario.
 :::demo Es posible seleccionar un rango de tiempo al añadir el atributo `is-range`. También, `arrow-control` es soportado en modo de rango.
 ```html
 <template>
-  <el-time-picker
+  <my-time-picker
     is-range
     v-model="value1"
     range-separator="To"
     start-placeholder="Start time"
     end-placeholder="End time">
-  </el-time-picker>
-  <el-time-picker
+  </my-time-picker>
+  <my-time-picker
     is-range
     arrow-control
     v-model="value2"
     range-separator="To"
     start-placeholder="Start time"
     end-placeholder="End time">
-  </el-time-picker>
+  </my-time-picker>
 </template>
 
 <script>
@@ -158,8 +158,8 @@ Es posible escoger un rango de tiempo arbitrario.
 | placeholder       | placeholder en un modo fuera de rango    | string                                   | —                                        | —                    |
 | start-placeholder | placeholder para el tiempo de inicio en modo de rango | string                                   | —                                        | —                    |
 | end-placeholder   | placeholder para el tiempo de finalización en modo de rango | string                                   | —                                        | —                    |
-| is-range          | si es posible escoger un rango de tiempo, solo funciona con `<el-time-picker>` | boolean                                  | —                                        | false                |
-| arrow-control     | si es posible escoger el tiempo usando los botones de flecha, solo funciona con `<el-time-picker>` | boolean                                  | —                                        | false                |
+| is-range          | si es posible escoger un rango de tiempo, solo funciona con `<my-time-picker>` | boolean                                  | —                                        | false                |
+| arrow-control     | si es posible escoger el tiempo usando los botones de flecha, solo funciona con `<my-time-picker>` | boolean                                  | —                                        | false                |
 | align             | alineación                               | left / center / right                    | left                                     |                      |
 | popper-class      | nombre de clase personalizada para el dropdown del Time Picker | string                                   | —                                        | —                    |
 | picker-options    | opciones adicionales, revisar la tabla posterior | object                                   | —                                        | {}                   |

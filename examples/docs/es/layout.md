@@ -8,32 +8,32 @@ Crea un layout básico usando columnas.
 
 :::demo Con `row` y `col`, puede fácilmente manipular el layout usando el atributo `span`.
 ```html
-<el-row>
-  <el-col :span="24"><div class="grid-content bg-purple-dark"></div></el-col>
-</el-row>
-<el-row>
-  <el-col :span="12"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="12"><div class="grid-content bg-purple-light"></div></el-col>
-</el-row>
-<el-row>
-  <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="8"><div class="grid-content bg-purple-light"></div></el-col>
-  <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
-<el-row>
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
-</el-row>
-<el-row>
-  <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
-  <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
-  <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
-</el-row>
+<my-row>
+  <my-col :span="24"><div class="grid-content bg-purple-dark"></div></my-col>
+</my-row>
+<my-row>
+  <my-col :span="12"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :span="12"><div class="grid-content bg-purple-light"></div></my-col>
+</my-row>
+<my-row>
+  <my-col :span="8"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :span="8"><div class="grid-content bg-purple-light"></div></my-col>
+  <my-col :span="8"><div class="grid-content bg-purple"></div></my-col>
+</my-row>
+<my-row>
+  <my-col :span="6"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :span="6"><div class="grid-content bg-purple-light"></div></my-col>
+  <my-col :span="6"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :span="6"><div class="grid-content bg-purple-light"></div></my-col>
+</my-row>
+<my-row>
+  <my-col :span="4"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :span="4"><div class="grid-content bg-purple-light"></div></my-col>
+  <my-col :span="4"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :span="4"><div class="grid-content bg-purple-light"></div></my-col>
+  <my-col :span="4"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :span="4"><div class="grid-content bg-purple-light"></div></my-col>
+</my-row>
 
 <style>
   .el-row {
@@ -72,12 +72,12 @@ El espaciado de columnas está soportado.
 
 :::demo Row provee el atributo `gutter` para especificar el espacio entre columnas y su valor por defecto es 0.
 ```html
-<el-row :gutter="20">
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
+<my-row :gutter="20">
+  <my-col :span="6"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :span="6"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :span="6"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :span="6"><div class="grid-content bg-purple"></div></my-col>
+</my-row>
 
 <style>
   .el-row {
@@ -116,21 +116,21 @@ Crea un complejo layout híbrido combinando el básico de 1/24 columnas.
 
 :::demo
 ```html
-<el-row :gutter="20">
-  <el-col :span="16"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
-<el-row :gutter="20">
-  <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
-<el-row :gutter="20">
-  <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="16"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
+<my-row :gutter="20">
+  <my-col :span="16"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :span="8"><div class="grid-content bg-purple"></div></my-col>
+</my-row>
+<my-row :gutter="20">
+  <my-col :span="8"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :span="8"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :span="4"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :span="4"><div class="grid-content bg-purple"></div></my-col>
+</my-row>
+<my-row :gutter="20">
+  <my-col :span="4"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :span="16"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :span="4"><div class="grid-content bg-purple"></div></my-col>
+</my-row>
 
 <style>
   .el-row {
@@ -170,17 +170,17 @@ Puedes especificar offsets para las columnas.
 :::demo Puedes especificar el offset para una columna mediante el atributo `offset` de Col.
 
 ```html
-<el-row :gutter="20">
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
-<el-row :gutter="20">
-  <el-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
-<el-row :gutter="20">
-  <el-col :span="12" :offset="6"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
+<my-row :gutter="20">
+  <my-col :span="6"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></my-col>
+</my-row>
+<my-row :gutter="20">
+  <my-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></my-col>
+</my-row>
+<my-row :gutter="20">
+  <my-col :span="12" :offset="6"><div class="grid-content bg-purple"></div></my-col>
+</my-row>
 
 <style>
   .el-row {
@@ -219,31 +219,31 @@ Usa flex layout para un alineamiento flexible de columnas.
 
 :::demo Puede habilitar flex layout asignando el atributo `type` a 'flex', y definir el layout de elementos hijos asignando el atributo `justify` con los valores start, center, end, space-between o space-around.
 ```html
-<el-row type="flex" class="row-bg">
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
-<el-row type="flex" class="row-bg" justify="center">
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
-<el-row type="flex" class="row-bg" justify="end">
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
-<el-row type="flex" class="row-bg" justify="space-between">
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
-<el-row type="flex" class="row-bg" justify="space-around">
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
+<my-row type="flex" class="row-bg">
+  <my-col :span="6"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :span="6"><div class="grid-content bg-purple-light"></div></my-col>
+  <my-col :span="6"><div class="grid-content bg-purple"></div></my-col>
+</my-row>
+<my-row type="flex" class="row-bg" justify="center">
+  <my-col :span="6"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :span="6"><div class="grid-content bg-purple-light"></div></my-col>
+  <my-col :span="6"><div class="grid-content bg-purple"></div></my-col>
+</my-row>
+<my-row type="flex" class="row-bg" justify="end">
+  <my-col :span="6"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :span="6"><div class="grid-content bg-purple-light"></div></my-col>
+  <my-col :span="6"><div class="grid-content bg-purple"></div></my-col>
+</my-row>
+<my-row type="flex" class="row-bg" justify="space-between">
+  <my-col :span="6"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :span="6"><div class="grid-content bg-purple-light"></div></my-col>
+  <my-col :span="6"><div class="grid-content bg-purple"></div></my-col>
+</my-row>
+<my-row type="flex" class="row-bg" justify="space-around">
+  <my-col :span="6"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :span="6"><div class="grid-content bg-purple-light"></div></my-col>
+  <my-col :span="6"><div class="grid-content bg-purple"></div></my-col>
+</my-row>
 
 <style>
   .el-row {
@@ -282,12 +282,12 @@ Tomando el ejemplo de Bootstrap responsive design, existen 5 breakpoints: xs, sm
 
 :::demo
 ```html
-<el-row :gutter="10">
-  <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11"><div class="grid-content bg-purple-light"></div></el-col>
-  <el-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"><div class="grid-content bg-purple-light"></div></el-col>
-</el-row>
+<my-row :gutter="10">
+  <my-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11"><div class="grid-content bg-purple-light"></div></my-col>
+  <my-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11"><div class="grid-content bg-purple"></div></my-col>
+  <my-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"><div class="grid-content bg-purple-light"></div></my-col>
+</my-row>
 
 <style>
   .el-col {
@@ -315,7 +315,7 @@ Tomando el ejemplo de Bootstrap responsive design, existen 5 breakpoints: xs, sm
 Adicionalmente, Element provee una serie de clases para ocultar elementos dadas ciertas condiciones. Estas clases pueden se agregadas a cualquier elemento del DOM o un elemento propio. Necesita importar el siguiente archivo CSS para usar estas clases:
 
 ```js
-import 'element-ui/lib/theme-chalk/display.css';
+import 'manyi-ui/lib/theme-chalk/display.css';
 ```
 
 Las clases son:

@@ -10,22 +10,22 @@ Les Alertes sont des composants non superposés qui ne disparaissent pas automat
 
 ```html
 <template>
-  <el-alert
+  <my-alert
     title="succès"
     type="success">
-  </el-alert>
-  <el-alert
+  </my-alert>
+  <my-alert
     title="information"
     type="info">
-  </el-alert>
-  <el-alert
+  </my-alert>
+  <my-alert
     title="avertissement"
     type="warning">
-  </el-alert>
-  <el-alert
+  </my-alert>
+  <my-alert
     title="erreur"
     type="error">
-  </el-alert>
+  </my-alert>
 </template>
 ```
 :::
@@ -37,26 +37,26 @@ Alert fournit deux thèmes différents, `light` et `dark`.
 :::demo Réglez `effect` pour changer le thème, le défaut étant `light`.
 ```html
 <template>
-  <el-alert
+  <my-alert
     title="succès"
     type="success"
     effect="dark">
-  </el-alert>
-  <el-alert
+  </my-alert>
+  <my-alert
     title="info"
     type="info"
     effect="dark">
-  </el-alert>
-  <el-alert
+  </my-alert>
+  <my-alert
     title="avertissement"
     type="warning"
     effect="dark">
-  </el-alert>
-  <el-alert
+  </my-alert>
+  <my-alert
     title="erreur"
     type="error"
     effect="dark">
-  </el-alert>
+  </my-alert>
 </template>
 ```
 :::
@@ -69,21 +69,21 @@ Personnalisez le bouton de fermeture avec du texte ou des symboles.
 
 ```html
 <template>
-  <el-alert
+  <my-alert
     title="alerte non fermable"
     type="success"
     :closable="false">
-  </el-alert>
-  <el-alert
+  </my-alert>
+  <my-alert
     title="texte de fermeture personnalisé"
     type="info"
     close-text="Gotcha">
-  </el-alert>
-  <el-alert
+  </my-alert>
+  <my-alert
     title="alerte avec callback"
     type="warning"
     @close="hello">
-  </el-alert>
+  </my-alert>
 </template>
 
 <script>
@@ -106,26 +106,26 @@ Afficher une icône améliore la lisibilité.
 
 ```html
 <template>
-  <el-alert
+  <my-alert
     title="succès"
     type="success"
     show-icon>
-  </el-alert>
-  <el-alert
+  </my-alert>
+  <my-alert
     title="information"
     type="info"
     show-icon>
-  </el-alert>
-  <el-alert
+  </my-alert>
+  <my-alert
     title="avertissement"
     type="warning"
     show-icon>
-  </el-alert>
-  <el-alert
+  </my-alert>
+  <my-alert
     title="erreur"
     type="error"
     show-icon>
-  </el-alert>
+  </my-alert>
 </template>
 ```
 :::
@@ -138,30 +138,30 @@ Utilisez l'attribut `center` pour centrer le texte.
 
 ```html
 <template>
-  <el-alert
+  <my-alert
     title="succès"
     type="success"
     center
     show-icon>
-  </el-alert>
-  <el-alert
+  </my-alert>
+  <my-alert
     title="information"
     type="info"
     center
     show-icon>
-  </el-alert>
-  <el-alert
+  </my-alert>
+  <my-alert
     title="avertissement"
     type="warning"
     center
     show-icon>
-  </el-alert>
-  <el-alert
+  </my-alert>
+  <my-alert
     title="erreur"
     type="error"
     center
     show-icon>
-  </el-alert>
+  </my-alert>
 </template>
 ```
 :::
@@ -174,11 +174,11 @@ Contient un message avec plus d'informations.
 
 ```html
 <template>
-  <el-alert
+  <my-alert
     title="Titre"
     type="success"
     description="Ceci est la description.">
-  </el-alert>
+  </my-alert>
 </template>
 ```
 :::
@@ -189,30 +189,30 @@ Contient un message avec plus d'informations.
 
 ```html
 <template>
-  <el-alert
+  <my-alert
     title="succès"
     type="success"
     description="Plus de texte pour décrire."
     show-icon>
-  </el-alert>
-  <el-alert
+  </my-alert>
+  <my-alert
     title="information"
     type="info"
     description="Plus de texte pour décrire."
     show-icon>
-  </el-alert>
-  <el-alert
+  </my-alert>
+  <my-alert
     title="avertissement"
     type="warning"
     description="Plus de texte pour décrire."
     show-icon>
-  </el-alert>
-  <el-alert
+  </my-alert>
+  <my-alert
     title="erreur"
     type="error"
     description="Plus de texte pour décrire."
     show-icon>
-  </el-alert>
+  </my-alert>
 </template>
 ```
 :::

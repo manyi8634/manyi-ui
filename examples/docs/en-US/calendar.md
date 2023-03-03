@@ -6,8 +6,8 @@ Display date.
 
 :::demo Set `value` to specify the currently displayed month. If `value` is not specified, current month is displayed. `value` supports two-way binding.
 ```html
-<el-calendar v-model="value">
-</el-calendar>
+<my-calendar v-model="value">
+</my-calendar>
 
 <script>
   export default {
@@ -25,7 +25,7 @@ Display date.
 
 :::demo Customize what is displayed in the calendar cell by setting `scoped-slot` named `dateCell`. In `scoped-slot` you can get the date (the date of the current cell), data (including the type, isSelected, day attribute). For details, please refer to the API documentation below.
 ```html
-<el-calendar>
+<my-calendar>
   <!-- Use 2.5 slot syntax. If you use Vue 2.6, please use new slot syntax-->
   <template
     slot="dateCell"
@@ -34,7 +34,7 @@ Display date.
       {{ data.day.split('-').slice(1).join('-') }} {{ data.isSelected ? '✔️' : ''}}
     </p>
   </template>
-</el-calendar>
+</my-calendar>
 <style>
   .is-selected {
     color: #1989FA;
@@ -47,8 +47,8 @@ Display date.
 
 :::demo Set the `range` attribute to specify the display range of the calendar. Start time must be Monday, end time must be Sunday, and the time span cannot exceed two months.
 ```html
-<el-calendar :range="['2019-03-04', '2019-03-24']">
-</el-calendar>
+<my-calendar :range="['2019-03-04', '2019-03-24']">
+</my-calendar>
 ```
 :::
 

@@ -27,7 +27,7 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
 Entonces, en el archivo principal del proyecto, importe este archivo de estilos en lugar de los estilos de Element:
 ```JS
 import Vue from 'vue'
-import Element from 'element-ui'
+import Element from 'manyi-ui'
 import './element-variables.scss'
 
 Vue.use(Element)
@@ -52,7 +52,7 @@ Ahora, instale el tema `chalk` desde npm o Github.
 npm i element-theme-chalk -D
 
 # desde GitHub
-npm i https://github.com/ElementUI/theme-chalk -D
+npm i https://github.com/ManyiUI/theme-chalk -D
 ```
 
 #### <strong>Inicializar archivo de variables</strong>
@@ -106,10 +106,10 @@ Importar su propio tema es igual que importar el tema por defecto, sol que esta 
 
 ```javascript
 import '../theme/index.css'
-import ElementUI from 'element-ui'
+import ManyiUI from 'manyi-ui'
 import Vue from 'vue'
 
-Vue.use(ElementUI)
+Vue.use(ManyiUI)
 ```
 
 #### <strong>Importar un tema de componente bajo demanda</strong>
@@ -128,4 +128,4 @@ Si esta utilizando `babel-plugin-component` para importar bajo demanda, solo deb
 }
 ```
 
-Si no esta familiarizado con `babel-plugin-component`, por favor diríjase a la documentación sobre <a href="./#/en-US/component/quickstart">Como Iniciar</a>. Para más detalles, consulte el [repositorio del proyecto](https://github.com/ElementUI/element-theme) de `element-theme`.
+Si no esta familiarizado con `babel-plugin-component`, por favor diríjase a la documentación sobre <a href="./#/en-US/component/quickstart">Como Iniciar</a>. Para más detalles, consulte el [repositorio del proyecto](https://github.com/ManyiUI/element-theme) de `element-theme`.

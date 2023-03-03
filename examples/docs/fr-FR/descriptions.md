@@ -7,15 +7,15 @@ Display multiple fields in list form.
 :::demo
 
 ```html
-<el-descriptions title="User Info">
-    <el-descriptions-item label="Username">kooriookami</el-descriptions-item>
-    <el-descriptions-item label="Telephone">18100000000</el-descriptions-item>
-    <el-descriptions-item label="Place">Suzhou</el-descriptions-item>
-    <el-descriptions-item label="Remarks">
-      <el-tag size="small">School</el-tag>
-    </el-descriptions-item>
-    <el-descriptions-item label="Address">No.1188, Wuzhong Avenue, Wuzhong District, Suzhou, Jiangsu Province</el-descriptions-item>
-</el-descriptions>
+<my-descriptions title="User Info">
+    <my-descriptions-item label="Username">kooriookami</my-descriptions-item>
+    <my-descriptions-item label="Telephone">18100000000</my-descriptions-item>
+    <my-descriptions-item label="Place">Suzhou</my-descriptions-item>
+    <my-descriptions-item label="Remarks">
+      <my-tag size="small">School</my-tag>
+    </my-descriptions-item>
+    <my-descriptions-item label="Address">No.1188, Wuzhong Avenue, Wuzhong District, Suzhou, Jiangsu Province</my-descriptions-item>
+</my-descriptions>
 ```
 :::
 
@@ -25,66 +25,66 @@ Display multiple fields in list form.
 
 ```html
 <template>
-  <el-radio-group v-model="size">
-    <el-radio label="">Default</el-radio>
-    <el-radio label="medium">Medium</el-radio>
-    <el-radio label="small">Small</el-radio>
-    <el-radio label="mini">Mini</el-radio>
-  </el-radio-group>
+  <my-radio-group v-model="size">
+    <my-radio label="">Default</my-radio>
+    <my-radio label="medium">Medium</my-radio>
+    <my-radio label="small">Small</my-radio>
+    <my-radio label="mini">Mini</my-radio>
+  </my-radio-group>
 
-  <el-descriptions class="margin-top" title="With border" :column="3" :size="size" border>
+  <my-descriptions class="margin-top" title="With border" :column="3" :size="size" border>
     <template slot="extra">
-      <el-button type="primary" size="small">Operation</el-button>
+      <my-button type="primary" size="small">Operation</my-button>
     </template>
-    <el-descriptions-item>
+    <my-descriptions-item>
       <template slot="label">
         <i class="el-icon-user"></i>
         Username
       </template>
       kooriookami
-    </el-descriptions-item>
-    <el-descriptions-item>
+    </my-descriptions-item>
+    <my-descriptions-item>
       <template slot="label">
         <i class="el-icon-mobile-phone"></i>
         Telephone
       </template>
       18100000000
-    </el-descriptions-item>
-    <el-descriptions-item>
+    </my-descriptions-item>
+    <my-descriptions-item>
       <template slot="label">
         <i class="el-icon-location-outline"></i>
         Place
       </template>
       Suzhou
-    </el-descriptions-item>
-    <el-descriptions-item>
+    </my-descriptions-item>
+    <my-descriptions-item>
       <template slot="label">
         <i class="el-icon-tickets"></i>
         Remarks
       </template>
-      <el-tag size="small">School</el-tag>
-    </el-descriptions-item>
-    <el-descriptions-item>
+      <my-tag size="small">School</my-tag>
+    </my-descriptions-item>
+    <my-descriptions-item>
       <template slot="label">
         <i class="el-icon-office-building"></i>
         Address
       </template>
       No.1188, Wuzhong Avenue, Wuzhong District, Suzhou, Jiangsu Province
-    </el-descriptions-item>
-  </el-descriptions>
+    </my-descriptions-item>
+  </my-descriptions>
 
-  <el-descriptions class="margin-top" title="Without border" :column="3" :size="size">
+  <my-descriptions class="margin-top" title="Without border" :column="3" :size="size">
     <template slot="extra">
-      <el-button type="primary" size="small">Operation</el-button>
+      <my-button type="primary" size="small">Operation</my-button>
     </template>
-    <el-descriptions-item label="Username">kooriookami</el-descriptions-item>
-    <el-descriptions-item label="Telephone">18100000000</el-descriptions-item>
-    <el-descriptions-item label="Place">Suzhou</el-descriptions-item>
-    <el-descriptions-item label="Remarks">
-      <el-tag size="small">School</el-tag>
-    </el-descriptions-item>
-    <el-descriptions-item label="Address">No.1188, Wuzhong Avenue, Wuzhong District, Suzhou, Jiangsu Province</el-descriptions-item>
-  </el-descriptions>
+    <my-descriptions-item label="Username">kooriookami</my-descriptions-item>
+    <my-descriptions-item label="Telephone">18100000000</my-descriptions-item>
+    <my-descriptions-item label="Place">Suzhou</my-descriptions-item>
+    <my-descriptions-item label="Remarks">
+      <my-tag size="small">School</my-tag>
+    </my-descriptions-item>
+    <my-descriptions-item label="Address">No.1188, Wuzhong Avenue, Wuzhong District, Suzhou, Jiangsu Province</my-descriptions-item>
+  </my-descriptions>
 </template>
 
 <script>
@@ -104,25 +104,25 @@ Display multiple fields in list form.
 :::demo
 
 ```html
-<el-descriptions title="Vertical list with border" direction="vertical" :column="4" border>
-  <el-descriptions-item label="Username">kooriookami</el-descriptions-item>
-  <el-descriptions-item label="Telephone">18100000000</el-descriptions-item>
-  <el-descriptions-item label="Place" :span="2">Suzhou</el-descriptions-item>
-  <el-descriptions-item label="Remarks">
-    <el-tag size="small">School</el-tag>
-  </el-descriptions-item>
-  <el-descriptions-item label="Address">No.1188, Wuzhong Avenue, Wuzhong District, Suzhou, Jiangsu Province</el-descriptions-item>
-</el-descriptions>
+<my-descriptions title="Vertical list with border" direction="vertical" :column="4" border>
+  <my-descriptions-item label="Username">kooriookami</my-descriptions-item>
+  <my-descriptions-item label="Telephone">18100000000</my-descriptions-item>
+  <my-descriptions-item label="Place" :span="2">Suzhou</my-descriptions-item>
+  <my-descriptions-item label="Remarks">
+    <my-tag size="small">School</my-tag>
+  </my-descriptions-item>
+  <my-descriptions-item label="Address">No.1188, Wuzhong Avenue, Wuzhong District, Suzhou, Jiangsu Province</my-descriptions-item>
+</my-descriptions>
 
-<el-descriptions class="margin-top" title="Vertical list without border" :column="4" direction="vertical">
-  <el-descriptions-item label="Username">kooriookami</el-descriptions-item>
-  <el-descriptions-item label="Telephone">18100000000</el-descriptions-item>
-  <el-descriptions-item label="Place" :span="2">Suzhou</el-descriptions-item>
-  <el-descriptions-item label="Remarks">
-    <el-tag size="small">School</el-tag>
-  </el-descriptions-item>
-  <el-descriptions-item label="Address">No.1188, Wuzhong Avenue, Wuzhong District, Suzhou, Jiangsu Province</el-descriptions-item>
-</el-descriptions>
+<my-descriptions class="margin-top" title="Vertical list without border" :column="4" direction="vertical">
+  <my-descriptions-item label="Username">kooriookami</my-descriptions-item>
+  <my-descriptions-item label="Telephone">18100000000</my-descriptions-item>
+  <my-descriptions-item label="Place" :span="2">Suzhou</my-descriptions-item>
+  <my-descriptions-item label="Remarks">
+    <my-tag size="small">School</my-tag>
+  </my-descriptions-item>
+  <my-descriptions-item label="Address">No.1188, Wuzhong Avenue, Wuzhong District, Suzhou, Jiangsu Province</my-descriptions-item>
+</my-descriptions>
 ```
 :::
 
@@ -131,15 +131,15 @@ Display multiple fields in list form.
 :::demo
 
 ```html
-<el-descriptions title="Customized style list" :column="3" border>
-  <el-descriptions-item label="Username" label-class-name="my-label" content-class-name="my-content">kooriookami</el-descriptions-item>
-  <el-descriptions-item label="Telephone">18100000000</el-descriptions-item>
-  <el-descriptions-item label="Place">Suzhou</el-descriptions-item>
-  <el-descriptions-item label="Remarks">
-    <el-tag size="small">School</el-tag>
-  </el-descriptions-item>
-  <el-descriptions-item label="Address" :content-style="{'text-align': 'right'}">No.1188, Wuzhong Avenue, Wuzhong District, Suzhou, Jiangsu Province</el-descriptions-item>
-</el-descriptions>
+<my-descriptions title="Customized style list" :column="3" border>
+  <my-descriptions-item label="Username" label-class-name="my-label" content-class-name="my-content">kooriookami</my-descriptions-item>
+  <my-descriptions-item label="Telephone">18100000000</my-descriptions-item>
+  <my-descriptions-item label="Place">Suzhou</my-descriptions-item>
+  <my-descriptions-item label="Remarks">
+    <my-tag size="small">School</my-tag>
+  </my-descriptions-item>
+  <my-descriptions-item label="Address" :content-style="{'text-align': 'right'}">No.1188, Wuzhong Avenue, Wuzhong District, Suzhou, Jiangsu Province</my-descriptions-item>
+</my-descriptions>
 <style>
   .my-label {
     background: #E1F3D8;

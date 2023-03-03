@@ -28,7 +28,7 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
 之后，在项目的入口文件中，直接引入以上样式文件即可（无需引入 Element 编译好的 CSS 文件）：
 ```JS
 import Vue from 'vue'
-import Element from 'element-ui'
+import Element from 'manyi-ui'
 import './element-variables.scss'
 
 Vue.use(Element)
@@ -53,7 +53,7 @@ npm i element-theme -g
 npm i element-theme-chalk -D
 
 # 从 GitHub
-npm i https://github.com/ElementUI/theme-chalk -D
+npm i https://github.com/ManyiUI/theme-chalk -D
 ```
 
 #### <strong>初始化变量文件</strong>
@@ -106,10 +106,10 @@ et
 
 ```javascript
 import '../theme/index.css'
-import ElementUI from 'element-ui'
+import ManyiUI from 'manyi-ui'
 import Vue from 'vue'
 
-Vue.use(ElementUI)
+Vue.use(ManyiUI)
 ```
 
 #### <strong>搭配插件按需引入组件主题</strong>
@@ -128,4 +128,4 @@ Vue.use(ElementUI)
 }
 ```
 
-如果不清楚 `babel-plugin-component` 是什么，请阅读 <a href="./#/zh-CN/component/quickstart">快速上手</a> 一节。更多 `element-theme` 用法请参考[项目仓库](https://github.com/ElementUI/element-theme)。
+如果不清楚 `babel-plugin-component` 是什么，请阅读 <a href="./#/zh-CN/component/quickstart">快速上手</a> 一节。更多 `element-theme` 用法请参考[项目仓库](https://github.com/ManyiUI/element-theme)。

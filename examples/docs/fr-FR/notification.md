@@ -8,16 +8,16 @@ Affiche une notification globale dans un coin de la page.
 
 ```html
 <template>
-  <el-button
+  <my-button
     plain
     @click="open1">
     Se ferme automatiquement
-  </el-button>
-  <el-button
+  </my-button>
+  <my-button
     plain
     @click="open2">
     Ne se ferme pas automatiquement
-    </el-button>
+    </my-button>
 </template>
 
 <script>
@@ -52,26 +52,26 @@ Nous fournissons quatre types: succès, avertissement, information et erreur.
 :::demo Element fournit quatre types de notifications: `success`, `warning`, `info` et `error`. Il sont choisis grâce au champs `type`, et n'importe quelle autre valeur sera ignorée. Il existe des méthodes  enregistrées pour chaque type, comme dans `open3` et `open4`, qui ne nécessitent donc pas le champs `type`.
 ```html
 <template>
-  <el-button
+  <my-button
     plain
     @click="open1">
     Success
-  </el-button>
-  <el-button
+  </my-button>
+  <my-button
     plain
     @click="open2">
     Warning
-  </el-button>
-  <el-button
+  </my-button>
+  <my-button
     plain
     @click="open3">
     Info
-  </el-button>
-  <el-button
+  </my-button>
+  <my-button
     plain
     @click="open4">
     Error
-  </el-button>
+  </my-button>
 </template>
 
 <script>
@@ -119,26 +119,26 @@ La notification peut apparaître dans le coin de votre choix.
 :::demo L'attribut `position` définit le coin d'apparition de la notification. Cela peut être `top-right`, `top-left`, `bottom-right` ou `bottom-left`. Le défaut est `top-right`.
 ```html
 <template>
-  <el-button
+  <my-button
     plain
     @click="open1">
     Top Right
-  </el-button>
-  <el-button
+  </my-button>
+  <my-button
     plain
     @click="open2">
     Bottom Right
-  </el-button>
-  <el-button
+  </my-button>
+  <my-button
     plain
     @click="open3">
     Bottom Left
-  </el-button>
-  <el-button
+  </my-button>
+  <my-button
     plain
     @click="open4">
     Top Left
-  </el-button>
+  </my-button>
 </template>
 
 <script>
@@ -187,11 +187,11 @@ Vous pouvez décaler l'emplacement de la notification par rapport au bord de la 
 :::demo Réglez `offset` pour choisir le décalage de la notification. Notez que chaque notification apparaissant au même moment devrait avoir le même décalage.
 ```html
 <template>
-  <el-button
+  <my-button
     plain
     @click="open">
     Notification avec décalage
-  </el-button>
+  </my-button>
 </template>
 
 <script>
@@ -218,11 +218,11 @@ L'attribut `message` supporte le HTML.
 
 ```html
 <template>
-  <el-button
+  <my-button
     plain
     @click="open">
     Utiliser du HTML
-  </el-button>
+  </my-button>
 </template>
 
 <script>
@@ -253,11 +253,11 @@ Il est possible de cacher le bouton de fermeture.
 
 ```html
 <template>
-  <el-button
+  <my-button
     plain
     @click="open">
     Bouton de fermeture caché
-    </el-button>
+    </my-button>
 </template>
 
 <script>
@@ -285,7 +285,7 @@ Element ajoute la méthode `$notify` à Vue.prototype. Vous pouvez donc appeler 
 Importez `Notification`:
 
 ```javascript
-import { Notification } from 'element-ui';
+import { Notification } from 'manyi-ui';
 ```
 
 Dans ce cas vous devrez appeler `Notification(options)`. Il existe aussi des méthodes pour chaque type, e.g. `Notification.success(options)`. Vous pouvez appeler `Notification.closeAll()` pour fermer manuellement toutes les instances.

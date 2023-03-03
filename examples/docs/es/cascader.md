@@ -10,18 +10,18 @@ Hay dos maneras de ampliar los elementos de opción hijos.
 ```html
 <div class="block">
   <span class="demonstration">Child options expand when clicked (default)</span>
-  <el-cascader
+  <my-cascader
     v-model="value"
     :options="options"
-    @change="handleChange"></el-cascader>
+    @change="handleChange"></my-cascader>
 </div>
 <div class="block">
   <span class="demonstration">Child options expand when hovered</span>
-  <el-cascader
+  <my-cascader
     v-model="value"
     :options="options"
     :props="{ expandTrigger: 'hover' }"
-    @change="handleChange"></el-cascader>
+    @change="handleChange"></my-cascader>
 </div>
 
 <script>
@@ -243,7 +243,7 @@ Deshabilite una opción estableciendo el campo  `disabled` en las opciones del o
 :::demo En este ejemplo, el primer ítem en el array `options` tiene un campo `disabled: true`, por lo que está deshabilitado. De forma predeterminada, Cascader comprueba el campo `disabled` en cada objeto de las opciones; si está utilizando otro nombre de campo para indicar si una opción está deshabilitada, puede asignarla en el atributo `props.disabled` (consulte la tabla de la API a continuación para obtener más detalles). Y por supuesto, el nombre de campo `value`, `label` y `children` también se pueden personalizar de la misma manera.
 
 ```html
-<el-cascader :options="options"></el-cascader>
+<my-cascader :options="options"></my-cascader>
 
 <script>
   export default {
@@ -458,7 +458,7 @@ Establezca el atributo `clearable` para `el-cascader` y aparecerá un icono de b
 
 :::demo
 ```html
-<el-cascader :options="options" clearable></el-cascader>
+<my-cascader :options="options" clearable></my-cascader>
 
 <script>
   export default {
@@ -672,7 +672,7 @@ La entrada puede mostrar sólo el último nivel en lugar de todos los niveles.
 
 :::demo El atributo `show-all-levels` define si se muestran todos los niveles. Si es `false`, sólo se muestra el último nivel.
 ```html
-<el-cascader :options="options" :show-all-levels="false"></el-cascader>
+<my-cascader :options="options" :show-all-levels="false"></my-cascader>
 <script>
   export default {
     data() {
@@ -887,18 +887,18 @@ Establezca `props.multiple = true` para usar la selección múltiple.
 ```html
 <div class="block">
   <span class="demonstration">Display all tags (default)</span>
-  <el-cascader
+  <my-cascader
     :options="options"
     :props="props"
-    clearable></el-cascader>
+    clearable></my-cascader>
 </div>
 <div class="block">
   <span class="demonstration">Collapse tags</span>
-  <el-cascader
+  <my-cascader
     :options="options"
     :props="props"
     collapse-tags
-    clearable></el-cascader>
+    clearable></my-cascader>
 </div>
 
 <script>
@@ -991,17 +991,17 @@ En la selección única, sólo se pueden comprobar los nodos de la hoja, y en la
 ```html
 <div class="block">
   <span class="demonstration">Select any level of options (Single selection)</span>
-  <el-cascader
+  <my-cascader
     :options="options"
     :props="{ checkStrictly: true }"
-    clearable></el-cascader>
+    clearable></my-cascader>
 </div>
 <div class="block">
   <span class="demonstration">Select any level of options (Multiple selection)</span>
-  <el-cascader
+  <my-cascader
     :options="options"
     :props="{ multiple: true, checkStrictly: true }"
-    clearable></el-cascader>
+    clearable></my-cascader>
 </div>
 
 <script>
@@ -1217,7 +1217,7 @@ Carga dinámica de sus nodos hijos cuando se selecciona un nodo.
 :::demo Establezca `lazy = true` para utilizar la carga dinámica, y deberá especificar cómo cargar la fuente de datos mediante `lazyload`. Hay dos parámetros de `lazyload`, el primer parámetro `node` es el nodo en el que se hace clic actualmente, y el `resolve` es una llamada de retorno que indica que la carga ha terminado y que debe invocarse. Para mostrar el estado del nodo con mayor precisión, puede añadir un campo `leaf` (puede ser modificado por `props.leaf`) para indicar si se trata de un nodo de hoja. De lo contrario, se deducirá verificando si tiene algún nodo hijo.
 
 ```html
-<el-cascader :props="props"></el-cascader>
+<my-cascader :props="props"></my-cascader>
 
 <script>
   let id = 0;
@@ -1257,18 +1257,18 @@ Buscar y seleccionar opciones con una palabra clave.
 ```html
 <div class="block">
   <span class="demonstration">Filterable (Single selection)</span>
-  <el-cascader
+  <my-cascader
     placeholder="Try searchingL Guide"
     :options="options"
-    filterable></el-cascader>
+    filterable></my-cascader>
 </div>
 <div class="block">
   <span class="demonstration">Filterable (Multiple selection)</span>
-  <el-cascader
+  <my-cascader
     placeholder="Try searchingL Guide"
     :options="options"
     :props="{ multiple: true }"
-    filterable></el-cascader>
+    filterable></my-cascader>
 </div>
 
 <script>
@@ -1483,12 +1483,12 @@ Puede personalizar el contenido del nodo de cascada.
 
 :::demo Puede personalizar el contenido del nodo del cascader mediante `scoped slot`. Tendrá acceso a `node` y `data` en el ámbito de aplicación, representando el objeto Node y los datos del nodo actual respectivamente.
 ```html
-<el-cascader :options="options">
+<my-cascader :options="options">
   <template slot-scope="{ node, data }">
     <span>{{ data.label }}</span>
     <span v-if="!node.isLeaf"> ({{ data.children.length }}) </span>
   </template>
-</el-cascader>
+</my-cascader>
 
 <script>
   export default {
@@ -1702,7 +1702,7 @@ Puede personalizar el contenido del nodo de cascada.
 
 :::demo Al igual que `el-cascader`, puede establecer opciones alternativas mediante `options`, y habilitar otras características mediante `props`, consulte el formulario de la API a continuación para obtener más detalles.
 ```html
-<el-cascader-panel :options="options"></el-cascader-panel>
+<my-cascader-panel :options="options"></my-cascader-panel>
 
 <script>
   export default {

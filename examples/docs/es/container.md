@@ -1,76 +1,76 @@
 ## Contenedor
 Componentes contenedores para iniciar una estructura básica de un sitio:
 
-`<el-container>`: Contenedor. Cuando este elemento se anida con un `<el-header>` o `<el-footer>`, todos los elementos secundarios se organizan verticalmente.
+`<my-container>`: Contenedor. Cuando este elemento se anida con un `<my-header>` o `<my-footer>`, todos los elementos secundarios se organizan verticalmente.
 De lo contrario, de forma horizontal. 
 
-`<el-header>`: Contenedor para cabeceras.
+`<my-header>`: Contenedor para cabeceras.
 
-`<el-aside>`: Contenedor para secciones laterales (generalmente, una barra lateral).
+`<my-aside>`: Contenedor para secciones laterales (generalmente, una barra lateral).
 
-`<el-main>`: Contenedor para sección principal.
+`<my-main>`: Contenedor para sección principal.
 
-`<el-footer>`: Contenedor para pie de página.
+`<my-footer>`: Contenedor para pie de página.
 
 :::tip
-Estos componentes utilizan flex para el diseño, así que asegúrese que el navegador lo soporta. Además, los elementos directos de `<el-container>` tienen que ser uno o más de los últimos cuatro componentes. Y el elemento padre de los últimos cuatro componentes debe ser un `<el-container>`.
+Estos componentes utilizan flex para el diseño, así que asegúrese que el navegador lo soporta. Además, los elementos directos de `<my-container>` tienen que ser uno o más de los últimos cuatro componentes. Y el elemento padre de los últimos cuatro componentes debe ser un `<my-container>`.
 :::
 
 ### Diseños comunes
 
 :::demo
 ```html
-<el-container>
-  <el-header>Cabecera</el-header>
-  <el-main>Principal</el-main>
-</el-container>
+<my-container>
+  <my-header>Cabecera</my-header>
+  <my-main>Principal</my-main>
+</my-container>
 
-<el-container>
-  <el-header>Cabecera</el-header>
-  <el-main>Principal</el-main>
-  <el-footer>Pie de página</el-footer>
-</el-container>
+<my-container>
+  <my-header>Cabecera</my-header>
+  <my-main>Principal</my-main>
+  <my-footer>Pie de página</my-footer>
+</my-container>
 
-<el-container>
-  <el-aside width="200px">Barra lateral</el-aside>
-  <el-main>Principal</el-main>
-</el-container>
+<my-container>
+  <my-aside width="200px">Barra lateral</my-aside>
+  <my-main>Principal</my-main>
+</my-container>
 
-<el-container>
-  <el-header>Cabecera</el-header>
-  <el-container>
-    <el-aside width="200px">Barra lateral</el-aside>
-    <el-main>Principal</el-main>
-  </el-container>
-</el-container>
+<my-container>
+  <my-header>Cabecera</my-header>
+  <my-container>
+    <my-aside width="200px">Barra lateral</my-aside>
+    <my-main>Principal</my-main>
+  </my-container>
+</my-container>
 
-<el-container>
-  <el-header>Cabecera</el-header>
-  <el-container>
-    <el-aside width="200px">Barra lateral</el-aside>
-    <el-container>
-      <el-main>Principal</el-main>
-      <el-footer>Pie de página</el-footer>
-    </el-container>
-  </el-container>
-</el-container>
+<my-container>
+  <my-header>Cabecera</my-header>
+  <my-container>
+    <my-aside width="200px">Barra lateral</my-aside>
+    <my-container>
+      <my-main>Principal</my-main>
+      <my-footer>Pie de página</my-footer>
+    </my-container>
+  </my-container>
+</my-container>
 
-<el-container>
-  <el-aside width="200px">Barra lateral</el-aside>
-  <el-container>
-    <el-header>Cabecera</el-header>
-    <el-main>Principal</el-main>
-  </el-container>
-</el-container>
+<my-container>
+  <my-aside width="200px">Barra lateral</my-aside>
+  <my-container>
+    <my-header>Cabecera</my-header>
+    <my-main>Principal</my-main>
+  </my-container>
+</my-container>
 
-<el-container>
-  <el-aside width="200px">Barra lateral</el-aside>
-  <el-container>
-    <el-header>Cabecera</el-header>
-    <el-main>Principal</el-main>
-    <el-footer>Pie de página</el-footer>
-  </el-container>
-</el-container>
+<my-container>
+  <my-aside width="200px">Barra lateral</my-aside>
+  <my-container>
+    <my-header>Cabecera</my-header>
+    <my-main>Principal</my-main>
+    <my-footer>Pie de página</my-footer>
+  </my-container>
+</my-container>
 
 <style>
   .el-header, .el-footer {
@@ -114,82 +114,82 @@ Estos componentes utilizan flex para el diseño, así que asegúrese que el nave
 
 :::demo
 ```html
-<el-container style="height: 500px; border: 1px solid #eee">
-  <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-    <el-menu :default-openeds="['1', '3']">
-      <el-submenu index="1">
+<my-container style="height: 500px; border: 1px solid #eee">
+  <my-aside width="200px" style="background-color: rgb(238, 241, 246)">
+    <my-menu :default-openeds="['1', '3']">
+      <my-submenu index="1">
         <template slot="title"><i class="el-icon-message"></i>Navigator One</template>
-        <el-menu-item-group>
+        <my-menu-item-group>
           <template slot="title">Group 1</template>
-          <el-menu-item index="1-1">Option 1</el-menu-item>
-          <el-menu-item index="1-2">Option 2</el-menu-item>
-        </el-menu-item-group>
-        <el-menu-item-group title="Group 2">
-          <el-menu-item index="1-3">Option 3</el-menu-item>
-        </el-menu-item-group>
-        <el-submenu index="1-4">
+          <my-menu-item index="1-1">Option 1</my-menu-item>
+          <my-menu-item index="1-2">Option 2</my-menu-item>
+        </my-menu-item-group>
+        <my-menu-item-group title="Group 2">
+          <my-menu-item index="1-3">Option 3</my-menu-item>
+        </my-menu-item-group>
+        <my-submenu index="1-4">
           <template slot="title">Option4</template>
-          <el-menu-item index="1-4-1">Option 4-1</el-menu-item>
-        </el-submenu>
-      </el-submenu>
-      <el-submenu index="2">
+          <my-menu-item index="1-4-1">Option 4-1</my-menu-item>
+        </my-submenu>
+      </my-submenu>
+      <my-submenu index="2">
         <template slot="title"><i class="el-icon-menu"></i>Navigator Two</template>
-        <el-menu-item-group>
+        <my-menu-item-group>
           <template slot="title">Group 1</template>
-          <el-menu-item index="2-1">Option 1</el-menu-item>
-          <el-menu-item index="2-2">Option 2</el-menu-item>
-        </el-menu-item-group>
-        <el-menu-item-group title="Group 2">
-          <el-menu-item index="2-3">Option 3</el-menu-item>
-        </el-menu-item-group>
-        <el-submenu index="2-4">
+          <my-menu-item index="2-1">Option 1</my-menu-item>
+          <my-menu-item index="2-2">Option 2</my-menu-item>
+        </my-menu-item-group>
+        <my-menu-item-group title="Group 2">
+          <my-menu-item index="2-3">Option 3</my-menu-item>
+        </my-menu-item-group>
+        <my-submenu index="2-4">
           <template slot="title">Option 4</template>
-          <el-menu-item index="2-4-1">Option 4-1</el-menu-item>
-        </el-submenu>
-      </el-submenu>
-      <el-submenu index="3">
+          <my-menu-item index="2-4-1">Option 4-1</my-menu-item>
+        </my-submenu>
+      </my-submenu>
+      <my-submenu index="3">
         <template slot="title"><i class="el-icon-setting"></i>Navigator Three</template>
-        <el-menu-item-group>
+        <my-menu-item-group>
           <template slot="title">Group 1</template>
-          <el-menu-item index="3-1">Option 1</el-menu-item>
-          <el-menu-item index="3-2">Option 2</el-menu-item>
-        </el-menu-item-group>
-        <el-menu-item-group title="Group 2">
-          <el-menu-item index="3-3">Option 3</el-menu-item>
-        </el-menu-item-group>
-        <el-submenu index="3-4">
+          <my-menu-item index="3-1">Option 1</my-menu-item>
+          <my-menu-item index="3-2">Option 2</my-menu-item>
+        </my-menu-item-group>
+        <my-menu-item-group title="Group 2">
+          <my-menu-item index="3-3">Option 3</my-menu-item>
+        </my-menu-item-group>
+        <my-submenu index="3-4">
           <template slot="title">Option 4</template>
-          <el-menu-item index="3-4-1">Option 4-1</el-menu-item>
-        </el-submenu>
-      </el-submenu>
-    </el-menu>
-  </el-aside>
+          <my-menu-item index="3-4-1">Option 4-1</my-menu-item>
+        </my-submenu>
+      </my-submenu>
+    </my-menu>
+  </my-aside>
   
-  <el-container>
-    <el-header style="text-align: right; font-size: 12px">
-      <el-dropdown>
+  <my-container>
+    <my-header style="text-align: right; font-size: 12px">
+      <my-dropdown>
         <i class="el-icon-setting" style="margin-right: 15px"></i>
-        <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item>View</el-dropdown-item>
-          <el-dropdown-item>Add</el-dropdown-item>
-          <el-dropdown-item>Delete</el-dropdown-item>
-        </el-dropdown-menu>
-      </el-dropdown>
+        <my-dropdown-menu slot="dropdown">
+          <my-dropdown-item>View</my-dropdown-item>
+          <my-dropdown-item>Add</my-dropdown-item>
+          <my-dropdown-item>Delete</my-dropdown-item>
+        </my-dropdown-menu>
+      </my-dropdown>
       <span>Tom</span>
-    </el-header>
+    </my-header>
     
-    <el-main>
-      <el-table :data="tableData">
-        <el-table-column prop="date" label="Date" width="140">
-        </el-table-column>
-        <el-table-column prop="name" label="Name" width="120">
-        </el-table-column>
-        <el-table-column prop="address" label="Address">
-        </el-table-column>
-      </el-table>
-    </el-main>
-  </el-container>
-</el-container>
+    <my-main>
+      <my-table :data="tableData">
+        <my-table-column prop="date" label="Date" width="140">
+        </my-table-column>
+        <my-table-column prop="name" label="Name" width="120">
+        </my-table-column>
+        <my-table-column prop="address" label="Address">
+        </my-table-column>
+      </my-table>
+    </my-main>
+  </my-container>
+</my-container>
 
 <style>
   .el-header {

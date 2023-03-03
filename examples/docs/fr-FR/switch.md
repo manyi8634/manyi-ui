@@ -7,13 +7,13 @@ Switch est utilisé pour choisir entre deux états opposés.
 :::demo Liez `v-model` à une variable de type `Boolean`. Les attributs `active-color` et `inactive-color` déterminent les couleurs des deux états.
 
 ```html
-<el-switch v-model="value1">
-</el-switch>
-<el-switch
+<my-switch v-model="value1">
+</my-switch>
+<my-switch
   v-model="value2"
   active-color="#13ce66"
   inactive-color="#ff4949">
-</el-switch>
+</my-switch>
 
 <script>
   export default {
@@ -33,19 +33,19 @@ Switch est utilisé pour choisir entre deux états opposés.
 :::demo Utilisez `active-text` et `inactive-text` pour afficher une description de chaque étape.
 
 ```html
-<el-switch
+<my-switch
   v-model="value1"
   active-text="Paiement mensuel"
   inactive-text="Paiement annuel">
-</el-switch>
-<el-switch
+</my-switch>
+<my-switch
   style="display: block"
   v-model="value2"
   active-color="#13ce66"
   inactive-color="#ff4949"
   active-text="Paiement mensuel"
   inactive-text="Paiement annuel">
-</el-switch>
+</my-switch>
 
 <script>
   export default {
@@ -65,15 +65,15 @@ Switch est utilisé pour choisir entre deux états opposés.
 :::demo Vous pouvez utiliser `active-value` et `inactive-value` pour déterminer la valeur de chaque état. Ils prennent un `Boolean`, `String` ou `Number`.
 
 ```html
-<el-tooltip :content="'Valeur de l\'état: ' + value" placement="top">
-  <el-switch
+<my-tooltip :content="'Valeur de l\'état: ' + value" placement="top">
+  <my-switch
     v-model="value"
     active-color="#13ce66"
     inactive-color="#ff4949"
     active-value="100"
     inactive-value="0">
-  </el-switch>
-</el-tooltip>
+  </my-switch>
+</my-tooltip>
 
 <script>
   export default {
@@ -93,14 +93,14 @@ Switch est utilisé pour choisir entre deux états opposés.
 :::demo Ajoutez l'attribut `disabled` pour désactiver le switch.
 
 ```html
-<el-switch
+<my-switch
   v-model="value1"
   disabled>
-</el-switch>
-<el-switch
+</my-switch>
+<my-switch
   v-model="value2"
   disabled>
-</el-switch>
+</my-switch>
 
 <script>
   export default {

@@ -4,11 +4,11 @@ This part walks you through the process of using Element in a webpack project.
 
 ### Use vue-cli@3
 
-We provide an [Element plugin](https://github.com/ElementUI/vue-cli-plugin-element) for vue-cli@3, which you can use to quickly build an Element-based project.
+We provide an [Element plugin](https://github.com/ManyiUI/vue-cli-plugin-element) for vue-cli@3, which you can use to quickly build an Element-based project.
 
 ### Use Starter Kit
 
-We provide a general [project template](https://github.com/ElementUI/element-starter) for you. For Laravel users, we also have a [template](https://github.com/ElementUI/element-in-laravel-starter). You can download and use them directly.
+We provide a general [project template](https://github.com/ManyiUI/element-starter) for you. For Laravel users, we also have a [template](https://github.com/ManyiUI/element-in-laravel-starter). You can download and use them directly.
 
 If you prefer not to use them, please read the following.
 
@@ -22,11 +22,11 @@ In main.js:
 
 ```javascript
 import Vue from 'vue';
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+import ManyiUI from 'manyi-ui';
+import 'manyi-ui/lib/theme-chalk/index.css';
 import App from './App.vue';
 
-Vue.use(ElementUI);
+Vue.use(ManyiUI);
 
 new Vue({
   el: '#app',
@@ -67,7 +67,7 @@ Next, if you need Button and Select, edit main.js:
 
 ```javascript
 import Vue from 'vue';
-import { Button, Select } from 'element-ui';
+import { Button, Select } from 'manyi-ui';
 import App from './App.vue';
 
 Vue.component(Button.name, Button);
@@ -165,7 +165,7 @@ import {
   MessageBox,
   Message,
   Notification
-} from 'element-ui';
+} from 'manyi-ui';
 
 Vue.use(Pagination);
 Vue.use(Dialog);
@@ -260,7 +260,7 @@ Fully import Element：
 
 ```js
 import Vue from 'vue';
-import Element from 'element-ui';
+import Element from 'manyi-ui';
 Vue.use(Element, { size: 'small', zIndex: 3000 });
 ```
 
@@ -268,7 +268,7 @@ Partial import Element：
 
 ```js
 import Vue from 'vue';
-import { Button } from 'element-ui';
+import { Button } from 'manyi-ui';
 
 Vue.prototype.$ELEMENT = { size: 'small', zIndex: 3000 };
 Vue.use(Button);

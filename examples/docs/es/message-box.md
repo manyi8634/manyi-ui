@@ -13,7 +13,7 @@ Alert interrumpe las operaciones realizadas hasta que el usuario confirme la ale
 
 ```html
 <template>
-  <el-button type="text" @click="open">Click to open the Message Box</el-button>
+  <my-button type="text" @click="open">Click to open the Message Box</my-button>
 </template>
 
 <script>
@@ -45,7 +45,7 @@ Confirm es utilizado para preguntar al usuario y recibir una confirmación.
 
 ```html
 <template>
-  <el-button type="text" @click="open">Click to open the Message Box</el-button>
+  <my-button type="text" @click="open">Click to open the Message Box</my-button>
 </template>
 
 <script>
@@ -83,7 +83,7 @@ Prompt es utilizado cuando se requiere entrada de información del usuario.
 
 ```html
 <template>
-  <el-button type="text" @click="open">Click to open Message Box</el-button>
+  <my-button type="text" @click="open">Click to open Message Box</my-button>
 </template>
 
 <script>
@@ -121,7 +121,7 @@ Puede ser personalizado para mostrar diversos contenidos.
 
 ```html
 <template>
-  <el-button type="text" @click="open">Click to open Message Box</el-button>
+  <my-button type="text" @click="open">Click to open Message Box</my-button>
 </template>
 
 <script>
@@ -179,7 +179,7 @@ El contenido de MessageBox puede ser `VNode`, permitiéndonos pasar componentes 
 
 ```html
 <template>
-  <el-button type="text" @click="open">Click to open Message Box</el-button>
+  <my-button type="text" @click="open">Click to open Message Box</my-button>
 </template>
 
 <script>
@@ -209,7 +209,7 @@ En algunos casos, hacer clic en el botón Cancelar y en el botón Cerrar puede t
 
 ```html
 <template>
-  <el-button type="text" @click="open">Click to open Message Box</el-button>
+  <my-button type="text" @click="open">Click to open Message Box</my-button>
 </template>
 
 <script>
@@ -249,7 +249,7 @@ El contenido del componente MessageBox puede ser centrado.
 
 ```html
 <template>
-  <el-button type="text" @click="open">Click to open Message Box</el-button>
+  <my-button type="text" @click="open">Click to open Message Box</my-button>
 </template>
 
 <script>
@@ -292,7 +292,7 @@ Si Element fue importado completamente, agregara los siguientes métodos globale
 Si prefieres importar `MessageBox` cuando lo necesites (on demand):
 
 ```javascript
-import { MessageBox } from 'element-ui';
+import { MessageBox } from 'manyi-ui';
 ```
 
 Los métodos correspondientes: `MessageBox`, `MessageBox.alert`, `MessageBox.confirm` y `MessageBox.prompt`. Los parámetros son los mismos que los anteriores.

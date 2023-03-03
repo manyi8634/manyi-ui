@@ -1,5 +1,5 @@
 <template>
-  <el-popover
+  <my-popover
     v-bind="$attrs"
     v-model="visible"
     trigger="click"
@@ -15,24 +15,24 @@
       {{title}}
     </p>
     <div class="el-popconfirm__action">
-      <el-button 
+      <my-button 
         size="mini" 
         :type="cancelButtonType" 
         @click="cancel"
       >
         {{ displayCancelButtonText }}
-      </el-button>
-      <el-button 
+      </my-button>
+      <my-button 
         size="mini" 
         :type="confirmButtonType" 
         @click="confirm"
       >
         {{ displayConfirmButtonText }}
-      </el-button>
+      </my-button>
     </div>
   </div>
   <slot name="reference" slot="reference"></slot>
-</el-popover>
+</my-popover>
 </template>
 
 <script>

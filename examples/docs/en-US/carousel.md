@@ -9,19 +9,19 @@ Loop a series of images or texts in a limited space
 <template>
   <div class="block">
     <span class="demonstration">Switch when indicator is hovered (default)</span>
-    <el-carousel height="150px">
-      <el-carousel-item v-for="item in 4" :key="item">
+    <my-carousel height="150px">
+      <my-carousel-item v-for="item in 4" :key="item">
         <h3 class="small">{{ item }}</h3>
-      </el-carousel-item>
-    </el-carousel>
+      </my-carousel-item>
+    </my-carousel>
   </div>
   <div class="block">
     <span class="demonstration">Switch when indicator is clicked</span>
-    <el-carousel trigger="click" height="150px">
-      <el-carousel-item v-for="item in 4" :key="item">
+    <my-carousel trigger="click" height="150px">
+      <my-carousel-item v-for="item in 4" :key="item">
         <h3 class="small">{{ item }}</h3>
-      </el-carousel-item>
-    </el-carousel>
+      </my-carousel-item>
+    </my-carousel>
   </div>
 </template>
 
@@ -52,11 +52,11 @@ Indicators can be displayed outside the carousel
 :::demo The `indicator-position` attribute determines where the indicators are located. By default they are inside the carousel, and setting `indicator-position` to `outside` moves them outside; setting `indicator-position` to `none` hides the indicators.
 ```html
 <template>
-  <el-carousel indicator-position="outside">
-    <el-carousel-item v-for="item in 4" :key="item">
+  <my-carousel indicator-position="outside">
+    <my-carousel-item v-for="item in 4" :key="item">
       <h3>{{ item }}</h3>
-    </el-carousel-item>
-  </el-carousel>
+    </my-carousel-item>
+  </my-carousel>
 </template>
 
 <style>
@@ -86,11 +86,11 @@ You can define when arrows are displayed
 :::demo The `arrow` attribute determines when arrows are displayed. By default they appear when mouse hovers over the carousel. Setting `arrow` to `always` or `never` shows/hides the arrows permanently.
 ```html
 <template>
-  <el-carousel :interval="5000" arrow="always">
-    <el-carousel-item v-for="item in 4" :key="item">
+  <my-carousel :interval="5000" arrow="always">
+    <my-carousel-item v-for="item in 4" :key="item">
       <h3>{{ item }}</h3>
-    </el-carousel-item>
-  </el-carousel>
+    </my-carousel-item>
+  </my-carousel>
 </template>
 
 <style>
@@ -120,11 +120,11 @@ When a page is wide enough but has limited height, you can activate card mode fo
 :::demo Setting `type` to `card` activates the card mode. Apart from the appearance, the biggest difference between card mode and common mode is that clicking the slides at both sides directly switches the carousel in card mode.
 ```html
 <template>
-  <el-carousel :interval="4000" type="card" height="200px">
-    <el-carousel-item v-for="item in 6" :key="item">
+  <my-carousel :interval="4000" type="card" height="200px">
+    <my-carousel-item v-for="item in 6" :key="item">
       <h3 class="medium">{{ item }}</h3>
-    </el-carousel-item>
-  </el-carousel>
+    </my-carousel-item>
+  </my-carousel>
 </template>
 
 <style>
@@ -152,11 +152,11 @@ By default, `direction` is `horizontal`. Let carousel be displayed in the vertic
 :::demo
 ```html
 <template>
-  <el-carousel height="200px" direction="vertical" :autoplay="false">
-    <el-carousel-item v-for="item in 4" :key="item">
+  <my-carousel height="200px" direction="vertical" :autoplay="false">
+    <my-carousel-item v-for="item in 4" :key="item">
       <h3 class="medium">{{ item }}</h3>
-    </el-carousel-item>
-  </el-carousel>
+    </my-carousel-item>
+  </my-carousel>
 </template>
 
 <style>

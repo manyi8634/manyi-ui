@@ -9,11 +9,11 @@ Popconfirm es parecido a Popover. Para algunos atributos duplicados, por favor c
 :::demo Solo el atributo  `title`  esta disponible en Popconfirm, `content` sera ignorado.
 ```html
 <template>
-<el-popconfirm
+<my-popconfirm
   title="Are you sure to delete this?"
 >
-  <el-button slot="reference">Delete</el-button>
-</el-popconfirm>
+  <my-button slot="reference">Delete</my-button>
+</my-popconfirm>
 </template>
 ````
 :::
@@ -24,15 +24,15 @@ Se puede personalizar Popconfirm así:
 
 ```html
 <template>
-<el-popconfirm
+<my-popconfirm
   confirm-button-text='OK'
   cancel-button-text='No, Thanks'
   icon="el-icon-info"
   icon-color="red"
   title="Are you sure to delete this?"
 >
-  <el-button slot="reference">Delete</el-button>
-</el-popconfirm>
+  <my-button slot="reference">Delete</my-button>
+</my-popconfirm>
 </template>
 ```
 :::

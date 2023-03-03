@@ -10,7 +10,7 @@ Scrollez en bas de la page pour voir le bouton en bas à droite.
 ```html
 <template>
   Scrollez en bas de la page pour voir le bouton en bas à droite.
-  <el-backtop target=".page-component__scroll .el-scrollbar__wrap"></el-backtop>
+  <my-backtop target=".page-component__scroll .el-scrollbar__wrap"></my-backtop>
 </template>
 ```
 
@@ -24,7 +24,7 @@ La zone d'affichage est de 40px \* 40px.
 ```html
 <template>
   Scrollez en bas de la page pour voir le bouton en bas à droite.
-  <el-backtop target=".page-component__scroll .el-scrollbar__wrap" :bottom="100">
+  <my-backtop target=".page-component__scroll .el-scrollbar__wrap" :bottom="100">
     <div
       style="{
         height: 100%;
@@ -38,7 +38,7 @@ La zone d'affichage est de 40px \* 40px.
     >
       UP
     </div>
-  </el-backtop>
+  </my-backtop>
 </template>
 ```
 

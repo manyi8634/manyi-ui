@@ -152,7 +152,7 @@
 
 按钮样式的多选组合。
 
-:::demo 只需要把`my-checkbox`元素替换为`my-checkbox-button`元素即可。此外，Element 还提供了`size`属性。
+:::demo 只需要把`my-checkbox`元素替换为`my-checkbox-button`元素即可。此外，ManyiUI 还提供了`size`属性。
 ```html
 <template>
   <div>

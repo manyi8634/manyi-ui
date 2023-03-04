@@ -22,7 +22,7 @@ Dans main.js:
 
 ```javascript
 import Vue from 'vue';
-import ManyiUI from 'manyi-ui';
+import ManyiUI from 'manyi-ui/src';
 import 'manyi-ui/lib/theme-chalk/index.css';
 import App from './App.vue';
 
@@ -67,7 +67,8 @@ Ensuite, si vous n'avez besoin que de Button et Select, éditez main.js comme su
 
 ```javascript
 import Vue from 'vue';
-import { Button, Select } from 'manyi-ui';
+import ManyiUI from 'manyi-ui/src';
+const { Button, Select } = ManyiUI
 import App from './App.vue';
 
 Vue.component(Button.name, Button);

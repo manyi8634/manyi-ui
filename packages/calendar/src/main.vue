@@ -57,12 +57,12 @@
 </template>
 
 <script>
-import Locale from 'element-ui/src/mixins/locale';
-import fecha from 'element-ui/src/utils/date';
-import ElButton from 'element-ui/packages/button';
-import ElButtonGroup from 'element-ui/packages/button-group';
+import Locale from 'manyi-ui/src/mixins/locale';
+import fecha from 'manyi-ui/src/utils/date';
+import ElButton from 'manyi-ui/packages/button';
+import ElButtonGroup from 'manyi-ui/packages/button-group';
 import DateTable from './date-table';
-import { validateRangeInOneMonth } from 'element-ui/src/utils/date-util';
+import { validateRangeInOneMonth } from 'manyi-ui/src/utils/date-util';
 
 const validTypes = ['prev-month', 'today', 'next-month'];
 const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];

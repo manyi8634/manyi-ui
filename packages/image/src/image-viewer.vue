@@ -52,9 +52,9 @@
 </template>
 
 <script>
-import { on, off } from 'element-ui/src/utils/dom';
-import { rafThrottle, isFirefox } from 'element-ui/src/utils/util';
-import { PopupManager } from 'element-ui/src/utils/popup';
+import { on, off } from 'manyi-ui/src/utils/dom';
+import { rafThrottle, isFirefox } from 'manyi-ui/src/utils/util';
+import { PopupManager } from 'manyi-ui/src/utils/popup';
 
 const Mode = {
   CONTAIN: {

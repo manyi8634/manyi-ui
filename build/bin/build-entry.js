@@ -18,13 +18,15 @@ const components = [
 {{install}},
   CollapseTransition
 ];
+components.forEach(component => {
+  component.name = 'My' + component.name.slice(2);
+});
 
 const install = function(Vue, opts = {}) {
   locale.use(opts.locale);
   locale.i18n(opts.i18n);
 
   components.forEach(component => {
-    component.name = 'My' + component.name.slice(2);
     Vue.component(component.name, component);
   });
 

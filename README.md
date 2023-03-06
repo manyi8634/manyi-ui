@@ -1,4 +1,4 @@
-
+>使用文档 ：http://119.3.70.157:7777
 ## 安装
 ```shell
 npm install manyi-ui -S
@@ -10,15 +10,3 @@ import Vue from 'vue'
 import ManyiUI from 'manyi-ui/src'
 
 Vue.use(ManyiUI)
-
-// or
-import {
-  Select,
-  Button
-  // ...
-} from 'manyi-ui'
-
-Vue.component(Select.name, Select)
-Vue.component(Button.name, Button)
-```
->官网文档，正在开发中，敬请期待 ...

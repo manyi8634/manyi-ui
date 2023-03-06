@@ -177,6 +177,9 @@ const components = [
   Result,
   CollapseTransition
 ];
+components.forEach(component => {
+  component.name = 'My' + component.name.slice(2);
+});
 
 const install = function(Vue, opts = {}) {
   locale.use(opts.locale);

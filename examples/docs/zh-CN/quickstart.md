@@ -13,7 +13,7 @@
 
 ```javascript
 import Vue from 'vue';
-import ManyiUI from 'manyi-ui/src';
+import ManyiUI from 'manyi-ui';
 import 'manyi-ui/lib/theme-chalk/index.css';
 import App from './App.vue';
 
@@ -58,8 +58,7 @@ npm install babel-plugin-component -D
 
 ```javascript
 import Vue from 'vue';
-import ManyiUI from 'manyi-ui/src';
-const { Button, Select } = ManyiUI
+import { Button, Select } from 'manyi-ui';
 import App from './App.vue';
 
 Vue.component(Button.name, Button);
@@ -252,7 +251,7 @@ Vue.prototype.$message = Message;
 
 ```js
 import Vue from 'vue';
-import ManyiUI from 'manyi-ui/src';
+import ManyiUI from 'manyi-ui';
 Vue.use(ManyiUI, { size: 'small', zIndex: 3000 });
 ```
 
@@ -260,8 +259,7 @@ Vue.use(ManyiUI, { size: 'small', zIndex: 3000 });
 
 ```js
 import Vue from 'vue';
-import ManyiUI from 'manyi-ui/src';
-const { Button } = ManyiUI
+import { Button } from 'manyi-ui';
 
 Vue.prototype.$ELEMENT = { size: 'small', zIndex: 3000 };
 Vue.use(Button);

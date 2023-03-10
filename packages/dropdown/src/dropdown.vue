@@ -2,8 +2,8 @@
   import Clickoutside from 'manyi-ui/src/utils/clickoutside';
   import Emitter from 'manyi-ui/src/mixins/emitter';
   import Migrating from 'manyi-ui/src/mixins/migrating';
-  import ElButton from 'manyi-ui/packages/button';
-  import ElButtonGroup from 'manyi-ui/packages/button-group';
+  import MyButton from 'manyi-ui/packages/button';
+  import MyButtonGroup from 'manyi-ui/packages/button-group';
   import { generateId } from 'manyi-ui/src/utils/util';
 
   export default {
@@ -16,8 +16,8 @@
     directives: { Clickoutside },
 
     components: {
-      ElButton,
-      ElButtonGroup
+      MyButton,
+      MyButtonGroup
     },
 
     provide() {

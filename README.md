@@ -1,5 +1,5 @@
 ## 使用文档 
->http://119.3.70.157:7777
+> https://manyi8634.github.io/manyi-ui-doc
 
 ## 安装
 ```shell
